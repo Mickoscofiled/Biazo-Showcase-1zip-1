@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Wrench, ShieldAlert, Laptop, Zap, Settings, Pipette, FlaskConical, Map, Construction, Car } from "lucide-react";
+import { Wrench, ShieldAlert, Laptop, Zap, Settings, Pipette, FlaskConical, Construction, Car } from "lucide-react";
 
 const products = [
   {
@@ -56,12 +56,6 @@ const products = [
     items: ["Water treatment chemicals", "Scale inhibitors", "Antidote & Buffer solution", "Lab chemicals", "Solvents & Adhesives", "Oxidizers & Reducing agents"],
     accent: "from-cyan-600/15 to-cyan-900/5"
   },
-  {
-    title: "Geological Catalogue",
-    icon: <Map className="w-7 h-7 text-blue-400" />,
-    items: ["PVC Flagging Tapes, Flags, Pin Tags", "Triangle Markers, Alutags", "Aluminium Labels, Core Tray Tags", "Field Books, Rite in the Rain products", "Paint Markers, Tungsten Tipped Scribe", "Protractors, Inclinometer, Scales", "Sample Storage, Core & More", "Exploration & Navigation tools", "Gold Mining Accessories"],
-    accent: "from-blue-600/15 to-blue-900/5"
-  }
 ];
 
 export default function Products() {
