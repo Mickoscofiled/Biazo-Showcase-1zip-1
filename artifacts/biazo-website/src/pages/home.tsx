@@ -8,6 +8,7 @@ import GeologicalCatalogue from "@/components/GeologicalCatalogue";
 import Statistics from "@/components/Statistics";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function HomePage() {
   return (
@@ -24,6 +25,7 @@ export default function HomePage() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
