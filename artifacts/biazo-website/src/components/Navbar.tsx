@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import logoPath from "@assets/WhatsApp_Image_2026-05-28_at_9.07.14_AM_1779994735397.jpeg";
+import logoPath from "@assets/biazo-logo-transparent.png";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -40,15 +40,12 @@ export default function Navbar() {
           <Link href="/">
             <div className="relative flex items-center gap-3 cursor-pointer group">
               <div className="relative">
-                <div className="absolute inset-0 rounded-xl bg-white/20 blur-md group-hover:bg-white/30 transition-all duration-300 scale-110" />
-                <div className="relative bg-white rounded-xl p-1.5 shadow-xl shadow-blue-900/50 border border-white/30">
-                  <img
-                    src={logoPath}
-                    alt="Biazo International Logo"
-                    data-testid="img-navbar-logo"
-                    className="h-14 w-auto object-contain"
-                  />
-                </div>
+                <img
+                  src={logoPath}
+                  alt="Biazo International Logo"
+                  data-testid="img-navbar-logo"
+                  className="h-14 w-auto object-contain drop-shadow-lg"
+                />
               </div>
             </div>
           </Link>

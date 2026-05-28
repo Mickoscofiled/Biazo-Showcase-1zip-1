@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import logoPath from "@assets/WhatsApp_Image_2026-05-28_at_9.07.14_AM_1779994735397.jpeg";
+import logoPath from "@assets/biazo-logo-transparent.png";
 
 export default function Hero() {
   const textContainer = {
@@ -58,7 +58,7 @@ export default function Hero() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="absolute inset-0 rounded-3xl bg-blue-400/20 blur-2xl scale-125"
             />
-            <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl p-4 shadow-2xl shadow-blue-500/30 border border-white/40 inline-block">
+            <div className="relative inline-block">
               <img
                 src={logoPath}
                 alt="Biazo International Logo"
