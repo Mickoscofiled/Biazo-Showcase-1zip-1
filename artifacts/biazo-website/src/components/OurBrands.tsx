@@ -1,78 +1,78 @@
 import { motion } from "framer-motion";
 import { Car, Settings, Laptop, Zap, ShieldCheck, Wrench } from "lucide-react";
 
+const WA_URL =
+  "https://wa.me/971524860664?text=Hello%20Biazo%20International%2C%20I%20would%20like%20to%20inquire%20about%20your%20brand%20products.";
+
 const brands = [
   {
-    icon: <Car className="w-8 h-8 text-blue-400" />,
+    icon: <Car className="w-7 h-7 text-blue-400" />,
     title: "Automotive",
     subtitle: "Heavy Equipment & Vehicles",
-    items: [
-      "Automotive vehicles & parts",
-      "Heavy mining equipment",
-      "Construction machines",
-      "Grease, lubricants & compounds",
-      "Engines",
-      "Tyres",
-      "Spare parts",
+    description: "Automotive · Heavy mining equipment · Construction machines · Grease, lubricants & compounds · Engines · Tyres · Spare parts",
+    brandNames: [
+      "MAN", "Shell", "CAT", "Toyota", "Mobil", "Sullair",
+      "Belzona", "Bridgestone", "Bestolife", "Moly Slip",
+      "TotalEnergies", "Storike", "XCMG", "Perkins",
+      "Atlas Copco", "IVECO", "Yokohama Tyres",
     ],
   },
   {
-    icon: <Settings className="w-8 h-8 text-blue-400" />,
-    title: "Welding Machines",
-    subtitle: "Machines & Consumables",
-    items: [
-      "Welding machines — MIG, TIG, STICK, FLUX-CORED",
-      "PPRC Pipes",
-      "Electrodes",
-      "Filler wire",
-      "Shielding gas",
-      "Cutting torch & Tips",
-      "Gloves, Aperon, Full Coverall",
+    icon: <Settings className="w-7 h-7 text-blue-400" />,
+    title: "Welding Machines & Consumables",
+    subtitle: "MIG · TIG · STICK · FLUX-CORED",
+    description: "Welding machines · PPRC Pipes · Electrodes · Filler wire · Shielding gas · Cutting torch & Tips · Gloves · Aperon · Full Coverall",
+    brandNames: [
+      "CIGWELD", "AFROX", "Lincoln Electric",
+      "TWECO", "Harris", "Victor",
+      "ESAB", "Miller", "Bossweld",
     ],
   },
   {
-    icon: <Laptop className="w-8 h-8 text-blue-400" />,
-    title: "IT Equipment",
-    subtitle: "Accessories & Cables",
-    items: [
-      "Laptops & Accessories",
-      "Printers & Cartridges",
-      "Ethernet cable",
-      "UPS Systems",
-      "Resin joint kit",
-      "Electric & Mining Cables",
+    icon: <Laptop className="w-7 h-7 text-blue-400" />,
+    title: "IT Equipment, Accessories & Cables",
+    subtitle: "Computing · Networking · Cables",
+    description: "Laptops & Accessories · Printers & Cartridges · Ethernet cable · UPS Systems · Resin joint kit · Electric & Mining Cables",
+    brandNames: [
+      "APC", "CyberPower", "Dell",
+      "D-Link", "3M", "Ducab",
+      "Huadong", "Nexans", "RR Kabel",
     ],
   },
   {
-    icon: <Zap className="w-8 h-8 text-blue-400" />,
+    icon: <Zap className="w-7 h-7 text-blue-400" />,
     title: "Electrical Products",
-    subtitle: "Automation & Lighting",
-    items: [
-      "Contactors",
-      "Overload relays",
-      "Switches & automation",
-      "Plugs & sockets",
-      "Lighting & accessories",
+    subtitle: "Automation · Lighting · Control",
+    description: "Contactors · Overload relays · Switches & automation · Plugs & sockets · Lighting & accessories",
+    brandNames: [
+      "OSRAM", "Philips", "Schneider Electric",
+      "Gewiss", "Chint Electric", "ABB",
+      "Legrand", "Hager", "Mitsubishi Electric",
+      "Siemens", "Eaton",
     ],
   },
   {
-    icon: <ShieldCheck className="w-8 h-8 text-blue-400" />,
+    icon: <ShieldCheck className="w-7 h-7 text-blue-400" />,
     title: "Safety Solutions",
-    subtitle: "Mining & Field Safety",
-    items: [
-      "Mining safety gear",
-      "Geological equipment & accessories",
-      "Workwear & PPE",
+    subtitle: "Mining Safety · Geological · Workwear",
+    description: "Safety solutions · Mining safety gear · Geological equipment & accessories · Workwear",
+    brandNames: [
+      "Voltex", "Suunto", "Bisley Workwear",
+      "Blundstone", "Dy-Mark", "Honeywell",
+      "DuPont", "Specialized Coating Systems",
+      "Discoverer", "Maxicut", "Dräger",
+      "Dynamics G-Ex", "MSA", "3M",
     ],
   },
   {
-    icon: <Wrench className="w-8 h-8 text-blue-400" />,
+    icon: <Wrench className="w-7 h-7 text-blue-400" />,
     title: "Hand & Power Tools",
-    subtitle: "Precision & Garden Tools",
-    items: [
-      "Precision tools",
-      "Power tools & accessories",
-      "Garden tools",
+    subtitle: "Precision · Power · Garden Tools",
+    description: "Hand tools · Precision tools · Power tools & accessories · Garden tools",
+    brandNames: [
+      "Bosch", "Makita", "Ronix", "Gedore",
+      "Kindrick", "Kapro", "Total", "Fluke",
+      "Stanley", "HellermannTyton", "Tolsen",
     ],
   },
 ];
@@ -110,54 +110,59 @@ export default function OurBrands() {
             transition={{ delay: 0.1 }}
             className="text-lg text-blue-200/60 max-w-2xl mx-auto"
           >
-            Biazo International represents and supplies a wide portfolio of product lines across six major brand categories, sourced from trusted global manufacturers.
+            We represent and supply world-class brands across six major product categories, bringing trusted global manufacturers to East Africa.
           </motion.p>
         </div>
 
-        {/* Brand cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Brand category cards */}
+        <div className="space-y-8">
           {brands.map((brand, i) => (
             <motion.div
               key={brand.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-30px" }}
-              transition={{ duration: 0.55, delay: (i % 3) * 0.1 }}
-              whileHover={{ y: -6, transition: { duration: 0.2 } }}
+              transition={{ duration: 0.55, delay: 0.05 }}
               data-testid={`card-brand-${i}`}
-              className="group relative p-7 rounded-2xl bg-white/[0.02] hover:bg-white/[0.05] border border-blue-900/30 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/30 overflow-hidden"
+              className="group relative rounded-2xl bg-white/[0.02] hover:bg-white/[0.04] border border-blue-900/30 hover:border-blue-600/40 transition-all duration-300 overflow-hidden"
             >
-              {/* Glow accent */}
-              <div className="absolute top-0 right-0 w-28 h-28 bg-blue-500/5 rounded-full blur-2xl -mr-6 -mt-6 group-hover:bg-blue-500/12 transition-all duration-500" />
+              {/* Glow */}
+              <div className="absolute top-0 left-0 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 group-hover:bg-blue-600/10 transition-all duration-500 pointer-events-none" />
 
-              {/* Icon + header */}
-              <div className="flex items-start gap-4 mb-6 relative">
-                <div className="p-3.5 rounded-xl bg-blue-500/10 border border-blue-500/20 group-hover:bg-blue-500/20 group-hover:scale-110 transition-all duration-300 shrink-0">
-                  {brand.icon}
+              <div className="p-7 lg:p-8">
+                {/* Category header */}
+                <div className="flex flex-col sm:flex-row sm:items-start gap-5 mb-6">
+                  <div className="p-3.5 rounded-xl bg-blue-500/10 border border-blue-500/20 group-hover:bg-blue-500/20 transition-all duration-300 self-start shrink-0">
+                    {brand.icon}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors leading-tight mb-1">
+                      {brand.title}
+                    </h3>
+                    <p className="text-xs text-blue-400/60 font-semibold tracking-wide uppercase mb-2">{brand.subtitle}</p>
+                    <p className="text-sm text-blue-200/45 leading-relaxed">{brand.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors leading-tight">
-                    {brand.title}
-                  </h3>
-                  <p className="text-xs text-blue-400/60 font-medium mt-0.5">{brand.subtitle}</p>
+
+                {/* Divider */}
+                <div className="w-full h-px bg-blue-900/40 mb-6 group-hover:bg-blue-700/40 transition-colors" />
+
+                {/* Brand name chips */}
+                <div className="flex flex-wrap gap-2.5">
+                  {brand.brandNames.map((name, j) => (
+                    <motion.span
+                      key={name}
+                      initial={{ opacity: 0, scale: 0.85 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: j * 0.04 }}
+                      className="inline-flex items-center px-4 py-2 rounded-xl bg-blue-950/60 hover:bg-blue-900/60 border border-blue-800/40 hover:border-blue-600/60 text-white/85 hover:text-white text-sm font-semibold tracking-wide transition-all duration-200 cursor-default hover:shadow-lg hover:shadow-blue-900/30 hover:-translate-y-0.5"
+                    >
+                      {name}
+                    </motion.span>
+                  ))}
                 </div>
               </div>
-
-              {/* Divider */}
-              <div className="w-full h-px bg-blue-900/40 mb-5 group-hover:bg-blue-700/40 transition-colors" />
-
-              {/* Items */}
-              <ul className="space-y-2">
-                {brand.items.map((item, j) => (
-                  <li
-                    key={j}
-                    className="flex items-start gap-2.5 text-sm text-blue-200/55 group-hover:text-blue-200/80 transition-colors"
-                  >
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500/60 shrink-0 group-hover:bg-blue-400 transition-colors" />
-                    <span className="leading-snug">{item}</span>
-                  </li>
-                ))}
-              </ul>
             </motion.div>
           ))}
         </div>
@@ -167,11 +172,11 @@ export default function OurBrands() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.2 }}
           className="mt-14 text-center"
         >
           <a
-            href="https://wa.me/971524860664?text=Hello%20Biazo%20International%2C%20I%20would%20like%20to%20inquire%20about%20your%20brand%20products."
+            href={WA_URL}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="link-brands-whatsapp"
