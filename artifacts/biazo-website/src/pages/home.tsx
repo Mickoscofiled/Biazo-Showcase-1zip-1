@@ -6,6 +6,7 @@ import Activities from "@/components/Activities";
 import Products from "@/components/Products";
 import OurBrands from "@/components/OurBrands";
 import GeologicalCatalogue from "@/components/GeologicalCatalogue";
+import PipesSteelCatalogue from "@/components/PipesSteelCatalogue";
 import Statistics from "@/components/Statistics";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -23,6 +24,7 @@ export default function HomePage() {
         <Products />
         <OurBrands />
         <GeologicalCatalogue />
+        <PipesSteelCatalogue />
         <Statistics />
         <Contact />
       </main>

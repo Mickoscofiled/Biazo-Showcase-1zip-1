@@ -11,6 +11,7 @@ const navLinks = [
   { name: "Products", href: "#products" },
   { name: "Our Brands", href: "#brands" },
   { name: "Geological", href: "#geological" },
+  { name: "Pipes & Steel", href: "#pipes-steel" },
   { name: "Statistics", href: "#statistics" },
   { name: "Contact", href: "#contact" },
 ];
