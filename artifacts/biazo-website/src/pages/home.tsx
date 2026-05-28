@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Mission from "@/components/Mission";
 import Activities from "@/components/Activities";
 import Products from "@/components/Products";
+import OurBrands from "@/components/OurBrands";
 import GeologicalCatalogue from "@/components/GeologicalCatalogue";
 import Statistics from "@/components/Statistics";
 import Contact from "@/components/Contact";
@@ -20,6 +21,7 @@ export default function HomePage() {
         <Mission />
         <Activities />
         <Products />
+        <OurBrands />
         <GeologicalCatalogue />
         <Statistics />
         <Contact />
