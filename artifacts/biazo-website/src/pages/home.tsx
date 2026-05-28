@@ -7,6 +7,7 @@ import Products from "@/components/Products";
 import OurBrands from "@/components/OurBrands";
 import GeologicalCatalogue from "@/components/GeologicalCatalogue";
 import PipesSteelCatalogue from "@/components/PipesSteelCatalogue";
+import InquiryForm from "@/components/InquiryForm";
 import Statistics from "@/components/Statistics";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -25,6 +26,7 @@ export default function HomePage() {
         <OurBrands />
         <GeologicalCatalogue />
         <PipesSteelCatalogue />
+        <InquiryForm />
         <Statistics />
         <Contact />
       </main>
