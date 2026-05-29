@@ -6,11 +6,13 @@ const stats = [
   { label: "Spare Parts", value: 24 },
   { label: "Welding Consumables", value: 20 },
   { label: "Building Materials", value: 20 },
+  { label: "Electrical Consumables", value: 18.5 },
   { label: "Chemicals & Reagents", value: 18.2 },
   { label: "Power & Hand Tools", value: 16 },
   { label: "Construction Machinery", value: 13.6 },
   { label: "Mining Equipment", value: 13.6 },
   { label: "Cables", value: 13.6 },
+  { label: "Geological Supplies", value: 13.6 },
   { label: "Geo-survey Equipment", value: 13.6 },
   { label: "Machines", value: 12 },
   { label: "Office Supplies", value: 8 }

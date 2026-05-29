@@ -65,7 +65,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://wa.me/971524860664?text=Hello%20Biazo%20International%2C%20I%20would%20like%20to%20get%20in%20touch%20regarding%20your%20products%20and%20services."
+              href="https://wa.me/971504620492?text=Hello%20Biazo%20International%2C%20I%20would%20like%20to%20get%20in%20touch%20regarding%20your%20products%20and%20services."
               target="_blank"
               rel="noopener noreferrer"
               data-testid="link-get-in-touch"

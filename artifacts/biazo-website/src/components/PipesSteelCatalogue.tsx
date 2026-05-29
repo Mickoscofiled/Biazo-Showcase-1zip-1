@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Pipette, Layers, FlaskConical, ChevronRight } from "lucide-react";
 
-const WA_BASE = "https://wa.me/971524860664?text=Hello%20Biazo%20International%2C%20I%20would%20like%20a%20quote%20for%20";
+const WA_BASE = "https://wa.me/971504620492?text=Hello%20Biazo%20International%2C%20I%20would%20like%20a%20quote%20for%20";
 
 const categories = [
   {
@@ -242,7 +242,7 @@ export default function PipesSteelCatalogue() {
             <p className="text-blue-200 text-sm">Send us your project requirements on WhatsApp and we'll respond with pricing within 24 hours.</p>
           </div>
           <a
-            href="https://wa.me/971524860664?text=Hello%20Biazo%20International%2C%20I%20have%20a%20project%20requiring%20pipes%2C%20steel%20or%20chemicals.%20Please%20assist%20with%20a%20quote."
+            href="https://wa.me/971504620492?text=Hello%20Biazo%20International%2C%20I%20have%20a%20project%20requiring%20pipes%2C%20steel%20or%20chemicals.%20Please%20assist%20with%20a%20quote."
             target="_blank"
             rel="noopener noreferrer"
             data-testid="link-pipes-steel-cta"

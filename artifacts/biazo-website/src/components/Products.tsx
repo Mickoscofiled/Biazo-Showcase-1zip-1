@@ -5,42 +5,47 @@ const products = [
   {
     title: "Automotive & Heavy Equipment",
     icon: <Car className="w-7 h-7 text-blue-600" />,
-    items: ["Heavy mining equipment", "Construction machines", "Grease, lubricants & compounds", "Engines", "Tyres", "Spare parts"],
+    items: ["Heavy mining equipment", "Construction machines", "Grease, lubricants & compounds", "Engines", "Tyres", "Spare parts", "Others"],
   },
   {
     title: "Welding Machines & Consumables",
     icon: <Settings className="w-7 h-7 text-blue-600" />,
-    items: ["MIG, TIG, Stick, Flux-cored machines", "PPRC Pipes", "Electrodes", "Filler wire", "Shielding gas", "Cutting torch & Tips", "Gloves, Aperon, Full Coverall"],
+    items: ["MIG, TIG, Stick, Flux-cored machines", "PPRC Pipes", "Electrodes", "Filler wire", "Shielding gas", "Cutting torch & Tips", "Gloves, Aperon, Full Coverall", "Others"],
   },
   {
     title: "IT Equipment & Accessories",
     icon: <Laptop className="w-7 h-7 text-blue-600" />,
-    items: ["Laptops & Accessories", "Printers & Cartridges", "Ethernet cable", "UPS Systems", "Resin joint kit", "Electric & Mining Cables"],
+    items: ["Laptops & Accessories", "Printers & Cartridges", "Ethernet cable", "UPS Systems", "Resin joint kit", "Electric & Mining Cables", "Others"],
   },
   {
     title: "Electrical Products",
     icon: <Zap className="w-7 h-7 text-blue-600" />,
-    items: ["Contactors", "Overload relays", "Switches and automation", "Plugs and sockets", "Lighting and accessories"],
+    items: ["Contactors", "Overload relays", "Switches and automation", "Plugs and sockets", "Lighting and accessories", "Cable & Wire", "Conduits", "Others"],
+  },
+  {
+    title: "Safety Solutions",
+    icon: <ShieldAlert className="w-7 h-7 text-blue-600" />,
+    items: ["Mining Safety Gear", "Geological Equipment & Accessories", "Workwear", "Others"],
   },
   {
     title: "Hand Tools & Power Tools",
     icon: <Wrench className="w-7 h-7 text-blue-600" />,
-    items: ["Precision Tools", "Power Tools & Accessories", "Garden Tools"],
+    items: ["Precision Tools", "Power Tools & Accessories", "Garden Tools", "Others"],
   },
   {
     title: "Pipes & Fittings",
     icon: <Pipette className="w-7 h-7 text-blue-600" />,
-    items: ["GI Pipes & PPRC Pipes", "Elbows, Tees, Reducers", "Couplings, Unions, Caps", "Plugs, Nipples, Bushings", "Adapters, Flanges"],
+    items: ["GI Pipes & PPRC Pipes", "HDPE Pipes", "PVC Pipes", "Black Steel Pipes", "Elbows, Tees, Reducers", "Couplings, Unions, Caps", "Plugs, Nipples, Bushings", "Adapters, Flanges", "Others"],
   },
   {
     title: "Steel & Metal",
     icon: <Construction className="w-7 h-7 text-blue-600" />,
-    items: ["Mild Steel Plates (HR & CR)", "Stainless & Galvanized Steel", "Chequered Plates", "RHS, Metal Bar", "Section/Channel/Structural", "Wear Plates", "Scaffolding & Formwork"],
+    items: ["Mild Steel Plates (HR & CR)", "Stainless & Galvanized Steel", "Chequered Plates", "RHS, Metal Bar", "Section/Channel/Structural", "Wear Plates", "Scaffolding & Formwork", "Others"],
   },
   {
     title: "Industrial & Lab Chemicals",
     icon: <FlaskConical className="w-7 h-7 text-blue-600" />,
-    items: ["Water treatment chemicals", "Scale inhibitors", "Antidote & Buffer solution", "Lab chemicals", "Solvents & Adhesives", "Oxidizers & Reducing agents"],
+    items: ["Water treatment chemicals", "Scale inhibitors", "Antidote & Buffer solution", "Lab chemicals", "Solvents & Adhesives", "Oxidizers & Reducing agents", "Others"],
   },
 ];
 
@@ -73,7 +78,7 @@ export default function Products() {
             transition={{ delay: 0.1 }}
             className="text-lg text-blue-600/70 max-w-2xl mx-auto"
           >
-            A comprehensive portfolio of high-quality industrial supplies across 9 major categories.
+            A comprehensive portfolio of high-quality industrial supplies across 9 major categories and more.
           </motion.p>
         </div>
 
@@ -95,8 +100,15 @@ export default function Products() {
               <h3 className="text-lg font-bold text-blue-900 mb-4 group-hover:text-blue-600 transition-colors">{category.title}</h3>
               <ul className="space-y-2">
                 {category.items.map((item, i) => (
-                  <li key={i} className="text-sm text-blue-600/55 flex items-start gap-2.5 group-hover:text-blue-600/80 transition-colors">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 shrink-0 group-hover:bg-blue-600 transition-colors" />
+                  <li
+                    key={i}
+                    className={`text-sm flex items-start gap-2.5 transition-colors ${
+                      item === "Others"
+                        ? "text-blue-400/60 italic group-hover:text-blue-500/70"
+                        : "text-blue-600/55 group-hover:text-blue-600/80"
+                    }`}
+                  >
+                    <span className={`w-1.5 h-1.5 rounded-full mt-1.5 shrink-0 transition-colors ${item === "Others" ? "bg-blue-200 group-hover:bg-blue-300" : "bg-blue-400 group-hover:bg-blue-600"}`} />
                     <span className="leading-snug">{item}</span>
                   </li>
                 ))}

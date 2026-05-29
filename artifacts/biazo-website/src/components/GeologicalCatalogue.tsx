@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { BookOpen, Tag, Package, Compass, Pickaxe, ChevronRight } from "lucide-react";
 
 const WA_URL =
-  "https://wa.me/971524860664?text=Hello%20Biazo%20International%2C%20I%20would%20like%20to%20request%20the%20Geological%20Catalogue%20and%20get%20a%20quote.";
+  "https://wa.me/971504620492?text=Hello%20Biazo%20International%2C%20I%20would%20like%20to%20request%20the%20Geological%20Catalogue%20and%20get%20a%20quote.";
 
 const categories = [
   {
@@ -10,41 +10,23 @@ const categories = [
     title: "Stationery & Labelling",
     pages: "Pages 3 – 12",
     items: [
-      "PVC Flagging Tapes — 11mm & 25mm widths, 50m/75m/100m rolls, 12 colours",
-      "Flagging Tape Dispenser — holds 2 × 50m rolls, waterproof Oxford fabric",
-      "PVC Flags on Wire Stakes — 500mm, 700mm, 900mm, 12 colours",
-      "Pin Tags on Wire Stakes — 500mm, 7 colours",
-      "Triangle Markers — 90mm × 120mm, UV-stabilised, 5 colours",
-      "Alutags — 25mm × 75mm aluminium tags with wire ties (pack of 1000)",
-      "Aluminium Labels with Copper Ties — 20mm × 100mm, 150mic",
-      "Pointed Aluminium Labels with Wire Ties — 23mm × 113mm, 150mic",
-      "Core Tray Tags",
-      "Steel Tags",
-      "Plastic Tags with Slots — 250mic",
-      "Plastic Tags — 600mic",
-      "Buff Tags",
-      "Large Plastic T-Markers",
+      "PVC Flagging Tapes",
+      "Flagging Tape Dispenser",
+      "PVC Flags on Wire Stakes",
+      "Pin Tags on Wire Stakes",
+      "Triangle Markers",
+      "Alutags",
+      "Aluminium Labels with Wire Ties",
+      "Core Tray Tags & Steel Tags",
+      "Plastic Tags & Buff Tags",
       "PVC Self-Tie Labels",
       "Field Books",
-      "Rite in the Rain Fabrikoid Cover Books",
-      "Rite in the Rain Field Desk",
-      "Rite in the Rain Dirtbag Pen Organizer",
-      "Rite in the Rain Lead Holder",
-      "Rite in the Rain Plastic Click Pen",
-      "Rite in the Rain Loose Leaf Pages",
-      "Peel-off China Markers",
-      "Edding Paint Markers",
-      "Rilbex Paint Markers",
+      "Rite in the Rain Books",
+      "Paint Markers & China Markers",
       "Tungsten Tipped Scribe",
-      "Magnet Pen",
-      "Douglas Protractor",
-      "Steel Protractor with Hinged Arm",
-      "Map Suspension Tape",
-      "SOLA Inclinometer",
-      "Triangular Scales",
-      "Sample Ticket Book",
-      "Dy-Mark Spray Paint",
-      "Mining Barrier Cones",
+      "Protractors & Triangular Scales",
+      "Inclinometer",
+      "Spray Paint & Barrier Cones",
     ],
   },
   {
@@ -52,11 +34,11 @@ const categories = [
     title: "Sample Storage",
     pages: "Pages 14 – 16",
     items: [
-      "Core trays — rigid and stackable for drill core samples",
-      "Sample bags — polyethylene and calico in multiple sizes",
-      "Specimen containers — labelled and sealable",
-      "Chip trays — for rock chip and cuttings samples",
-      "Durable outdoor-rated storage solutions",
+      "Core Trays",
+      "Sample Bags",
+      "Specimen Containers",
+      "Chip Trays",
+      "Outdoor-rated Storage Solutions",
     ],
   },
   {
@@ -64,16 +46,16 @@ const categories = [
     title: "Core & More",
     pages: "Pages 17 – 27",
     items: [
-      "Core cutting & splitting equipment",
-      "Core orientation tools",
-      "Geological hammers & chisels",
-      "Rock saws & grinding accessories",
-      "Sample preparation equipment",
-      "Core logging trays & forms",
-      "Magnifying loupes & hand lenses",
-      "UV lamps for mineral identification",
-      "Streak plates & hardness picks",
-      "Dilatometre & density measurement tools",
+      "Core Cutting & Splitting Equipment",
+      "Core Orientation Tools",
+      "Geological Hammers & Chisels",
+      "Rock Saws & Grinding Accessories",
+      "Sample Preparation Equipment",
+      "Core Logging Trays & Forms",
+      "Magnifying Loupes",
+      "UV Lamps",
+      "Streak Plates & Hardness Picks",
+      "Density Measurement Tools",
     ],
   },
   {
@@ -81,16 +63,13 @@ const categories = [
     title: "Exploration & Navigation",
     pages: "Pages 28 – 32",
     items: [
-      "Brunton compasses & geological compasses",
-      "Clinometers & dip meters",
-      "GPS devices & accessories",
-      "Map boards & drafting film",
-      "Map suspension tape",
-      "Ranging poles & survey pins",
-      "Pegs & lathes for grid marking",
-      "Survey tapes — fibreglass and steel",
-      "Theodolite accessories",
-      "Aerial survey support equipment",
+      "Brunton & Geological Compasses",
+      "Clinometers & Dip Meters",
+      "GPS Devices & Accessories",
+      "Map Boards & Drafting Film",
+      "Ranging Poles & Survey Pins",
+      "Survey Tapes",
+      "Theodolite Accessories",
     ],
   },
   {
@@ -98,18 +77,16 @@ const categories = [
     title: "Gold Mining Accessories",
     pages: "Pages 33 – 45",
     items: [
-      "Gold pans — plastic & steel, various sizes",
-      "Sluice boxes & accessories",
-      "Classifiers & screens — multiple mesh sizes",
-      "Snuffer bottles & suction tools",
-      "Black sand separators & magnetic separators",
-      "Mercury retorts & amalgamation equipment",
-      "Hand-held metal detectors",
-      "Mining safety gear & PPE",
-      "Mining barrier cones & tape",
-      "Workwear & high-visibility clothing",
-      "Geological equipment & accessories",
-      "Dy-Mark spray paint for site marking",
+      "Gold Pans",
+      "Sluice Boxes & Accessories",
+      "Classifiers & Screens",
+      "Snuffer Bottles & Suction Tools",
+      "Black Sand & Magnetic Separators",
+      "Mercury Retorts",
+      "Hand-held Metal Detectors",
+      "Mining Safety Gear & PPE",
+      "Workwear & Hi-Vis Clothing",
+      "Dy-Mark Spray Paint",
     ],
   },
 ];
@@ -149,7 +126,7 @@ export default function GeologicalCatalogue() {
               transition={{ delay: 0.1 }}
               className="text-lg text-blue-600/65 max-w-xl"
             >
-              Specialist equipment and supplies for geological fieldwork, mining exploration, and sample management — trusted by professionals across East Africa.
+              Specialist equipment and supplies for geological fieldwork, mining exploration, and sample management — trusted by professionals across the Continent.
             </motion.p>
           </div>
 
@@ -172,35 +149,35 @@ export default function GeologicalCatalogue() {
           </motion.a>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-30px" }}
-              transition={{ duration: 0.5, delay: (i % 2) * 0.1 }}
+              transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
               data-testid={`card-geo-${i}`}
-              className="group p-7 rounded-2xl bg-white hover:bg-blue-50 border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100"
+              className="group p-6 rounded-2xl bg-white hover:bg-blue-50 border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100"
             >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="p-3 rounded-xl bg-blue-50 border border-blue-100 group-hover:bg-blue-100 group-hover:scale-110 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-xl bg-blue-50 border border-blue-100 group-hover:bg-blue-100 group-hover:scale-110 transition-all duration-300 shrink-0">
                   {cat.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-blue-900 group-hover:text-blue-600 transition-colors">{cat.title}</h3>
-                  <span className="text-xs text-blue-500/60 font-medium">{cat.pages}</span>
+                  <h3 className="text-base font-bold text-blue-900 group-hover:text-blue-600 transition-colors leading-tight">{cat.title}</h3>
+                  <span className="text-xs text-blue-400 font-medium">{cat.pages}</span>
                 </div>
               </div>
 
-              <div className="w-full h-px bg-blue-100 my-4" />
+              <div className="w-full h-px bg-blue-100 mb-4" />
 
-              <ul className="space-y-2 columns-1 sm:columns-2 gap-x-6">
+              <ul className="space-y-1.5">
                 {cat.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-2 text-sm text-blue-600/55 group-hover:text-blue-600/80 transition-colors break-inside-avoid mb-1">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0 group-hover:bg-blue-600 transition-colors" />
-                    <span className="leading-snug">{item}</span>
+                  <li key={j} className="flex items-center gap-2 text-sm text-blue-600/60 group-hover:text-blue-700/70 transition-colors">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-300 shrink-0 group-hover:bg-blue-500 transition-colors" />
+                    {item}
                   </li>
                 ))}
               </ul>

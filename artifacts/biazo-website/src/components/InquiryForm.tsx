@@ -22,7 +22,7 @@ const PRODUCT_CATEGORIES = [
   "Other / Multiple Products",
 ];
 
-const WA_NUMBER = "971524860664";
+const WA_NUMBER = "971504620492";
 
 export default function InquiryForm() {
   const [form, setForm] = useState({ name: "", company: "", product: "", quantity: "", notes: "" });

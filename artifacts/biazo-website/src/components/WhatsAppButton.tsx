@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL = `https://wa.me/971524860664?text=Hello%20Biazo%20International%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20the%20following%20products%3A%20`;
+const WHATSAPP_URL = `https://wa.me/971504620492?text=Hello%20Biazo%20International%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20the%20following%20products%3A%20`;
 
 export default function WhatsAppButton() {
   const [open, setOpen] = useState(false);

@@ -45,8 +45,9 @@ export default function Footer() {
           <div>
             <h4 className="text-blue-100 font-semibold mb-5 text-sm uppercase tracking-wider">Contact</h4>
             <ul className="space-y-3 text-sm text-blue-300/50">
-              <li>+971 524 860 664</li>
-              <li>+971 568 878 801</li>
+              <li>+971 50 462 0492</li>
+              <li>+971 54 551 6485</li>
+              <li>+971 52 486 0664</li>
               <li className="pt-2">
                 <a href="https://www.biazointernational.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-100 transition-colors">
                   www.biazointernational.com
