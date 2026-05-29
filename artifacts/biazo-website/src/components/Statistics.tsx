@@ -41,15 +41,15 @@ function CountUp({ end, decimals = 1 }: { end: number; decimals?: number }) {
 
 export default function Statistics() {
   return (
-    <section id="statistics" className="py-24 bg-[#060f20] relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/8 blur-[100px] rounded-full" />
+    <section id="statistics" className="py-24 bg-blue-50 relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-200/30 blur-[100px] rounded-full" />
       <div className="container mx-auto px-4 lg:px-8 max-w-5xl relative z-10">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold tracking-widest uppercase mb-6"
+            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-blue-100 border border-blue-200 text-blue-600 text-xs font-semibold tracking-widest uppercase mb-6"
           >
             Portfolio Breakdown
           </motion.div>
@@ -57,7 +57,7 @@ export default function Statistics() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
+            className="text-3xl md:text-4xl font-bold text-blue-900 mb-4"
           >
             Product Distribution
           </motion.h2>
@@ -66,7 +66,7 @@ export default function Statistics() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-blue-200/60"
+            className="text-lg text-blue-600/70"
           >
             Breakdown of our key product supply portfolio across sectors.
           </motion.p>
@@ -84,18 +84,18 @@ export default function Statistics() {
               data-testid={`stat-${stat.label.toLowerCase().replace(/\s+/g, '-')}`}
             >
               <div className="flex justify-between items-end mb-2">
-                <span className="font-semibold text-blue-100 text-sm group-hover:text-white transition-colors">{stat.label}</span>
-                <span className="text-blue-400 font-bold text-sm tabular-nums">
+                <span className="font-semibold text-blue-800 text-sm group-hover:text-blue-900 transition-colors">{stat.label}</span>
+                <span className="text-blue-600 font-bold text-sm tabular-nums">
                   <CountUp end={stat.value} />%
                 </span>
               </div>
-              <div className="h-2.5 w-full bg-blue-950/80 rounded-full overflow-hidden border border-blue-900/30">
+              <div className="h-2.5 w-full bg-blue-100 rounded-full overflow-hidden border border-blue-200">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: `${stat.value}%` }}
                   viewport={{ once: true }}
                   transition={{ duration: 1.5, delay: i * 0.05, ease: "easeOut" }}
-                  className="h-full rounded-full bg-gradient-to-r from-blue-500 to-blue-400 shadow-sm shadow-blue-500/50"
+                  className="h-full rounded-full bg-gradient-to-r from-blue-600 to-sky-400 shadow-sm"
                 />
               </div>
             </motion.div>
