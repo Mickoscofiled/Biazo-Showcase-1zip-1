@@ -24,14 +24,14 @@ const brands = [
     title: "IT Equipment, Accessories & Cables",
     subtitle: "Computing · Networking · Cables",
     description: "Laptops & Accessories · Printers & Cartridges · Ethernet cable · UPS Systems · Resin joint kit · Electric & Mining Cables",
-    brandNames: ["APC","CyberPower","Dell","D-Link","3M","Ducab","Huadong","Nexans","RR Kabel"],
+    brandNames: ["APC","CyberPower","Dell","D-Link","Ducab","Huadong","Nexans","RR Kabel"],
   },
   {
     icon: <Zap className="w-7 h-7 text-blue-600" />,
     title: "Electrical Products",
     subtitle: "Automation · Lighting · Control",
     description: "Contactors · Overload relays · Switches & automation · Plugs & sockets · Lighting & accessories",
-    brandNames: ["OSRAM","Philips","Schneider Electric","Gewiss","Chint Electric","ABB","Legrand","Hager","Mitsubishi Electric","Siemens","Eaton"],
+    brandNames: ["OSRAM","Philips","Schneider Electric","Gewiss","Chint Electric","ABB","Legrand","Hager","Mitsubishi Electric","Siemens","Eaton","3M"],
   },
   {
     icon: <ShieldCheck className="w-7 h-7 text-blue-600" />,

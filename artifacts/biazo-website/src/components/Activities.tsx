@@ -1,13 +1,11 @@
 import { motion } from "framer-motion";
-import { Tractor, HardHat, Pickaxe, Flame, Stethoscope, FlaskConical, Landmark } from "lucide-react";
+import { Tractor, HardHat, Pickaxe, Flame, Landmark } from "lucide-react";
 
 const sectors = [
   { name: "Agriculture", icon: <Tractor className="w-5 h-5" /> },
   { name: "Construction", icon: <HardHat className="w-5 h-5" /> },
   { name: "Mining", icon: <Pickaxe className="w-5 h-5" /> },
   { name: "Oil & Gas", icon: <Flame className="w-5 h-5" /> },
-  { name: "Healthcare", icon: <Stethoscope className="w-5 h-5" /> },
-  { name: "Pharmaceuticals", icon: <FlaskConical className="w-5 h-5" /> },
   { name: "Government Institutions", icon: <Landmark className="w-5 h-5" /> }
 ];
 
@@ -42,7 +40,7 @@ export default function Activities() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-lg text-blue-600/70 max-w-2xl mx-auto mb-16"
         >
-          We supply essential materials and equipment to pivotal industries driving economic growth across East Africa and the UAE.
+          We supply essential materials and equipment to pivotal industries driving economic growth across the Continent and the UAE.
         </motion.p>
 
         <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
@@ -70,7 +68,7 @@ export default function Activities() {
           className="mt-16 p-8 rounded-2xl bg-white border border-blue-100 shadow-sm max-w-3xl mx-auto"
         >
           <p className="text-blue-700/70 leading-relaxed text-lg">
-            Leveraging our dual-hub operations in the <span className="text-blue-900 font-semibold">UAE</span> and <span className="text-blue-900 font-semibold">Uganda</span>, we deliver high-performance procurement services across East Africa, anchored by a commitment to operational transparency and efficiency.
+            Leveraging our dual-hub operations in the <span className="text-blue-900 font-semibold">UAE</span> and <span className="text-blue-900 font-semibold">Uganda</span>, we deliver high-performance procurement services across the Continent, anchored by a commitment to operational transparency and efficiency.
           </p>
         </motion.div>
       </div>

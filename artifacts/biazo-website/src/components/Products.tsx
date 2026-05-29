@@ -23,11 +23,6 @@ const products = [
     items: ["Contactors", "Overload relays", "Switches and automation", "Plugs and sockets", "Lighting and accessories"],
   },
   {
-    title: "Safety Solutions",
-    icon: <ShieldAlert className="w-7 h-7 text-blue-600" />,
-    items: ["Mining Safety Gear", "Geological Equipment & Accessories", "Workwear"],
-  },
-  {
     title: "Hand Tools & Power Tools",
     icon: <Wrench className="w-7 h-7 text-blue-600" />,
     items: ["Precision Tools", "Power Tools & Accessories", "Garden Tools"],
