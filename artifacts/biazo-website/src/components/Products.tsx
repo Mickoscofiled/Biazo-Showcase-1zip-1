@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Wrench, ShieldAlert, Laptop, Zap, Settings, Pipette, FlaskConical, Construction, Car } from "lucide-react";
+import { Wrench, Laptop, Zap, Settings, Pipette, FlaskConical, Construction, Car } from "lucide-react";
 
 const products = [
   {
@@ -10,7 +10,7 @@ const products = [
   {
     title: "Welding Machines & Consumables",
     icon: <Settings className="w-7 h-7 text-blue-600" />,
-    items: ["MIG, TIG, Stick, Flux-cored machines", "PPRC Pipes", "Electrodes", "Filler wire", "Shielding gas", "Cutting torch & Tips", "Gloves, Aperon, Full Coverall", "Others"],
+    items: ["MIG, TIG, Stick, Flux-cored machines", "Electrodes", "Filler wire", "Shielding gas", "Cutting torch & Tips", "Gloves, Aperon, Full Coverall", "Others"],
   },
   {
     title: "IT Equipment & Accessories",
@@ -21,11 +21,6 @@ const products = [
     title: "Electrical Products",
     icon: <Zap className="w-7 h-7 text-blue-600" />,
     items: ["Contactors", "Overload relays", "Switches and automation", "Plugs and sockets", "Lighting and accessories", "Cable & Wire", "Conduits", "Others"],
-  },
-  {
-    title: "Safety Solutions",
-    icon: <ShieldAlert className="w-7 h-7 text-blue-600" />,
-    items: ["Mining Safety Gear", "Geological Equipment & Accessories", "Workwear", "Others"],
   },
   {
     title: "Hand Tools & Power Tools",

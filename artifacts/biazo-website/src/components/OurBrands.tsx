@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Car, Settings, Laptop, Zap, ShieldCheck, Wrench } from "lucide-react";
+import { Car, Settings, Laptop, Zap, Wrench } from "lucide-react";
 
 const WA_URL =
   "https://wa.me/971504620492?text=Hello%20Biazo%20International%2C%20I%20would%20like%20to%20inquire%20about%20your%20brand%20products.";
@@ -16,7 +16,7 @@ const brands = [
     icon: <Settings className="w-7 h-7 text-blue-600" />,
     title: "Welding Machines & Consumables",
     subtitle: "MIG · TIG · STICK · FLUX-CORED",
-    description: "Welding machines · PPRC Pipes · Electrodes · Filler wire · Shielding gas · Cutting torch & Tips · Gloves · Aperon · Full Coverall",
+    description: "Welding machines · Electrodes · Filler wire · Shielding gas · Cutting torch & Tips · Gloves · Aperon · Full Coverall",
     brandNames: ["CIGWELD","AFROX","Lincoln Electric","TWECO","Harris","Victor","ESAB","Miller","Bossweld"],
   },
   {
@@ -32,13 +32,6 @@ const brands = [
     subtitle: "Automation · Lighting · Control",
     description: "Contactors · Overload relays · Switches & automation · Plugs & sockets · Lighting & accessories",
     brandNames: ["OSRAM","Philips","Schneider Electric","Gewiss","Chint Electric","ABB","Legrand","Hager","Mitsubishi Electric","Siemens","Eaton","3M","HellermannTyton"],
-  },
-  {
-    icon: <ShieldCheck className="w-7 h-7 text-blue-600" />,
-    title: "Safety Solutions",
-    subtitle: "Mining Safety · Geological · Workwear",
-    description: "Safety solutions · Mining safety gear · Geological equipment & accessories · Workwear",
-    brandNames: ["Voltex","Suunto","Bisley Workwear","Blundstone","Dy-Mark","Honeywell","DuPont","Specialized Coating Systems","Discoverer","Maxicut","Dräger","Dynamics G-Ex","MSA","3M"],
   },
   {
     icon: <Wrench className="w-7 h-7 text-blue-600" />,
