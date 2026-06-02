@@ -3,13 +3,13 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 import logoPath from "@assets/biazo-logo-transparent.png";
 
 export default function Hero() {
-  const textContainer: Variants = {
+  const textContainer: any = {
     hidden: { opacity: 0 },
     show: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 0.4 } }
   };
-  const textItem: Variants = {
+  const textItem: any = {
     hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: "easeOut" } }
+    show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: "easeOut" as any } }
   };
 
   return (
@@ -18,17 +18,17 @@ export default function Hero() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{ y: [0, -30, 0], scale: [1, 1.08, 1] }}
-          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" as any }}
           className="absolute top-[-10%] right-[-10%] w-[700px] h-[700px] rounded-full bg-blue-100/60 blur-[130px]"
         />
         <motion.div
           animate={{ y: [0, 25, 0], scale: [1, 1.06, 1] }}
-          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" as any, delay: 1.5 }}
           className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-sky-100/50 blur-[110px]"
         />
         <motion.div
           animate={{ x: [0, 20, 0], y: [0, -15, 0] }}
-          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" as any, delay: 3 }}
           className="absolute top-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-blue-50/80 blur-[90px]"
         />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.04)_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -45,7 +45,7 @@ export default function Hero() {
           <motion.div variants={textItem} className="relative mb-2">
             <motion.div
               animate={{ scale: [1, 1.04, 1] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as any }}
               className="absolute inset-0 rounded-3xl bg-blue-200/30 blur-2xl scale-125"
             />
             <div className="relative inline-block">
@@ -104,7 +104,7 @@ export default function Hero() {
           <motion.div variants={textItem} className="mt-8">
             <motion.div
               animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" as any }}
             >
               <ChevronDown className="text-blue-300 w-8 h-8" />
             </motion.div>

@@ -68,7 +68,7 @@ export default function WhatsAppButton() {
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
         animate={open ? {} : { y: [0, -4, 0] }}
-        transition={open ? {} : { duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+        transition={open ? {} : { duration: 2.5, repeat: Infinity, ease: "easeInOut" as any }}
         className="relative w-16 h-16 rounded-full bg-[#25D366] shadow-2xl shadow-green-300/50 flex items-center justify-center text-white hover:bg-[#20c05c] transition-colors"
         aria-label="Chat on WhatsApp"
       >

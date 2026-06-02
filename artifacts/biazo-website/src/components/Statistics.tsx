@@ -96,7 +96,7 @@ export default function Statistics() {
                   initial={{ width: 0 }}
                   whileInView={{ width: `${stat.value}%` }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1.5, delay: i * 0.05, ease: "easeOut" }}
+                  transition={{ duration: 1.5, delay: i * 0.05, ease: "easeOut" as any }}
                   className="h-full rounded-full bg-gradient-to-r from-blue-600 to-sky-400 shadow-sm"
                 />
               </div>
