@@ -1,13 +1,13 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import logoPath from "@assets/biazo-logo-transparent.png";
 
 export default function Hero() {
-  const textContainer = {
+  const textContainer: Variants = {
     hidden: { opacity: 0 },
     show: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 0.4 } }
   };
-  const textItem = {
+  const textItem: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: "easeOut" } }
   };
