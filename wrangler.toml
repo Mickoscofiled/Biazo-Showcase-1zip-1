@@ -1,0 +1,6 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "blazoshowcase"
+compatibility_date = "2025-06-02"
+
+# Deploy as a static Pages site
+pages_build_output_dir = "artifacts/biazo-website/dist/public"
