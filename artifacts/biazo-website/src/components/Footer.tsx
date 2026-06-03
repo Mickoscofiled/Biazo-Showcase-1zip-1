@@ -18,8 +18,8 @@ export default function Footer() {
   return (
     <footer className="relative bg-[#0f172a] text-slate-400 py-20 overflow-hidden">
       {/* Background glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#7391D1]/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(115,145,209,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(115,145,209,0.03)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#1E90FF]/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(30,144,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(30,144,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none" />
 
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         <motion.div
@@ -43,7 +43,7 @@ export default function Footer() {
               <a
                 href="mailto:sales@biazointernational.com"
                 data-testid="link-footer-email"
-                className="text-xs text-slate-400 hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-full active:scale-95 border border-white/10 hover:border-[#7391D1]/50 hover:bg-[#7391D1]/10 shadow-sm"
+                className="text-xs text-slate-400 hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-full active:scale-95 border border-white/10 hover:border-[#1E90FF]/50 hover:bg-[#1E90FF]/10 shadow-sm"
               >
                 sales@biazointernational.com
               </a>
@@ -57,7 +57,7 @@ export default function Footer() {
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase().replace(/\s+/g, '')}`}
-                    className="text-slate-400 hover:text-[#7391D1] transition-colors"
+                    className="text-slate-400 hover:text-[#1E90FF] transition-colors"
                   >
                     {item}
                   </a>
@@ -73,7 +73,7 @@ export default function Footer() {
               <li>+971 54 551 6485</li>
               <li>+971 52 486 0664</li>
               <li className="pt-2">
-                <a href="https://www.biazointernational.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#7391D1] transition-colors">
+                <a href="https://www.biazointernational.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#1E90FF] transition-colors">
                   www.biazointernational.com
                 </a>
               </li>

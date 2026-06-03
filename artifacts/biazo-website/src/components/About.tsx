@@ -60,11 +60,11 @@ export default function About() {
 
             <motion.div variants={itemVariant} className="grid sm:grid-cols-2 gap-8 mt-10 pt-10 border-t border-slate-200">
               <div>
-                <h4 className="text-5xl font-bold bg-gradient-to-r from-primary to-[#a3b8e0] bg-clip-text text-transparent mb-2">2008</h4>
+                <h4 className="text-5xl font-bold bg-gradient-to-r from-primary to-[#66b3ff] bg-clip-text text-transparent mb-2">2008</h4>
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider">Uganda Roots Established</p>
               </div>
               <div>
-                <h4 className="text-5xl font-bold bg-gradient-to-r from-primary to-[#a3b8e0] bg-clip-text text-transparent mb-2">2022</h4>
+                <h4 className="text-5xl font-bold bg-gradient-to-r from-primary to-[#66b3ff] bg-clip-text text-transparent mb-2">2022</h4>
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider">UAE Hub Launched</p>
               </div>
             </motion.div>

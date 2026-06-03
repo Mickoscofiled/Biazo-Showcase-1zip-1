@@ -19,7 +19,7 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, -40, 0], x: [0, 20, 0], scale: [1, 1.1, 1] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" as any }}
-          className="absolute top-[-20%] right-[-15%] w-[800px] h-[800px] rounded-full bg-[#7391D1]/25 blur-[120px]"
+          className="absolute top-[-20%] right-[-15%] w-[800px] h-[800px] rounded-full bg-[#1E90FF]/25 blur-[120px]"
         />
         <motion.div
           animate={{ y: [0, 30, 0], x: [0, -20, 0], scale: [1, 1.08, 1] }}
@@ -32,7 +32,7 @@ export default function Hero() {
           className="absolute top-[20%] left-[40%] w-[500px] h-[500px] rounded-full bg-indigo-500/10 blur-[90px]"
         />
         {/* Subtle grid overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(115,145,209,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(115,145,209,0.04)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(30,144,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(30,144,255,0.04)_1px,transparent_1px)] bg-[size:60px_60px]" />
         {/* Vignette */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(15,23,42,0.6)_100%)]" />
       </div>
@@ -49,14 +49,14 @@ export default function Hero() {
             <motion.div
               animate={{ scale: [1, 1.06, 1], opacity: [0.4, 0.6, 0.4] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as any }}
-              className="absolute inset-0 rounded-full bg-[#7391D1]/30 blur-3xl scale-150"
+              className="absolute inset-0 rounded-full bg-[#1E90FF]/30 blur-3xl scale-150"
             />
             <div className="relative inline-block">
               <img
                 src={logoPath}
                 alt="Biazo International Logo"
                 data-testid="img-hero-logo"
-                className="h-28 md:h-40 w-auto object-contain drop-shadow-[0_0_30px_rgba(115,145,209,0.4)] brightness-0 invert"
+                className="h-28 md:h-40 w-auto object-contain drop-shadow-[0_0_30px_rgba(30,144,255,0.4)] brightness-0 invert"
               />
             </div>
           </motion.div>
@@ -76,7 +76,7 @@ export default function Hero() {
             className="text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold tracking-tight leading-[1.05]"
           >
             <span className="block text-white">Global Trading,</span>
-            <span className="block bg-gradient-to-r from-[#7391D1] via-[#93b0e8] to-[#7391D1] bg-clip-text text-transparent pb-2">
+            <span className="block bg-gradient-to-r from-[#1E90FF] via-[#66b3ff] to-[#1E90FF] bg-clip-text text-transparent pb-2">
               Precision Delivered.
             </span>
           </motion.h1>
@@ -94,7 +94,7 @@ export default function Hero() {
             <a
               href="#products"
               data-testid="link-explore-products"
-              className="group flex items-center gap-2 bg-[#7391D1] text-white px-8 py-4 rounded-full active:scale-95 font-bold text-lg transition-all shadow-[0_0_30px_rgba(115,145,209,0.3)] hover:shadow-[0_0_40px_rgba(115,145,209,0.5)] hover:scale-105 hover:bg-[#8aa3dc]"
+              className="group flex items-center gap-2 bg-[#1E90FF] text-white px-8 py-4 rounded-full active:scale-95 font-bold text-lg transition-all shadow-[0_0_30px_rgba(30,144,255,0.3)] hover:shadow-[0_0_40px_rgba(30,144,255,0.5)] hover:scale-105 hover:bg-[#4da6ff]"
             >
               Explore Products
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />

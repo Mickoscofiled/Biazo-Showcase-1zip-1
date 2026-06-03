@@ -112,7 +112,7 @@ export default function Statistics() {
                   whileInView={{ width: `${stat.value}%` }}
                   viewport={{ once: true }}
                   transition={{ duration: 1.5, delay: i * 0.05, ease: "easeOut" as any }}
-                  className="h-full rounded-full bg-gradient-to-r from-primary to-[#a3b8e0] shadow-[0_0_8px_rgba(115,145,209,0.4)]"
+                  className="h-full rounded-full bg-gradient-to-r from-primary to-[#66b3ff] shadow-[0_0_8px_rgba(30,144,255,0.4)]"
                 />
               </div>
             </motion.div>
