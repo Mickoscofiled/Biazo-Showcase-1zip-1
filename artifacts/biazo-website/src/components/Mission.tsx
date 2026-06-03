@@ -75,7 +75,9 @@ export default function Mission() {
             <motion.div
               key={card.title}
               variants={itemVariant}
-              className={`group relative p-8 rounded-2xl border border-slate-100 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden`}
+              whileHover={{ y: -8, scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className={`group relative p-8 rounded-2xl border border-slate-100 bg-white transition-all duration-300 hover:shadow-lg overflow-hidden`}
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:bg-primary/10 transition-all" />
               <div className="relative">

@@ -81,7 +81,9 @@ export default function About() {
               <motion.div
                 key={i}
                 variants={itemVariant}
-                className="group flex gap-4 p-6 bg-slate-50 hover:bg-white rounded-2xl border border-transparent hover:border-slate-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                whileHover={{ y: -8, scale: 1.01 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="group flex gap-4 p-6 bg-slate-50 hover:bg-white rounded-2xl border border-transparent hover:border-slate-200 transition-all duration-300 hover:shadow-lg"
               >
                 <div className="shrink-0 mt-1 p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
                   <div className="text-primary">{feature.icon}</div>
