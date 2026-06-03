@@ -10,8 +10,7 @@ const sectors = [
   { name: "Agriculture", icon: <Tractor className="w-5 h-5" /> },
   { name: "Construction", icon: <HardHat className="w-5 h-5" /> },
   { name: "Mining", icon: <Pickaxe className="w-5 h-5" /> },
-  { name: "Oil & Gas", icon: <Flame className="w-5 h-5" /> },
-  { name: "Government Institutions", icon: <Landmark className="w-5 h-5" /> }
+  { name: "Oil & Gas", icon: <Flame className="w-5 h-5" /> }
 ];
 
 const sectorImages = [
