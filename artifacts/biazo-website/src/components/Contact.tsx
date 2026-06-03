@@ -23,8 +23,8 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(100,149,237,0.07),transparent_70%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(100,149,237,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(100,149,237,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(115,145,209,0.07),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(115,145,209,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(115,145,209,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
       <div className="container mx-auto px-4 lg:px-8 max-w-6xl relative z-10">
         <motion.div
@@ -45,7 +45,7 @@ export default function Contact() {
             className="text-4xl md:text-5xl font-bold text-slate-800 mb-4"
           >
             We Look Forward to<br />
-            <span className="bg-gradient-to-r from-primary to-[#87CEEB] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-[#a3b8e0] bg-clip-text text-transparent">
               Working With You!
             </span>
           </motion.h2>

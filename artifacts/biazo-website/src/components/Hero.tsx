@@ -19,17 +19,17 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, -30, 0], scale: [1, 1.08, 1] }}
           transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" as any }}
-          className="absolute top-[-10%] right-[-10%] w-[700px] h-[700px] rounded-full bg-primary/5 blur-[120px]"
+          className="absolute top-[-10%] right-[-10%] w-[700px] h-[700px] rounded-full bg-primary/15 blur-[100px]"
         />
         <motion.div
           animate={{ y: [0, 25, 0], scale: [1, 1.06, 1] }}
           transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" as any, delay: 1.5 }}
-          className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-blue-400/5 blur-[100px]"
+          className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-blue-400/10 blur-[90px]"
         />
         <motion.div
           animate={{ x: [0, 20, 0], y: [0, -15, 0] }}
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" as any, delay: 3 }}
-          className="absolute top-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-indigo-400/5 blur-[90px]"
+          className="absolute top-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-indigo-400/10 blur-[80px]"
         />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(248,250,252,0.8)_100%)]" />
       </div>
@@ -87,7 +87,7 @@ export default function Hero() {
             <a
               href="#products"
               data-testid="link-explore-products"
-              className="group flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full active:scale-95 font-bold text-lg transition-all shadow-lg hover:shadow-xl hover:shadow-primary/20 hover:scale-105 hover:bg-primary/90"
+              className="group flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full active:scale-95 font-bold text-lg transition-all shadow-lg hover:shadow-[0_0_25px_rgba(115,145,209,0.5)] hover:scale-105 hover:bg-primary/90"
             >
               Explore Products
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />

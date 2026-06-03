@@ -103,7 +103,7 @@ export default function Products() {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
               data-testid={`card-product-${idx}`}
-              className="group bg-white p-7 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300"
+              className="group bg-white p-7 rounded-2xl border border-slate-100 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
               <div className="mb-5 bg-primary/5 w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
                 <div className="text-primary">{category.icon}</div>

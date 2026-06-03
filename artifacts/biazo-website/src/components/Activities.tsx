@@ -79,7 +79,7 @@ export default function Activities() {
               variants={itemVariant}
               whileHover={{ y: -5 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="group relative rounded-3xl overflow-hidden aspect-[4/5] shadow-lg cursor-default"
+              className="group relative rounded-3xl overflow-hidden aspect-[4/5] shadow-lg cursor-default hover:shadow-xl hover:shadow-primary/20 transition-shadow duration-300"
             >
               <div className="absolute inset-0 bg-slate-900">
                 <img

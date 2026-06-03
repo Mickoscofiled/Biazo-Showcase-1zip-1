@@ -77,7 +77,7 @@ export default function Mission() {
               variants={itemVariant}
               whileHover={{ y: -5 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className={`group relative p-8 rounded-2xl border border-slate-100 bg-white transition-all duration-300 hover:shadow-lg overflow-hidden`}
+              className={`group relative p-8 rounded-2xl border border-slate-100 hover:border-primary/20 bg-white transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 overflow-hidden`}
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:bg-primary/10 transition-all" />
               <div className="relative">

@@ -60,11 +60,11 @@ export default function About() {
 
             <motion.div variants={itemVariant} className="grid sm:grid-cols-2 gap-8 mt-10 pt-10 border-t border-slate-200">
               <div>
-                <h4 className="text-5xl font-bold bg-gradient-to-r from-primary to-[#87CEEB] bg-clip-text text-transparent mb-2">2008</h4>
+                <h4 className="text-5xl font-bold bg-gradient-to-r from-primary to-[#a3b8e0] bg-clip-text text-transparent mb-2">2008</h4>
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider">Uganda Roots Established</p>
               </div>
               <div>
-                <h4 className="text-5xl font-bold bg-gradient-to-r from-primary to-[#87CEEB] bg-clip-text text-transparent mb-2">2022</h4>
+                <h4 className="text-5xl font-bold bg-gradient-to-r from-primary to-[#a3b8e0] bg-clip-text text-transparent mb-2">2022</h4>
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider">UAE Hub Launched</p>
               </div>
             </motion.div>
@@ -83,7 +83,7 @@ export default function About() {
                 variants={itemVariant}
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="group flex gap-4 p-6 bg-slate-50 hover:bg-white rounded-2xl border border-transparent hover:border-slate-200 transition-all duration-300 hover:shadow-lg"
+                className="group flex gap-4 p-6 bg-slate-50 hover:bg-white rounded-2xl border border-transparent hover:border-primary/20 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
               >
                 <div className="shrink-0 mt-1 p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
                   <div className="text-primary">{feature.icon}</div>
