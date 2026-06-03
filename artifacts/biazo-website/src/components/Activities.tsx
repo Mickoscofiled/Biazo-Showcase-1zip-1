@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { Tractor, HardHat, Pickaxe, Flame, Landmark } from "lucide-react";
 
-import agriImg from "@assets/sectors/agriculture.png";
-import constImg from "@assets/sectors/construction.png";
-import miningImg from "@assets/sectors/mining.png";
-import oilImg from "@assets/sectors/oil-gas.png";
+import agriImg from "@/assets/sectors/agriculture.png";
+import constImg from "@/assets/sectors/construction.png";
+import miningImg from "@/assets/sectors/mining.png";
+import oilImg from "@/assets/sectors/oil-gas.png";
 
 const sectors = [
   { name: "Agriculture", icon: <Tractor className="w-5 h-5" /> },
