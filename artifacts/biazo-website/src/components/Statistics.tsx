@@ -41,6 +41,7 @@ function CountUp({ end, decimals = 1 }: { end: number; decimals?: number }) {
   return <span ref={ref}>{count.toFixed(decimals)}</span>;
 }
 
+export default function Statistics() {
   const containerVariant = {
     hidden: { opacity: 0 },
     show: {

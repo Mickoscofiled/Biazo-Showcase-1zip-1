@@ -99,6 +99,7 @@ const categories = [
   },
 ];
 
+export default function PipesSteelCatalogue() {
   const containerVariant = {
     hidden: { opacity: 0 },
     show: {

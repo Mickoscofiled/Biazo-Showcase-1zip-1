@@ -7,6 +7,7 @@ const WA_ICON = (
   </svg>
 );
 
+export default function Contact() {
   const containerVariant = {
     hidden: { opacity: 0 },
     show: {

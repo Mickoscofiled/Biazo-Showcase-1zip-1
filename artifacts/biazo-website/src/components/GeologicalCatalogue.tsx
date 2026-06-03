@@ -91,6 +91,7 @@ const categories = [
   },
 ];
 
+export default function GeologicalCatalogue() {
   const containerVariant = {
     hidden: { opacity: 0 },
     show: {
