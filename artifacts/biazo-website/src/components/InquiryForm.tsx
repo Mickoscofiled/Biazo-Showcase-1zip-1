@@ -237,7 +237,7 @@ export default function InquiryForm() {
                     <button
                       type="submit"
                       data-testid="button-inquiry-submit"
-                      className={`w-full flex items-center justify-center gap-2.5 py-4 rounded-xl font-semibold text-base transition-all duration-200 ${
+                      className={`w-full flex items-center justify-center gap-2.5 py-4 rounded-full active:scale-[0.98] font-semibold text-base transition-all duration-200 ${
                         isValid
                           ? "bg-[#25D366] hover:bg-[#20c05c] text-white shadow-lg shadow-green-200 hover:shadow-green-300 hover:scale-[1.02]"
                           : "bg-blue-50 text-blue-300 border border-blue-100 cursor-not-allowed"

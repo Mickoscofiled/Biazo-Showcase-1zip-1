@@ -87,7 +87,7 @@ export default function Hero() {
             <a
               href="#products"
               data-testid="link-explore-products"
-              className="group flex items-center gap-2 bg-white text-[#6495ED] px-8 py-4 rounded-full font-bold text-lg transition-all shadow-2xl hover:shadow-white/40 hover:scale-105"
+              className="group flex items-center gap-2 bg-white text-[#6495ED] px-8 py-4 rounded-full active:scale-95 font-bold text-lg transition-all shadow-2xl hover:shadow-white/40 hover:scale-105"
             >
               Explore Products
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -95,7 +95,7 @@ export default function Hero() {
             <a
               href="#contact"
               data-testid="link-contact-sales"
-              className="flex items-center gap-2 bg-transparent text-white border-2 border-white/40 hover:bg-white/10 hover:border-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105"
+              className="flex items-center gap-2 bg-transparent text-white border-2 border-white/40 hover:bg-white/10 hover:border-white px-8 py-4 rounded-full active:scale-95 font-bold text-lg transition-all hover:scale-105"
             >
               Contact Sales
             </a>

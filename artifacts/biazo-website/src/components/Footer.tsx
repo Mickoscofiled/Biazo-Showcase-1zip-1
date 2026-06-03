@@ -40,7 +40,7 @@ export default function Footer() {
               <a
                 href="mailto:sales@biazointernational.com"
                 data-testid="link-footer-email"
-                className="text-xs text-slate-400 hover:text-white transition-colors bg-slate-800/60 px-3 py-1.5 rounded-lg border border-slate-700/50 hover:border-primary/50 hover:bg-primary/10"
+                className="text-xs text-slate-400 hover:text-white transition-colors bg-slate-800/60 px-4 py-2 rounded-full active:scale-95 border border-slate-700/50 hover:border-primary/50 hover:bg-primary/10 shadow-sm"
               >
                 sales@biazointernational.com
               </a>

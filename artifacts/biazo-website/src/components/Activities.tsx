@@ -67,7 +67,7 @@ export default function Activities() {
               key={sector.name}
               variants={itemVariant}
               whileHover={{ scale: 1.06, y: -4, transition: { duration: 0.2 } }}
-              className="group flex items-center gap-3 bg-white hover:bg-primary border border-slate-200 hover:border-primary px-6 py-3.5 rounded-2xl text-base font-semibold text-slate-700 hover:text-primary-foreground transition-all duration-300 cursor-default shadow-sm hover:shadow-xl hover:shadow-primary/20"
+              className="group flex items-center gap-3 bg-white hover:bg-primary border border-slate-200 hover:border-primary px-6 py-3.5 rounded-full active:scale-95 text-base font-semibold text-slate-700 hover:text-primary-foreground transition-all duration-300 cursor-default shadow-sm hover:shadow-xl hover:shadow-primary/20"
             >
               <span className="text-primary group-hover:text-primary-foreground/90 transition-colors">{sector.icon}</span>
               {sector.name}
