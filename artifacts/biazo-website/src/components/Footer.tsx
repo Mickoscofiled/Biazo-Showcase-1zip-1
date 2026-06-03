@@ -17,7 +17,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-900 text-slate-300 py-14 border-t border-slate-800">
+    <footer className="bg-slate-900 text-slate-400 py-20 border-t border-slate-800/50">
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         <motion.div
           initial="hidden"
@@ -48,7 +48,7 @@ export default function Footer() {
           </motion.div>
 
           <motion.div variants={itemVariant}>
-            <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Quick Links</h4>
+            <h4 className="text-white font-semibold mb-5 text-xs uppercase tracking-widest">Quick Links</h4>
             <ul className="space-y-3 text-sm">
               {["About Us", "Sectors", "Products", "Statistics", "Contact"].map((item) => (
                 <li key={item}>
@@ -64,7 +64,7 @@ export default function Footer() {
           </motion.div>
 
           <motion.div variants={itemVariant}>
-            <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Contact</h4>
+            <h4 className="text-white font-semibold mb-5 text-xs uppercase tracking-widest">Contact</h4>
             <ul className="space-y-3 text-sm text-slate-400">
               <li>+971 50 462 0492</li>
               <li>+971 54 551 6485</li>

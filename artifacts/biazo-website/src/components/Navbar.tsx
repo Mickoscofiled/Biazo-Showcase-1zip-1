@@ -53,15 +53,15 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-white/90 hover:text-white transition-colors relative group"
+                className="text-[13px] font-medium text-white/80 hover:text-white transition-colors relative group"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-white/80 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
             <a
@@ -95,7 +95,7 @@ export default function Navbar() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-slate-100 shadow-2xl"
+          className="lg:hidden bg-white backdrop-blur-xl border-t border-slate-100/60 shadow-xl"
         >
           <div className="container mx-auto px-4 py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
@@ -103,7 +103,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-medium text-slate-700 py-2.5 px-3 rounded-lg border-b border-slate-50 hover:bg-primary/10 hover:text-primary transition-colors"
+                className="text-sm font-medium text-slate-600 py-3 px-4 rounded-xl hover:bg-slate-50 hover:text-slate-900 transition-colors"
               >
                 {link.name}
               </a>

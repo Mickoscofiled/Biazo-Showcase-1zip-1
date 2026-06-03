@@ -56,8 +56,8 @@ export default function Statistics() {
   };
 
   return (
-    <section id="statistics" className="py-24 bg-slate-50 relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/10 blur-[100px] rounded-full" />
+    <section id="statistics" className="py-28 bg-white relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/5 blur-[100px] rounded-full" />
       <div className="container mx-auto px-4 lg:px-8 max-w-5xl relative z-10">
         <motion.div
           initial="hidden"
@@ -68,7 +68,7 @@ export default function Statistics() {
         >
           <motion.div
             variants={itemVariant}
-            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-widest uppercase mb-6"
+            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/5 text-primary text-xs font-semibold tracking-widest uppercase mb-6"
           >
             Portfolio Breakdown
           </motion.div>
@@ -106,7 +106,7 @@ export default function Statistics() {
                   <CountUp end={stat.value} />%
                 </span>
               </div>
-              <div className="h-2.5 w-full bg-slate-200 rounded-full overflow-hidden border border-slate-300">
+              <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: `${stat.value}%` }}

@@ -40,8 +40,8 @@ export default function Mission() {
   };
 
   return (
-    <section id="mission" className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary/10 blur-[100px] rounded-full" />
+    <section id="mission" className="py-28 bg-slate-50/50 relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary/5 blur-[100px] rounded-full" />
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         <motion.div
           initial="hidden"
@@ -52,7 +52,7 @@ export default function Mission() {
         >
           <motion.div
             variants={itemVariant}
-            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-widest uppercase mb-6"
+            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/5 text-primary text-xs font-semibold tracking-widest uppercase mb-6"
           >
             Our Foundation
           </motion.div>
@@ -75,7 +75,7 @@ export default function Mission() {
             <motion.div
               key={card.title}
               variants={itemVariant}
-              className={`group relative p-8 rounded-2xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 overflow-hidden`}
+              className={`group relative p-8 rounded-2xl border border-slate-100 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden`}
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:bg-primary/10 transition-all" />
               <div className="relative">

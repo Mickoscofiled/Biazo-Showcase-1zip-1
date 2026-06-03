@@ -34,8 +34,8 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-24 bg-slate-50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(100,149,237,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(100,149,237,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
+    <section id="about" className="py-28 bg-white relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -45,7 +45,7 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             variants={containerVariant}
           >
-            <motion.div variants={itemVariant} className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-widest uppercase mb-6">
+            <motion.div variants={itemVariant} className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/5 text-primary text-xs font-semibold tracking-widest uppercase mb-6">
               Our Story
             </motion.div>
             <motion.h2 variants={itemVariant} className="text-3xl md:text-4xl font-bold mb-6 text-slate-800 leading-tight">
@@ -81,7 +81,7 @@ export default function About() {
               <motion.div
                 key={i}
                 variants={itemVariant}
-                className="group flex gap-4 p-6 bg-white hover:bg-slate-50 rounded-2xl border border-slate-100 hover:border-primary/20 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1"
+                className="group flex gap-4 p-6 bg-slate-50 hover:bg-white rounded-2xl border border-transparent hover:border-slate-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
                 <div className="shrink-0 mt-1 p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
                   <div className="text-primary">{feature.icon}</div>

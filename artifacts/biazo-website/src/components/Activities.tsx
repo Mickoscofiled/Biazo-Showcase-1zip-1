@@ -24,9 +24,9 @@ export default function Activities() {
   };
 
   return (
-    <section id="sectors" className="py-24 bg-slate-50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(100,149,237,0.06),transparent_70%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(100,149,237,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(100,149,237,0.04)_1px,transparent_1px)] bg-[size:60px_60px]" />
+    <section id="sectors" className="py-28 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(100,149,237,0.03),transparent_70%)]" />
+      {/* clean bg */}
 
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10 text-center">
         <motion.div
@@ -37,7 +37,7 @@ export default function Activities() {
         >
           <motion.div
             variants={itemVariant}
-            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-widest uppercase mb-6"
+            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/5 text-primary text-xs font-semibold tracking-widest uppercase mb-6"
           >
             Industries We Serve
           </motion.div>
@@ -80,7 +80,7 @@ export default function Activities() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-16 p-8 rounded-2xl bg-white border border-slate-100 shadow-sm max-w-3xl mx-auto"
+          className="mt-16 p-8 rounded-2xl bg-slate-50 border border-slate-100 max-w-3xl mx-auto"
         >
           <p className="text-slate-600 leading-relaxed text-lg">
             Leveraging our dual-hub operations in the <span className="text-slate-800 font-semibold">UAE</span> and <span className="text-slate-800 font-semibold">Uganda</span>, we deliver high-performance procurement services across the Continent, anchored by a commitment to operational transparency and efficiency.

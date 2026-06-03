@@ -59,8 +59,8 @@ export default function Products() {
   };
 
   return (
-    <section id="products" className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(100,149,237,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(100,149,237,0.03)_1px,transparent_1px)] bg-[size:80px_80px]" />
+    <section id="products" className="py-28 bg-slate-50/50 relative overflow-hidden">
+      <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         <motion.div
           initial="hidden"
@@ -71,7 +71,7 @@ export default function Products() {
         >
           <motion.div
             variants={itemVariant}
-            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-widest uppercase mb-6"
+            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/5 text-primary text-xs font-semibold tracking-widest uppercase mb-6"
           >
             What We Supply
           </motion.div>
@@ -102,9 +102,9 @@ export default function Products() {
               variants={itemVariant}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
               data-testid={`card-product-${idx}`}
-              className="group bg-white p-7 rounded-2xl border border-slate-100 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
+              className="group bg-white p-7 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300"
             >
-              <div className="mb-5 bg-primary/5 border border-primary/10 w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+              <div className="mb-5 bg-primary/5 w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
                 <div className="text-primary">{category.icon}</div>
               </div>
               <h3 className="text-lg font-bold text-slate-800 mb-4 group-hover:text-primary transition-colors">{category.title}</h3>

@@ -13,7 +13,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-br from-[#6495ED] via-[#5282d6] to-[#2857a8] text-white">
+    <section className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-br from-[#6495ED] via-[#5a8ae0] to-[#3a6fd4] text-white">
       {/* Subtle animated light orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -31,7 +31,7 @@ export default function Hero() {
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" as any, delay: 3 }}
           className="absolute top-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-white/5 blur-[90px]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="absolute inset-0" />
       </div>
 
       <div className="container relative z-10 px-4 lg:px-8 max-w-6xl mx-auto text-center">
@@ -70,15 +70,15 @@ export default function Hero() {
             variants={textItem}
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05]"
           >
-            <span className="block text-white drop-shadow-md">Global Trading,</span>
-            <span className="block text-white/90 drop-shadow-md pb-2">
+            <span className="block text-white">Global Trading,</span>
+            <span className="block text-white/90 pb-2">
               Precision Delivered.
             </span>
           </motion.h1>
 
           <motion.p
             variants={textItem}
-            className="text-lg md:text-xl text-blue-50 max-w-2xl mx-auto leading-relaxed drop-shadow-sm font-medium"
+            className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed font-normal"
           >
             Biazo International connects markets with essential products across Agriculture, Construction, Mining, Oil & Gas, and Healthcare — delivering value through our dual hubs in the UAE and Uganda.
           </motion.p>
