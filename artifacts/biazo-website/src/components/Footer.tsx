@@ -1,5 +1,4 @@
 import logoPath from "@assets/biazo-logo-transparent.png";
-
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -17,8 +16,12 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-900 text-slate-400 py-20 border-t border-slate-800/50">
-      <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+    <footer className="relative bg-[#0f172a] text-slate-400 py-20 overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#7391D1]/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(115,145,209,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(115,145,209,0.03)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none" />
+
+      <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -40,7 +43,7 @@ export default function Footer() {
               <a
                 href="mailto:sales@biazointernational.com"
                 data-testid="link-footer-email"
-                className="text-xs text-slate-400 hover:text-white transition-colors bg-slate-800/60 px-4 py-2 rounded-full active:scale-95 border border-slate-700/50 hover:border-primary/50 hover:bg-primary/10 shadow-sm"
+                className="text-xs text-slate-400 hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-full active:scale-95 border border-white/10 hover:border-[#7391D1]/50 hover:bg-[#7391D1]/10 shadow-sm"
               >
                 sales@biazointernational.com
               </a>
@@ -54,7 +57,7 @@ export default function Footer() {
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase().replace(/\s+/g, '')}`}
-                    className="text-slate-400 hover:text-primary transition-colors"
+                    className="text-slate-400 hover:text-[#7391D1] transition-colors"
                   >
                     {item}
                   </a>
@@ -70,7 +73,7 @@ export default function Footer() {
               <li>+971 54 551 6485</li>
               <li>+971 52 486 0664</li>
               <li className="pt-2">
-                <a href="https://www.biazointernational.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <a href="https://www.biazointernational.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#7391D1] transition-colors">
                   www.biazointernational.com
                 </a>
               </li>
@@ -83,7 +86,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="pt-8 border-t border-slate-800 text-xs flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500"
+          className="pt-8 border-t border-white/5 text-xs flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500"
         >
           <p>&copy; {new Date().getFullYear()} Biazo International General Trading FZ-LLC. All rights reserved.</p>
           <p>RAKEZ Business Zone, Ras Al Khaimah, UAE</p>
