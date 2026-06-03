@@ -112,19 +112,19 @@
 
   --popover-border: 210 40% 88%;
 
-  --primary: 210 79% 46%;
+  --primary: 219 79% 66%;
 
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 210 60% 95%;
+  --secondary: 219 40% 94%;
 
-  --secondary-foreground: 210 79% 30%;
+  --secondary-foreground: 219 50% 30%;
 
-  --muted: 210 40% 96%;
+  --muted: 219 30% 96%;
 
-  --muted-foreground: 215 30% 45%;
+  --muted-foreground: 219 20% 50%;
 
-  --accent: 210 79% 46%;
+  --accent: 219 79% 66%;
 
   --accent-foreground: 0 0% 100%;
 
@@ -132,26 +132,26 @@
 
   --destructive-foreground: 0 0% 100%;
 
-  --input: 210 40% 88%;
-  --ring: 210 79% 46%;
-  --chart-1: 210 79% 46%;
-  --chart-2: 210 60% 60%;
-  --chart-3: 210 50% 70%;
-  --chart-4: 210 40% 80%;
-  --chart-5: 215 50% 35%;
+  --input: 219 30% 88%;
+  --ring: 219 79% 66%;
+  --chart-1: 219 79% 66%;
+  --chart-2: 219 60% 75%;
+  --chart-3: 219 50% 85%;
+  --chart-4: 219 40% 90%;
+  --chart-5: 219 50% 40%;
 
   --app-font-sans: 'Inter', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: Menlo, monospace;
   --radius: .5rem; /* 8px */
-  --shadow-2xs: 0px 2px 0px 0px hsl(210 79% 46% / 0.10);
-  --shadow-xs: 0px 2px 0px 0px hsl(210 79% 46% / 0.10);
-  --shadow-sm: 0px 2px 0px 0px hsl(210 79% 46% / 0.10), 0px 1px 2px -1px hsl(210 79% 46% / 0.10);
-  --shadow: 0px 2px 0px 0px hsl(210 79% 46% / 0.10), 0px 1px 2px -1px hsl(210 79% 46% / 0.10);
-  --shadow-md: 0px 2px 0px 0px hsl(210 79% 46% / 0.10), 0px 2px 4px -1px hsl(210 79% 46% / 0.10);
-  --shadow-lg: 0px 2px 0px 0px hsl(210 79% 46% / 0.10), 0px 4px 6px -1px hsl(210 79% 46% / 0.10);
-  --shadow-xl: 0px 2px 0px 0px hsl(210 79% 46% / 0.10), 0px 8px 10px -1px hsl(210 79% 46% / 0.10);
-  --shadow-2xl: 0px 2px 0px 0px hsl(210 79% 46% / 0.10);
+  --shadow-2xs: 0px 2px 0px 0px hsl(219 79% 66% / 0.10);
+  --shadow-xs: 0px 2px 0px 0px hsl(219 79% 66% / 0.10);
+  --shadow-sm: 0px 2px 0px 0px hsl(219 79% 66% / 0.10), 0px 1px 2px -1px hsl(219 79% 66% / 0.10);
+  --shadow: 0px 2px 0px 0px hsl(219 79% 66% / 0.10), 0px 1px 2px -1px hsl(219 79% 66% / 0.10);
+  --shadow-md: 0px 2px 0px 0px hsl(219 79% 66% / 0.10), 0px 2px 4px -1px hsl(219 79% 66% / 0.10);
+  --shadow-lg: 0px 2px 0px 0px hsl(219 79% 66% / 0.10), 0px 4px 6px -1px hsl(219 79% 66% / 0.10);
+  --shadow-xl: 0px 2px 0px 0px hsl(219 79% 66% / 0.10), 0px 8px 10px -1px hsl(219 79% 66% / 0.10);
+  --shadow-2xl: 0px 2px 0px 0px hsl(219 79% 66% / 0.10);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 

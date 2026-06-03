@@ -33,8 +33,8 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" as any }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-md shadow-blue-100/60 border-b border-blue-100"
-          : "bg-white/80 backdrop-blur-sm border-b border-blue-50"
+          ? "bg-white/70 backdrop-blur-lg shadow-lg shadow-black/5 border-b border-white/20"
+          : "bg-white/40 backdrop-blur-sm border-b border-white/10"
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
@@ -46,7 +46,7 @@ export default function Navbar() {
                   src={logoPath}
                   alt="Biazo International Logo"
                   data-testid="img-navbar-logo"
-                  className="h-14 w-auto object-contain drop-shadow-sm"
+                  className="h-14 w-auto object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
             </div>
@@ -58,10 +58,10 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-blue-700 hover:text-blue-500 transition-colors relative group"
+                className="text-sm font-medium text-slate-700 hover:text-primary transition-colors relative group"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
               </a>
             ))}
             <a
@@ -69,7 +69,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               data-testid="link-get-in-touch"
-              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-md shadow-blue-200 hover:shadow-blue-300 hover:scale-105"
+              className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-0.5"
             >
               <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white shrink-0">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.834L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-4.99-1.365l-.358-.213-3.758.98.999-3.648-.234-.374A9.817 9.817 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/>
@@ -80,7 +80,7 @@ export default function Navbar() {
 
           {/* Mobile Toggle */}
           <button
-            className="lg:hidden p-2 text-blue-700"
+            className="lg:hidden p-2 text-slate-700 hover:text-primary transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             data-testid="button-mobile-menu"
           >
@@ -95,7 +95,7 @@ export default function Navbar() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="lg:hidden bg-white border-t border-blue-100 shadow-lg"
+          className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-slate-100 shadow-2xl"
         >
           <div className="container mx-auto px-4 py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
@@ -103,7 +103,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-medium text-blue-700 py-2.5 px-3 rounded-lg border-b border-blue-50 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                className="text-base font-medium text-slate-700 py-2.5 px-3 rounded-lg border-b border-slate-50 hover:bg-primary/10 hover:text-primary transition-colors"
               >
                 {link.name}
               </a>
