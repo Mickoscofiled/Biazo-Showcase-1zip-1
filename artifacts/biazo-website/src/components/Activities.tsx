@@ -77,8 +77,8 @@ export default function Activities() {
             <motion.div
               key={sector.name}
               variants={itemVariant}
-              whileHover={{ y: -8, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
               className="group relative rounded-3xl overflow-hidden aspect-[4/5] shadow-lg cursor-default"
             >
               <div className="absolute inset-0 bg-slate-900">

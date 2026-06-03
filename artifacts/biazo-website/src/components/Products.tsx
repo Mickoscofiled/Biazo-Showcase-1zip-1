@@ -100,8 +100,8 @@ export default function Products() {
             <motion.div
               key={category.title}
               variants={itemVariant}
-              whileHover={{ y: -8, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
               data-testid={`card-product-${idx}`}
               className="group bg-white p-7 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300"
             >
