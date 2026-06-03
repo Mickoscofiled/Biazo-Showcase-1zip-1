@@ -13,25 +13,25 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden bg-white">
-      {/* Subtle animated light-blue orbs */}
+    <section className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-br from-[#6495ED] via-[#5282d6] to-[#2857a8] text-white">
+      {/* Subtle animated light orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{ y: [0, -30, 0], scale: [1, 1.08, 1] }}
           transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" as any }}
-          className="absolute top-[-10%] right-[-10%] w-[700px] h-[700px] rounded-full bg-primary/20 blur-[130px]"
+          className="absolute top-[-10%] right-[-10%] w-[700px] h-[700px] rounded-full bg-white/10 blur-[130px]"
         />
         <motion.div
           animate={{ y: [0, 25, 0], scale: [1, 1.06, 1] }}
           transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" as any, delay: 1.5 }}
-          className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-sky-200/30 blur-[110px]"
+          className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-cyan-200/20 blur-[110px]"
         />
         <motion.div
           animate={{ x: [0, 20, 0], y: [0, -15, 0] }}
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" as any, delay: 3 }}
-          className="absolute top-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-primary/10 blur-[90px]"
+          className="absolute top-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-white/5 blur-[90px]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(100,149,237,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(100,149,237,0.05)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:60px_60px]" />
       </div>
 
       <div className="container relative z-10 px-4 lg:px-8 max-w-6xl mx-auto text-center">
@@ -46,23 +46,23 @@ export default function Hero() {
             <motion.div
               animate={{ scale: [1, 1.04, 1] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as any }}
-              className="absolute inset-0 rounded-3xl bg-primary/20 blur-2xl scale-125"
+              className="absolute inset-0 rounded-3xl bg-white/20 blur-2xl scale-125"
             />
             <div className="relative inline-block">
               <img
                 src={logoPath}
                 alt="Biazo International Logo"
                 data-testid="img-hero-logo"
-                className="h-36 md:h-48 w-auto object-contain drop-shadow-lg"
+                className="h-36 md:h-48 w-auto object-contain drop-shadow-2xl brightness-0 invert"
               />
             </div>
           </motion.div>
 
           <motion.div
             variants={textItem}
-            className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/60 backdrop-blur-md border border-primary/20 text-primary font-semibold tracking-widest uppercase text-xs sm:text-sm shadow-sm"
+            className="inline-flex items-center gap-2 py-1.5 px-5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold tracking-widest uppercase text-xs sm:text-sm shadow-xl"
           >
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_rgba(74,222,128,0.8)]" />
             Bridging UAE & East Africa
           </motion.div>
 
@@ -70,15 +70,15 @@ export default function Hero() {
             variants={textItem}
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05]"
           >
-            <span className="block text-slate-800">Global Trading,</span>
-            <span className="block bg-gradient-to-r from-primary via-[#4169E1] to-[#87CEEB] bg-clip-text text-transparent pb-2">
+            <span className="block text-white drop-shadow-md">Global Trading,</span>
+            <span className="block text-white/90 drop-shadow-md pb-2">
               Precision Delivered.
             </span>
           </motion.h1>
 
           <motion.p
             variants={textItem}
-            className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-blue-50 max-w-2xl mx-auto leading-relaxed drop-shadow-sm font-medium"
           >
             Biazo International connects markets with essential products across Agriculture, Construction, Mining, Oil & Gas, and Healthcare — delivering value through our dual hubs in the UAE and Uganda.
           </motion.p>
@@ -87,7 +87,7 @@ export default function Hero() {
             <a
               href="#products"
               data-testid="link-explore-products"
-              className="group flex items-center gap-2 bg-gradient-to-r from-primary to-[#4169E1] text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-xl shadow-primary/30 hover:shadow-primary/50 hover:scale-105"
+              className="group flex items-center gap-2 bg-white text-[#6495ED] px-8 py-4 rounded-full font-bold text-lg transition-all shadow-2xl hover:shadow-white/40 hover:scale-105"
             >
               Explore Products
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -95,7 +95,7 @@ export default function Hero() {
             <a
               href="#contact"
               data-testid="link-contact-sales"
-              className="flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-semibold text-lg transition-all hover:scale-105 shadow-sm"
+              className="flex items-center gap-2 bg-transparent text-white border-2 border-white/40 hover:bg-white/10 hover:border-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105"
             >
               Contact Sales
             </a>
@@ -106,7 +106,7 @@ export default function Hero() {
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" as any }}
             >
-              <ChevronDown className="text-primary/40 w-10 h-10" />
+              <ChevronDown className="text-white/60 w-10 h-10" />
             </motion.div>
           </motion.div>
         </motion.div>
