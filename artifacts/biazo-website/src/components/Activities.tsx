@@ -9,6 +9,7 @@ const sectors = [
   { name: "Government Institutions", icon: <Landmark className="w-5 h-5" /> }
 ];
 
+export default function Activities() {
   const containerVariant = {
     hidden: { opacity: 0 },
     show: {

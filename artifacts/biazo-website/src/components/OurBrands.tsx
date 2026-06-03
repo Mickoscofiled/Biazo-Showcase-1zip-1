@@ -42,6 +42,7 @@ const brands = [
   },
 ];
 
+export default function OurBrands() {
   const containerVariant = {
     hidden: { opacity: 0 },
     show: {

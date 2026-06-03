@@ -44,6 +44,7 @@ const products = [
   },
 ];
 
+export default function Products() {
   const containerVariant = {
     hidden: { opacity: 0 },
     show: {
