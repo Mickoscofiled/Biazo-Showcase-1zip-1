@@ -7,56 +7,66 @@ const WA_ICON = (
   </svg>
 );
 
-export default function Contact() {
+  const containerVariant = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.1 }
+    }
+  };
+
+  const itemVariant = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as any } }
+  };
+
   return (
     <section id="contact" className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(59,130,246,0.07),transparent_70%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(100,149,237,0.07),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(100,149,237,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(100,149,237,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
       <div className="container mx-auto px-4 lg:px-8 max-w-6xl relative z-10">
-        <div className="text-center mb-16">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={containerVariant}
+          className="text-center mb-16"
+        >
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-blue-100 border border-blue-200 text-blue-600 text-xs font-semibold tracking-widest uppercase mb-6"
+            variants={itemVariant}
+            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-widest uppercase mb-6"
           >
             Get In Touch
           </motion.div>
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold text-blue-900 mb-4"
+            variants={itemVariant}
+            className="text-4xl md:text-5xl font-bold text-slate-800 mb-4"
           >
             We Look Forward to<br />
-            <span className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-[#87CEEB] bg-clip-text text-transparent">
               Working With You!
             </span>
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.15 }}
-            className="text-xl text-blue-600/65 max-w-xl mx-auto"
+            variants={itemVariant}
+            className="text-xl text-slate-600 max-w-xl mx-auto"
           >
             Reach out to discuss your procurement needs. Our global network is ready to serve you.
           </motion.p>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={containerVariant}
             className="flex flex-col gap-4"
           >
             {[
               {
-                icon: <Mail className="w-5 h-5 text-blue-600" />,
+                icon: <Mail className="w-5 h-5 text-primary" />,
                 label: "Email",
                 value: "sales@biazointernational.com",
                 href: "mailto:sales@biazointernational.com",
@@ -77,14 +87,14 @@ export default function Contact() {
                 highlight: true
               },
               {
-                icon: <Phone className="w-5 h-5 text-blue-600" />,
+                icon: <Phone className="w-5 h-5 text-primary" />,
                 label: "Phone",
                 value: "+971 52 486 0664",
                 href: "tel:+971524860664",
                 highlight: false
               },
               {
-                icon: <Globe className="w-5 h-5 text-blue-600" />,
+                icon: <Globe className="w-5 h-5 text-primary" />,
                 label: "Website",
                 value: "www.biazointernational.com",
                 href: "https://www.biazointernational.com",
@@ -96,28 +106,25 @@ export default function Contact() {
                 href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
+                variants={itemVariant}
                 data-testid={`link-contact-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                 className={`group flex items-center gap-4 p-5 rounded-2xl border transition-all duration-300 ${
                   item.highlight
                     ? "bg-green-50 hover:bg-green-100 border-green-200 hover:border-green-400"
-                    : "bg-white hover:bg-blue-50 border-blue-100 hover:border-blue-300"
+                    : "bg-white hover:bg-slate-50 border-slate-100 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
                 }`}
               >
                 <div className={`p-3 rounded-xl transition-colors shrink-0 ${
-                  item.highlight ? "bg-green-100 group-hover:bg-green-200" : "bg-blue-50 group-hover:bg-blue-100"
+                  item.highlight ? "bg-green-100 group-hover:bg-green-200" : "bg-primary/5 group-hover:bg-primary/10"
                 }`}>
                   {item.icon}
                 </div>
                 <div>
                   <p className={`text-xs font-semibold uppercase tracking-wider mb-0.5 ${
-                    item.highlight ? "text-green-600" : "text-blue-500"
+                    item.highlight ? "text-green-600" : "text-primary"
                   }`}>{item.label}</p>
                   <p className={`font-medium transition-colors ${
-                    item.highlight ? "text-green-800 group-hover:text-green-600" : "text-blue-900 group-hover:text-blue-600"
+                    item.highlight ? "text-green-800 group-hover:text-green-600" : "text-slate-800 group-hover:text-primary"
                   }`}>{item.value}</p>
                 </div>
               </motion.a>
@@ -127,30 +134,30 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="p-8 rounded-2xl bg-blue-50 border border-blue-100 hover:border-blue-200 transition-all"
+            className="p-8 rounded-2xl bg-primary/5 border border-primary/10 hover:border-primary/20 transition-all"
           >
             <div className="flex items-center gap-3 mb-8">
-              <div className="p-3 rounded-xl bg-blue-100 border border-blue-200">
-                <MapPin className="w-5 h-5 text-blue-600" />
+              <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
+                <MapPin className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-blue-900">Our Locations</h3>
+              <h3 className="text-2xl font-bold text-slate-800">Our Locations</h3>
             </div>
 
             <div className="space-y-8">
-              <div className="pl-4 border-l-2 border-blue-400">
-                <h4 className="font-bold text-lg text-blue-700 mb-2">UAE Headquarters</h4>
-                <p className="text-blue-600/65 leading-relaxed">
+              <div className="pl-4 border-l-2 border-primary/40">
+                <h4 className="font-bold text-lg text-slate-700 mb-2">UAE Headquarters</h4>
+                <p className="text-slate-600 leading-relaxed">
                   Ras Al Khaimah, UAE<br />
                   RAKEZ Business Zone-FZ<br />
                   B4209b10-Business Center 04
                 </p>
               </div>
 
-              <div className="pl-4 border-l-2 border-blue-300">
-                <h4 className="font-bold text-lg text-blue-700 mb-2">Dubai Office</h4>
-                <p className="text-blue-600/65 leading-relaxed">
+              <div className="pl-4 border-l-2 border-primary/30">
+                <h4 className="font-bold text-lg text-slate-700 mb-2">Dubai Office</h4>
+                <p className="text-slate-600 leading-relaxed">
                   Abraj Shopping Center<br />
                   903 Sabka Rd, Deira<br />
                   Dubai, UAE

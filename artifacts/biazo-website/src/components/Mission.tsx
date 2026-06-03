@@ -26,53 +26,70 @@ export default function Mission() {
     }
   ];
 
+  const containerVariant = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15, delayChildren: 0.1 }
+    }
+  };
+
+  const itemVariant = {
+    hidden: { opacity: 0, y: 40 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as any } }
+  };
+
   return (
     <section id="mission" className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-blue-100/40 blur-[100px] rounded-full" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary/10 blur-[100px] rounded-full" />
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
-        <div className="text-center mb-16">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={containerVariant}
+          className="text-center mb-16"
+        >
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-blue-100 border border-blue-200 text-blue-600 text-xs font-semibold tracking-widest uppercase mb-6"
+            variants={itemVariant}
+            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-widest uppercase mb-6"
           >
             Our Foundation
           </motion.div>
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-bold text-blue-900"
+            variants={itemVariant}
+            className="text-3xl md:text-5xl font-bold text-slate-800"
           >
             What Drives Us
           </motion.h2>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={containerVariant}
+          className="grid md:grid-cols-3 gap-6"
+        >
           {cards.map((card, i) => (
             <motion.div
               key={card.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              className={`group relative p-8 rounded-2xl border ${card.border} ${card.bg} transition-all duration-300 hover:shadow-xl hover:shadow-blue-100 hover:-translate-y-1 overflow-hidden`}
+              variants={itemVariant}
+              className={`group relative p-8 rounded-2xl border border-slate-100 bg-white hover:bg-slate-50 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 overflow-hidden`}
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100/50 rounded-full blur-2xl -mr-8 -mt-8 group-hover:bg-blue-200/50 transition-all" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:bg-primary/10 transition-all" />
               <div className="relative">
-                <div className="mb-6 p-4 bg-blue-50 border border-blue-100 inline-block rounded-xl group-hover:scale-110 transition-transform">
-                  {card.icon}
+                <div className="mb-6 p-4 bg-primary/5 border border-primary/10 inline-block rounded-xl group-hover:scale-110 transition-transform">
+                  <div className="text-primary">{card.icon}</div>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-900 mb-4 group-hover:text-blue-600 transition-colors">{card.title}</h3>
-                <p className="text-blue-600/65 leading-relaxed">
+                <h3 className="text-2xl font-bold text-slate-800 mb-4 group-hover:text-primary transition-colors">{card.title}</h3>
+                <p className="text-slate-600 leading-relaxed">
                   {card.content}
                 </p>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

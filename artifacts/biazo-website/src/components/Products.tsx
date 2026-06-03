@@ -44,73 +44,87 @@ const products = [
   },
 ];
 
-export default function Products() {
+  const containerVariant = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.1 }
+    }
+  };
+
+  const itemVariant = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as any } }
+  };
+
   return (
     <section id="products" className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:80px_80px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(100,149,237,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(100,149,237,0.03)_1px,transparent_1px)] bg-[size:80px_80px]" />
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
-        <div className="text-center mb-16">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={containerVariant}
+          className="text-center mb-16"
+        >
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-blue-100 border border-blue-200 text-blue-600 text-xs font-semibold tracking-widest uppercase mb-6"
+            variants={itemVariant}
+            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-widest uppercase mb-6"
           >
             What We Supply
           </motion.div>
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-blue-900 mb-4"
+            variants={itemVariant}
+            className="text-3xl md:text-5xl font-bold text-slate-800 mb-4"
           >
             Products & Services
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-lg text-blue-600/70 max-w-2xl mx-auto"
+            variants={itemVariant}
+            className="text-lg text-slate-600 max-w-2xl mx-auto"
           >
             A comprehensive portfolio of high-quality industrial supplies across 9 major categories and more.
           </motion.p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={containerVariant}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           {products.map((category, idx) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-30px" }}
-              transition={{ duration: 0.5, delay: (idx % 3) * 0.08 }}
+              variants={itemVariant}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
               data-testid={`card-product-${idx}`}
-              className="group bg-white p-7 rounded-2xl border border-blue-100 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-300"
+              className="group bg-white p-7 rounded-2xl border border-slate-100 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
-              <div className="mb-5 bg-blue-50 border border-blue-100 w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:bg-blue-100 transition-all duration-300">
-                {category.icon}
+              <div className="mb-5 bg-primary/5 border border-primary/10 w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+                <div className="text-primary">{category.icon}</div>
               </div>
-              <h3 className="text-lg font-bold text-blue-900 mb-4 group-hover:text-blue-600 transition-colors">{category.title}</h3>
+              <h3 className="text-lg font-bold text-slate-800 mb-4 group-hover:text-primary transition-colors">{category.title}</h3>
               <ul className="space-y-2">
                 {category.items.map((item, i) => (
                   <li
                     key={i}
                     className={`text-sm flex items-start gap-2.5 transition-colors ${
                       item === "Others"
-                        ? "text-blue-400/60 italic group-hover:text-blue-500/70"
-                        : "text-blue-600/55 group-hover:text-blue-600/80"
+                        ? "text-slate-400 italic group-hover:text-slate-500"
+                        : "text-slate-600 group-hover:text-slate-800"
                     }`}
                   >
-                    <span className={`w-1.5 h-1.5 rounded-full mt-1.5 shrink-0 transition-colors ${item === "Others" ? "bg-blue-200 group-hover:bg-blue-300" : "bg-blue-400 group-hover:bg-blue-600"}`} />
+                    <span className={`w-1.5 h-1.5 rounded-full mt-1.5 shrink-0 transition-colors ${item === "Others" ? "bg-slate-200 group-hover:bg-slate-300" : "bg-primary/60 group-hover:bg-primary"}`} />
                     <span className="leading-snug">{item}</span>
                   </li>
                 ))}
               </ul>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
