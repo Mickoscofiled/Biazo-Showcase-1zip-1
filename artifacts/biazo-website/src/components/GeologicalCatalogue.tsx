@@ -170,7 +170,7 @@ export default function GeologicalCatalogue() {
               variants={itemVariant}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
               data-testid={`card-geo-${i}`}
-              className="group p-6 rounded-2xl bg-white hover:bg-slate-50 border border-slate-100 hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+              className="group p-6 rounded-2xl bg-blue-50 hover:bg-blue-100 border border-blue-100 hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-3 rounded-xl bg-primary/5 border border-primary/10 group-hover:bg-primary/10 group-hover:scale-110 transition-all duration-300 shrink-0">
@@ -201,7 +201,7 @@ export default function GeologicalCatalogue() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-10 p-8 rounded-2xl bg-white border border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm"
+          className="mt-10 p-8 rounded-2xl bg-blue-50 border border-blue-100 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm"
         >
           <div>
             <h3 className="text-xl font-bold text-slate-800 mb-1">Need pricing or availability?</h3>

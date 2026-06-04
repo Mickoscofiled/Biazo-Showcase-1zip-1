@@ -59,7 +59,7 @@ export default function Products() {
   };
 
   return (
-    <section id="products" className="py-28 bg-slate-50/50 relative overflow-hidden">
+    <section id="products" className="py-28 bg-blue-50 relative overflow-hidden">
       <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         <motion.div
@@ -103,7 +103,7 @@ export default function Products() {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
               data-testid={`card-product-${idx}`}
-              className="group bg-white p-7 rounded-2xl border border-slate-100 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
+              className="group bg-blue-50 p-7 rounded-2xl border border-blue-100 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
               <div className="mb-5 bg-primary/5 w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
                 <div className="text-primary">{category.icon}</div>

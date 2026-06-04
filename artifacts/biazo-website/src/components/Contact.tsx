@@ -22,7 +22,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white relative overflow-hidden">
+    <section id="contact" className="py-24 bg-blue-50 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(115,145,209,0.07),transparent_70%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(115,145,209,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(115,145,209,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
@@ -112,7 +112,7 @@ export default function Contact() {
                 className={`group flex items-center gap-4 p-5 rounded-2xl border transition-all duration-300 ${
                   item.highlight
                     ? "bg-green-50 hover:bg-green-100 border-green-200 hover:border-green-400"
-                    : "bg-white hover:bg-slate-50 border-slate-100 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
+                    : "bg-blue-50 hover:bg-blue-100 border-slate-100 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
                 }`}
               >
                 <div className={`p-3 rounded-xl transition-colors shrink-0 ${

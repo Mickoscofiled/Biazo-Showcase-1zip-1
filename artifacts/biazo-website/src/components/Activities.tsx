@@ -35,7 +35,7 @@ export default function Activities() {
   };
 
   return (
-    <section id="sectors" className="py-28 bg-white relative overflow-hidden">
+    <section id="sectors" className="py-28 bg-blue-50 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(100,149,237,0.03),transparent_70%)]" />
       {/* clean bg */}
 
@@ -111,7 +111,7 @@ export default function Activities() {
               key={sector.name}
               variants={itemVariant}
               whileHover={{ scale: 1.06, y: -4, transition: { duration: 0.2 } }}
-              className="group flex items-center gap-3 bg-slate-50 hover:bg-white border border-transparent hover:border-slate-200 px-6 py-3.5 rounded-full active:scale-95 text-sm font-semibold text-slate-700 transition-all duration-300 cursor-default hover:shadow-lg"
+              className="group flex items-center gap-3 bg-blue-100 hover:bg-blue-200 border border-transparent hover:border-blue-300 px-6 py-3.5 rounded-full active:scale-95 text-sm font-semibold text-slate-700 transition-all duration-300 cursor-default hover:shadow-lg"
             >
               <span className="text-primary group-hover:text-primary/80 transition-colors">{sector.icon}</span>
               {sector.name}
@@ -124,7 +124,7 @@ export default function Activities() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-16 p-8 rounded-2xl bg-slate-50 border border-slate-100 max-w-3xl mx-auto"
+          className="mt-16 p-8 rounded-2xl bg-blue-100 border border-blue-200 max-w-3xl mx-auto"
         >
           <p className="text-slate-600 leading-relaxed text-lg">
             Leveraging our dual-hub operations in the <span className="text-slate-800 font-semibold">UAE</span> and <span className="text-slate-800 font-semibold">Uganda</span>, we deliver high-performance procurement services across the Continent, anchored by a commitment to operational transparency and efficiency.

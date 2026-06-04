@@ -57,7 +57,7 @@ export default function OurBrands() {
   };
 
   return (
-    <section id="brands" className="py-24 bg-white relative overflow-hidden">
+    <section id="brands" className="py-24 bg-blue-50 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(115,145,209,0.06),transparent_70%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(115,145,209,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(115,145,209,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
@@ -101,7 +101,7 @@ export default function OurBrands() {
               key={brand.title}
               variants={itemVariant}
               data-testid={`card-brand-${i}`}
-              className="group relative rounded-2xl bg-white border border-slate-100 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 overflow-hidden"
+              className="group relative rounded-2xl bg-blue-50 border border-blue-100 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 group-hover:bg-primary/10 transition-all duration-500 pointer-events-none" />
 
@@ -129,7 +129,7 @@ export default function OurBrands() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: j * 0.03 }}
-                      className="inline-flex items-center px-4 py-2 rounded-full active:scale-95 bg-slate-50 hover:bg-primary border border-slate-200 hover:border-primary text-slate-600 hover:text-white text-sm font-semibold tracking-wide transition-all duration-200 cursor-default hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/20"
+                      className="inline-flex items-center px-4 py-2 rounded-full active:scale-95 bg-blue-100 hover:bg-primary border border-blue-200 hover:border-primary text-slate-600 hover:text-white text-sm font-semibold tracking-wide transition-all duration-200 cursor-default hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/20"
                     >
                       {name}
                     </motion.span>

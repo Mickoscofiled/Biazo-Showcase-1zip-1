@@ -8,21 +8,21 @@ export default function Mission() {
       icon: <Target className="w-9 h-9 text-blue-600" />,
       content: "To serve, support, and collaborate with our clients to deliver timely services with commitment, integrity, and professionalism.",
       border: "border-blue-200 hover:border-blue-400",
-      bg: "bg-white hover:bg-blue-50"
+      bg: "bg-blue-50 hover:bg-blue-100"
     },
     {
       title: "Our Vision",
       icon: <Lightbulb className="w-9 h-9 text-sky-500" />,
       content: "To be a leading, trusted partner that delivers outstanding, timely services and creates significant value.",
       border: "border-blue-200 hover:border-sky-400",
-      bg: "bg-white hover:bg-sky-50"
+      bg: "bg-blue-50 hover:bg-sky-100"
     },
     {
       title: "Our Goal",
       icon: <TrendingUp className="w-9 h-9 text-blue-500" />,
       content: "Global leader in providing innovative and comprehensive solutions to empower industries across continents.",
       border: "border-blue-200 hover:border-blue-400",
-      bg: "bg-white hover:bg-blue-50"
+      bg: "bg-blue-50 hover:bg-blue-100"
     }
   ];
 
@@ -40,7 +40,7 @@ export default function Mission() {
   };
 
   return (
-    <section id="mission" className="py-28 bg-slate-50/50 relative overflow-hidden">
+    <section id="mission" className="py-28 bg-blue-50/80 relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary/5 blur-[100px] rounded-full" />
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         <motion.div
@@ -77,7 +77,7 @@ export default function Mission() {
               variants={itemVariant}
               whileHover={{ y: -5 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className={`group relative p-8 rounded-2xl border border-slate-100 hover:border-primary/20 bg-white transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 overflow-hidden`}
+              className={`group relative p-8 rounded-2xl border border-blue-100 hover:border-primary/20 bg-blue-50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 overflow-hidden`}
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:bg-primary/10 transition-all" />
               <div className="relative">

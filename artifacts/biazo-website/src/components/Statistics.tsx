@@ -56,7 +56,7 @@ export default function Statistics() {
   };
 
   return (
-    <section id="statistics" className="py-28 bg-white relative overflow-hidden">
+    <section id="statistics" className="py-28 bg-blue-50 relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/5 blur-[100px] rounded-full" />
       <div className="container mx-auto px-4 lg:px-8 max-w-5xl relative z-10">
         <motion.div

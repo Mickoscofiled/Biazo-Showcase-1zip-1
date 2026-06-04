@@ -114,7 +114,7 @@ export default function PipesSteelCatalogue() {
   };
 
   return (
-    <section id="pipes-steel" className="py-24 bg-white relative overflow-hidden">
+    <section id="pipes-steel" className="py-24 bg-blue-50 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-primary/5 blur-[140px] rounded-full -translate-x-1/3 -translate-y-1/3 pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#87CEEB]/10 blur-[120px] rounded-full translate-x-1/3 translate-y-1/3 pointer-events-none" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(100,149,237,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(100,149,237,0.03)_1px,transparent_1px)] bg-[size:70px_70px]" />
@@ -154,7 +154,7 @@ export default function PipesSteelCatalogue() {
               <a
                 key={cat.id}
                 href={`#cat-${cat.id}`}
-                className="flex items-center gap-2 px-5 py-2 rounded-full active:scale-95 bg-slate-50 hover:bg-primary border border-slate-200 hover:border-primary text-slate-700 hover:text-white text-sm font-semibold transition-all shadow-sm hover:shadow-md"
+                className="flex items-center gap-2 px-5 py-2 rounded-full active:scale-95 bg-blue-100 hover:bg-primary border border-blue-200 hover:border-primary text-slate-700 hover:text-white text-sm font-semibold transition-all shadow-sm hover:shadow-md"
               >
                 {cat.label}
               </a>
@@ -174,11 +174,11 @@ export default function PipesSteelCatalogue() {
               key={cat.id}
               id={`cat-${cat.id}`}
               variants={itemVariant}
-              className="rounded-2xl bg-white border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all"
+              className="rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all"
             >
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-7 lg:p-8 border-b border-slate-100 bg-slate-50/50">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-7 lg:p-8 border-b border-blue-100 bg-blue-100/50">
                 <div className="flex items-center gap-4">
-                  <div className="p-3.5 rounded-xl bg-white border border-slate-200 shrink-0 text-primary">
+                  <div className="p-3.5 rounded-xl bg-white border border-blue-200 shrink-0 text-primary">
                     {cat.icon}
                   </div>
                   <div>
