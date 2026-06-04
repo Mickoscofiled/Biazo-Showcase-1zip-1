@@ -1,18 +1,20 @@
 import { motion } from "framer-motion";
-import { Tractor, HardHat, Pickaxe, Flame, Landmark, FlaskConical } from "lucide-react";
+import { Tractor, HardHat, Pickaxe, Flame, Landmark, FlaskConical, Wrench } from "lucide-react";
 
 import agriImg from "@/assets/sectors/agriculture.png";
 import constImg from "@/assets/sectors/construction.png";
 import miningImg from "@/assets/sectors/mining.png";
 import oilImg from "@/assets/sectors/oil-gas.png";
 import chemImg from "@/assets/sectors/chemicals.png";
+import weldingImg from "@/assets/sectors/cutting-welding.jpg";
 
 const sectors = [
   { name: "Agriculture", icon: <Tractor className="w-5 h-5" /> },
   { name: "Construction", icon: <HardHat className="w-5 h-5" /> },
   { name: "Mining", icon: <Pickaxe className="w-5 h-5" /> },
   { name: "Oil & Gas", icon: <Flame className="w-5 h-5" /> },
-  { name: "Chemicals (Reagents)", icon: <FlaskConical className="w-5 h-5" /> }
+  { name: "Chemicals (Reagents)", icon: <FlaskConical className="w-5 h-5" /> },
+  { name: "Cutting and welding equipment and consumables", icon: <Wrench className="w-5 h-5" /> }
 ];
 
 const sectorImages = [
@@ -21,6 +23,7 @@ const sectorImages = [
   { name: "Mining", image: miningImg },
   { name: "Oil & Gas", image: oilImg },
   { name: "Chemicals (Reagents)", image: chemImg },
+  { name: "Cutting and welding equipment and consumables", image: weldingImg },
 ];
 
 export default function Activities() {
@@ -74,7 +77,7 @@ export default function Activities() {
           whileInView="show"
           viewport={{ once: true, margin: "-50px" }}
           variants={containerVariant}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 max-w-7xl mx-auto mb-16"
         >
           {sectorImages.map((sector, i) => (
             <motion.div
