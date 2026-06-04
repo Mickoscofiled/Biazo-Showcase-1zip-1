@@ -114,25 +114,7 @@ export default function Activities() {
           ))}
         </motion.div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={containerVariant}
-          className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto"
-        >
-          {sectors.map((sector, i) => (
-            <motion.div
-              key={sector.name}
-              variants={itemVariant}
-              whileHover={{ scale: 1.06, y: -4, transition: { duration: 0.2 } }}
-              className="group flex items-center gap-3 bg-blue-100 hover:bg-blue-200 border border-transparent hover:border-blue-300 px-6 py-3.5 rounded-full active:scale-95 text-sm font-semibold text-slate-700 transition-all duration-300 cursor-default hover:shadow-lg"
-            >
-              <span className="text-primary group-hover:text-primary/80 transition-colors">{sector.icon}</span>
-              {sector.name}
-            </motion.div>
-          ))}
-        </motion.div>
+
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
