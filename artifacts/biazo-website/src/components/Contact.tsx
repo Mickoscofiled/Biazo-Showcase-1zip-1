@@ -164,6 +164,13 @@ export default function Contact() {
                   Dubai, UAE
                 </p>
               </div>
+
+              <div className="pl-4 border-l-2 border-primary/20">
+                <h4 className="font-bold text-lg text-slate-700 mb-2">Branch Offices</h4>
+                <p className="text-slate-600 leading-relaxed font-medium">
+                  Ethiopia &middot; Uganda &middot; Malawi &middot; Zimbabwe
+                </p>
+              </div>
             </div>
 
             <div className="mt-10">
