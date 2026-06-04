@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown, Globe2, Shield, Truck } from "lucide-react";
 import logoPath from "@assets/biazo-logo-transparent.png";
+import heroBg from "@/assets/hero-bg.jpg";
 
 export default function Hero() {
   const textContainer = {
@@ -14,28 +15,14 @@ export default function Hero() {
 
   return (
     <section 
-      className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden text-white bg-[#4169E1]"
+      className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden text-white bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${heroBg})` }}
     >
-      {/* Animated gradient mesh */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-60">
-        <motion.div
-          animate={{ y: [0, -40, 0], x: [0, 20, 0], scale: [1, 1.1, 1] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" as any }}
-          className="absolute top-[-20%] right-[-15%] w-[800px] h-[800px] rounded-full bg-white/20 blur-[120px]"
-        />
-        <motion.div
-          animate={{ y: [0, 30, 0], x: [0, -20, 0], scale: [1, 1.08, 1] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" as any, delay: 2 }}
-          className="absolute bottom-[-20%] left-[-15%] w-[700px] h-[700px] rounded-full bg-cyan-300/20 blur-[100px]"
-        />
-        <motion.div
-          animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" as any, delay: 4 }}
-          className="absolute top-[20%] left-[40%] w-[500px] h-[500px] rounded-full bg-blue-300/20 blur-[90px]"
-        />
-        {/* Subtle grid overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:60px_60px]" />
-      </div>
+      {/* Dark Overlay for Text Readability */}
+      <div className="absolute inset-0 bg-black/40 pointer-events-none" />
+      
+      {/* Subtle grid overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none" />
 
       <div className="container relative z-10 px-4 lg:px-8 max-w-6xl mx-auto text-center">
         <motion.div
