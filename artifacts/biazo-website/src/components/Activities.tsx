@@ -7,7 +7,8 @@ import miningImg from "@/assets/sectors/mining.png";
 import oilImg from "@/assets/sectors/oil-gas.png";
 import chemImg from "@/assets/sectors/chemicals.png";
 import weldingImg from "@/assets/sectors/cutting-welding.jpg";
-import pipesImg from "@/assets/sectors/pipes-fittings.png";
+import hdpeImg from "@/assets/sectors/hdpe-pipes.jpg";
+import steelImg from "@/assets/sectors/steel-pipes.jpg";
 import acImg from "@/assets/sectors/air-conditioners.png";
 import itImg from "@/assets/sectors/it-networking.png";
 
@@ -18,7 +19,8 @@ const sectors = [
   { name: "Oil & Gas", icon: <Flame className="w-5 h-5" /> },
   { name: "Chemicals (Reagents)", icon: <FlaskConical className="w-5 h-5" /> },
   { name: "Cutting and welding equipment and consumables", icon: <Wrench className="w-5 h-5" /> },
-  { name: "Pipes and fittings, valves and couplings", icon: <PipetteIcon className="w-5 h-5" /> },
+  { name: "PPR & HDPE Pipes", icon: <PipetteIcon className="w-5 h-5" /> },
+  { name: "Galvanized & Steel Pipes", icon: <PipetteIcon className="w-5 h-5" /> },
   { name: "Air conditioners, Accessories and spare parts", icon: <AirVent className="w-5 h-5" /> },
   { name: "IT Equipment, Networking & Communication", icon: <Monitor className="w-5 h-5" /> }
 ];
@@ -30,7 +32,8 @@ const sectorImages = [
   { name: "Oil & Gas", image: oilImg },
   { name: "Chemicals (Reagents)", image: chemImg },
   { name: "Cutting and welding equipment and consumables", image: weldingImg },
-  { name: "Pipes and fittings, valves and couplings", image: pipesImg },
+  { name: "PPR & HDPE Pipes", image: hdpeImg },
+  { name: "Galvanized & Steel Pipes", image: steelImg },
   { name: "Air conditioners, Accessories and spare parts", image: acImg },
   { name: "IT Equipment, Networking & Communication", image: itImg },
 ];
