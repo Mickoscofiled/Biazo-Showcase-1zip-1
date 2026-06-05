@@ -12,9 +12,9 @@ import acImg from "@/assets/sectors/air-conditioners.png";
 import itImg from "@/assets/sectors/it-networking.png";
 
 const sectors = [
-  { name: "Agriculture", icon: <Tractor className="w-5 h-5" /> },
-  { name: "Construction", icon: <HardHat className="w-5 h-5" /> },
-  { name: "Mining", icon: <Pickaxe className="w-5 h-5" /> },
+  { name: "Agriculture Equipment", icon: <Tractor className="w-5 h-5" /> },
+  { name: "Construction Equipment", icon: <HardHat className="w-5 h-5" /> },
+  { name: "Mining Equipment", icon: <Pickaxe className="w-5 h-5" /> },
   { name: "Oil & Gas", icon: <Flame className="w-5 h-5" /> },
   { name: "Chemicals (Reagents)", icon: <FlaskConical className="w-5 h-5" /> },
   { name: "Cutting and welding equipment and consumables", icon: <Wrench className="w-5 h-5" /> },
@@ -24,9 +24,9 @@ const sectors = [
 ];
 
 const sectorImages = [
-  { name: "Agriculture", image: agriImg },
-  { name: "Construction", image: constImg },
-  { name: "Mining", image: miningImg },
+  { name: "Agriculture Equipment", image: agriImg },
+  { name: "Construction Equipment", image: constImg },
+  { name: "Mining Equipment", image: miningImg },
   { name: "Oil & Gas", image: oilImg },
   { name: "Chemicals (Reagents)", image: chemImg },
   { name: "Cutting and welding equipment and consumables", image: weldingImg },
