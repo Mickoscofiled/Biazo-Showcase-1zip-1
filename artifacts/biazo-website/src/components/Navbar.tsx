@@ -46,7 +46,7 @@ export default function Navbar() {
                   src={logoPath}
                   alt="Biazo International Logo"
                   data-testid="img-navbar-logo"
-                  className="h-12 w-auto object-contain drop-shadow-sm transition-all duration-300 group-hover:scale-105"
+                  className="h-16 w-auto object-contain drop-shadow-sm transition-all duration-300 group-hover:scale-105"
                 />
               </div>
             </div>

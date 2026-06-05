@@ -43,7 +43,7 @@ export default function Hero() {
                 src={logoPath}
                 alt="Biazo International Logo"
                 data-testid="img-hero-logo"
-                className="h-28 md:h-40 w-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
+                className="h-36 md:h-48 w-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
               />
             </div>
           </motion.div>
