@@ -1,5 +1,5 @@
-import { motion, useInView } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
+import { useRef, useEffect } from "react";
 
 const stats = [
   { label: "Pipes & Fittings", value: 27.3 },
@@ -19,26 +19,18 @@ const stats = [
 ];
 
 function CountUp({ end, decimals = 1 }: { end: number; decimals?: number }) {
-  const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => latest.toFixed(decimals));
 
   useEffect(() => {
     if (isInView) {
-      const duration = 2000;
-      const startTime = performance.now();
-      const animate = (currentTime: number) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const ease = 1 - Math.pow(1 - progress, 4);
-        setCount(end * ease);
-        if (progress < 1) requestAnimationFrame(animate);
-      };
-      requestAnimationFrame(animate);
+      animate(count, end, { duration: 2, ease: "easeOut" });
     }
-  }, [isInView, end]);
+  }, [isInView, end, count]);
 
-  return <span ref={ref}>{count.toFixed(decimals)}</span>;
+  return <motion.span ref={ref}>{rounded}</motion.span>;
 }
 
 export default function Statistics() {
