@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Tractor, HardHat, Pickaxe, Flame, Landmark, FlaskConical, Wrench, PipetteIcon, AirVent, Monitor } from "lucide-react";
+import { Tractor, HardHat, Pickaxe, Flame, FlaskConical, Wrench, PipetteIcon, AirVent, Monitor } from "lucide-react";
 
 import agriImg from "@/assets/sectors/agriculture.png";
 import constImg from "@/assets/sectors/construction.png";
