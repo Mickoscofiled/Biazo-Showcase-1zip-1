@@ -42,13 +42,20 @@ export default function Navbar() {
           <Link href="/">
             <div className="relative flex items-center gap-3 cursor-pointer group">
               <div className="relative">
-                <img
-                  src={logoPath}
-                  alt="Biazo International Logo"
+                <div 
                   data-testid="img-navbar-logo"
-                  className={`h-12 w-auto object-contain drop-shadow-sm transition-all duration-300 group-hover:scale-105 ${
-                    isScrolled ? "" : "brightness-0 invert"
-                  }`}
+                  className="h-24 w-40 drop-shadow-sm transition-all duration-300 group-hover:scale-105"
+                  style={{
+                    backgroundColor: '#87CEFA',
+                    WebkitMaskImage: `url(${logoPath})`,
+                    maskImage: `url(${logoPath})`,
+                    WebkitMaskSize: 'contain',
+                    maskSize: 'contain',
+                    WebkitMaskRepeat: 'no-repeat',
+                    maskRepeat: 'no-repeat',
+                    WebkitMaskPosition: 'left center',
+                    maskPosition: 'left center',
+                  }}
                 />
               </div>
             </div>

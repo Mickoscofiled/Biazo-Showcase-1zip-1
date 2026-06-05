@@ -66,6 +66,10 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* LIGHT MODE */
 :root {
   --button-outline: rgba(0,0,0, .10);
@@ -140,7 +144,7 @@
   --chart-4: 219 40% 90%;
   --chart-5: 219 50% 40%;
 
-  --app-font-sans: 'Inter', sans-serif;
+  --app-font-sans: 'Outfit', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: Menlo, monospace;
   --radius: .5rem; /* 8px */

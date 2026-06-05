@@ -1,23 +1,59 @@
 import { motion } from "framer-motion";
-import { Tractor, HardHat, Pickaxe, Flame, Landmark } from "lucide-react";
+import { Tractor, HardHat, Pickaxe, Flame, FlaskConical, Wrench, PipetteIcon, AirVent, Monitor, Shield, Truck, Hammer, Car, SprayCan } from "lucide-react";
 
 import agriImg from "@/assets/sectors/agriculture.png";
 import constImg from "@/assets/sectors/construction.png";
 import miningImg from "@/assets/sectors/mining.png";
 import oilImg from "@/assets/sectors/oil-gas.png";
+import chemImg from "@/assets/sectors/chemicals.png";
+import weldingImg from "@/assets/sectors/cutting-welding.jpg";
+import hdpeImg from "@/assets/sectors/hdpe-pipes.jpg";
+import steelImg from "@/assets/sectors/steel-pipes.jpg";
+import ppeImg from "@/assets/sectors/ppe.jpg";
+import ivecoImg from "@/assets/sectors/iveco.png";
+import pipeFittingsImg from "@/assets/sectors/pipe-fittings.png";
+import handToolsImg from "@/assets/sectors/hand-tools.jpg";
+import toyotaImg from "@/assets/sectors/toyota-parts.jpg";
+import cleaningImg from "@/assets/sectors/cleaning-supplies.jpg";
+import acImg from "@/assets/sectors/air-conditioners.png";
+import itImg from "@/assets/sectors/it-networking.png";
 
 const sectors = [
-  { name: "Agriculture", icon: <Tractor className="w-5 h-5" /> },
-  { name: "Construction", icon: <HardHat className="w-5 h-5" /> },
-  { name: "Mining", icon: <Pickaxe className="w-5 h-5" /> },
-  { name: "Oil & Gas", icon: <Flame className="w-5 h-5" /> }
+  { name: "Agriculture Equipment", icon: <Tractor className="w-5 h-5" /> },
+  { name: "Construction Equipment", icon: <HardHat className="w-5 h-5" /> },
+  { name: "Mining Equipment", icon: <Pickaxe className="w-5 h-5" /> },
+  { name: "Oil & Gas", icon: <Flame className="w-5 h-5" /> },
+  { name: "Chemicals (Reagents)", icon: <FlaskConical className="w-5 h-5" /> },
+  { name: "Cutting and welding equipment and consumables", icon: <Wrench className="w-5 h-5" /> },
+  { name: "PPR & HDPE Pipes", icon: <PipetteIcon className="w-5 h-5" /> },
+  { name: "Galvanized & Steel Pipes", icon: <PipetteIcon className="w-5 h-5" /> },
+  { name: "PPE (Personal Protective Equipment)", icon: <Shield className="w-5 h-5" /> },
+  { name: "Air conditioners, Accessories and spare parts", icon: <AirVent className="w-5 h-5" /> },
+  { name: "IT Equipment, Networking & Communication", icon: <Monitor className="w-5 h-5" /> },
+  { name: "IVECO Truck/Vehicle Spare Parts", icon: <Truck className="w-5 h-5" /> },
+  { name: "Pipe Fittings", icon: <PipetteIcon className="w-5 h-5" /> },
+  { name: "Hand Tools Set", icon: <Hammer className="w-5 h-5" /> },
+  { name: "Toyota Genuine Parts", icon: <Car className="w-5 h-5" /> },
+  { name: "Cleaning Supplies", icon: <SprayCan className="w-5 h-5" /> }
 ];
 
 const sectorImages = [
-  { name: "Agriculture", image: agriImg },
-  { name: "Construction", image: constImg },
-  { name: "Mining", image: miningImg },
+  { name: "Agriculture Equipment", image: agriImg },
+  { name: "Construction Equipment", image: constImg },
+  { name: "Mining Equipment", image: miningImg },
   { name: "Oil & Gas", image: oilImg },
+  { name: "Chemicals (Reagents)", image: chemImg },
+  { name: "Cutting and welding equipment and consumables", image: weldingImg },
+  { name: "PPR & HDPE Pipes", image: hdpeImg },
+  { name: "Galvanized & Steel Pipes", image: steelImg },
+  { name: "PPE (Personal Protective Equipment)", image: ppeImg },
+  { name: "Air conditioners, Accessories and spare parts", image: acImg },
+  { name: "IT Equipment, Networking & Communication", image: itImg },
+  { name: "IVECO Truck/Vehicle Spare Parts", image: ivecoImg },
+  { name: "Pipe Fittings", image: pipeFittingsImg },
+  { name: "Hand Tools Set", image: handToolsImg },
+  { name: "Toyota Genuine Parts", image: toyotaImg },
+  { name: "Cleaning Supplies", image: cleaningImg },
 ];
 
 export default function Activities() {
@@ -71,7 +107,7 @@ export default function Activities() {
           whileInView="show"
           viewport={{ once: true, margin: "-50px" }}
           variants={containerVariant}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 max-w-7xl mx-auto mb-16"
         >
           {sectorImages.map((sector, i) => (
             <motion.div
@@ -85,6 +121,7 @@ export default function Activities() {
                 <img
                   src={sector.image}
                   alt={sector.name}
+                  loading="lazy"
                   className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700 group-hover:scale-105"
                 />
               </div>
@@ -99,25 +136,7 @@ export default function Activities() {
           ))}
         </motion.div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={containerVariant}
-          className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto"
-        >
-          {sectors.map((sector, i) => (
-            <motion.div
-              key={sector.name}
-              variants={itemVariant}
-              whileHover={{ scale: 1.06, y: -4, transition: { duration: 0.2 } }}
-              className="group flex items-center gap-3 bg-blue-100 hover:bg-blue-200 border border-transparent hover:border-blue-300 px-6 py-3.5 rounded-full active:scale-95 text-sm font-semibold text-slate-700 transition-all duration-300 cursor-default hover:shadow-lg"
-            >
-              <span className="text-primary group-hover:text-primary/80 transition-colors">{sector.icon}</span>
-              {sector.name}
-            </motion.div>
-          ))}
-        </motion.div>
+
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
