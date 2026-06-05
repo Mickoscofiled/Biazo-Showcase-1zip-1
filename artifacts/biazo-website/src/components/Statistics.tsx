@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform, useInView, useMotionValue, animate } from "framer-motion";
+import { motion, useInView, useMotionValue, useTransform, animate, useScroll } from "framer-motion";
 import { useRef, useEffect } from "react";
 
 const stats = [
@@ -18,221 +18,141 @@ const stats = [
   { label: "Office Supplies", value: 8 },
 ];
 
-function CountUp({ end, decimals = 1, trigger }: { end: number; decimals?: number; trigger: boolean }) {
-  const count = useMotionValue(0);
+function CountUp({ end, decimals = 1 }: { end: number; decimals?: number }) {
   const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true });
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest: number) => latest.toFixed(decimals));
 
   useEffect(() => {
-    if (trigger) {
-      const controls = animate(count, end, { duration: 1.4, ease: "easeOut" });
+    if (isInView) {
+      const controls = animate(count, end, { duration: 1.8, ease: "easeOut" });
       return controls.stop;
     }
-  }, [trigger, end, count]);
+  }, [isInView, end, count]);
 
   useEffect(() => {
-    const unsubscribe = count.on("change", (v) => {
-      if (ref.current) ref.current.textContent = v.toFixed(decimals);
+    const unsub = rounded.on("change", (v) => {
+      if (ref.current) ref.current.textContent = v;
     });
-    return unsubscribe;
-  }, [count, decimals]);
+    return unsub;
+  }, [rounded]);
 
   return <span ref={ref}>0.0</span>;
 }
 
-function StatCard({ stat, index, scrollYProgress }: { stat: typeof stats[0]; index: number; scrollYProgress: any }) {
-  const total = stats.length;
+function StatCard({ stat, index }: { stat: typeof stats[0]; index: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-60px" });
 
-  // Each card occupies 1/total of the scroll range, with a little overlap
-  const start = index / total;
-  const end = (index + 1) / total;
-  const midpoint = (start + end) / 2;
-
-  const opacity = useTransform(
-    scrollYProgress,
-    [start - 0.02, start + 0.06, midpoint, end - 0.06, end + 0.02],
-    [0, 1, 1, 1, 0]
-  );
-  const y = useTransform(
-    scrollYProgress,
-    [start - 0.02, start + 0.06, end - 0.06, end + 0.02],
-    [60, 0, 0, -60]
-  );
-  const scale = useTransform(
-    scrollYProgress,
-    [start - 0.02, start + 0.06, end - 0.06, end + 0.02],
-    [0.85, 1, 1, 0.85]
-  );
-
-  // Trigger countup when this card is active
-  const isActive = useTransform(scrollYProgress, (v) => v >= start && v < end);
-  const triggerRef = useRef(false);
-
-  useEffect(() => {
-    const unsubscribe = isActive.on("change", (active) => {
-      if (active && !triggerRef.current) {
-        triggerRef.current = true;
-      }
-    });
-    return unsubscribe;
-  }, [isActive]);
-
-  const barWidth = useTransform(
-    scrollYProgress,
-    [start + 0.02, start + 0.12],
-    ["0%", `${stat.value}%`]
-  );
+  const isEven = index % 2 === 0;
+  const color = index < 4
+    ? "from-[#7391D1] to-[#87CEFA]"
+    : index < 8
+    ? "from-[#87CEFA] to-[#a3c9f5]"
+    : "from-[#a3b8e0] to-[#c5d8f0]";
 
   return (
     <motion.div
-      style={{ opacity, y, scale }}
-      className="absolute inset-0 flex items-center justify-center px-4"
+      ref={ref}
+      initial={{ opacity: 0, x: isEven ? -60 : 60 }}
+      animate={isInView ? { opacity: 1, x: 0 } : {}}
+      transition={{ duration: 0.7, delay: 0.05, ease: [0.25, 0.46, 0.45, 0.94] }}
+      whileHover={{ y: -6, scale: 1.02 }}
+      data-testid={`stat-${stat.label.toLowerCase().replace(/\s+/g, "-")}`}
+      className="group relative bg-white/80 backdrop-blur-md rounded-2xl border border-white shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_rgba(115,145,209,0.2)] transition-shadow duration-300 overflow-hidden flex items-center gap-6 p-6"
     >
-      <div
-        data-testid={`stat-${stat.label.toLowerCase().replace(/\s+/g, "-")}`}
-        className="relative w-full max-w-lg bg-white/80 backdrop-blur-xl rounded-3xl border border-white shadow-[0_30px_80px_rgba(115,145,209,0.18)] p-10 md:p-14 overflow-hidden"
-      >
-        {/* Decorative blobs */}
-        <div className="absolute -top-16 -right-16 w-56 h-56 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-16 -left-16 w-48 h-48 bg-[#87CEFA]/10 rounded-full blur-3xl pointer-events-none" />
+      {/* Glow blob */}
+      <div className="absolute -top-8 -right-8 w-28 h-28 bg-primary/8 rounded-full blur-2xl group-hover:bg-primary/15 transition-colors duration-500 pointer-events-none" />
 
-        {/* Index counter */}
-        <div className="text-xs font-bold tracking-widest uppercase text-primary/50 mb-6">
-          {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+      {/* Index badge */}
+      <div className={`shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center shadow-lg`}>
+        <span className="text-white font-black text-lg">{String(index + 1).padStart(2, "0")}</span>
+      </div>
+
+      {/* Content */}
+      <div className="flex-1 min-w-0">
+        <div className="flex items-end justify-between mb-2">
+          <h3 className="font-bold text-slate-700 text-sm leading-tight group-hover:text-primary transition-colors pr-2 truncate">
+            {stat.label}
+          </h3>
+          <div className={`text-2xl font-black text-transparent bg-clip-text bg-gradient-to-br ${color} tabular-nums shrink-0`}>
+            <CountUp end={stat.value} />
+            <span className="text-base">%</span>
+          </div>
         </div>
 
-        {/* Big number */}
-        <div className="text-7xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#7391D1] to-[#87CEFA] tabular-nums leading-none mb-4">
-          <CountUp end={stat.value} trigger={true} />
-          <span className="text-4xl md:text-5xl">%</span>
-        </div>
-
-        {/* Label */}
-        <h3 className="text-xl md:text-2xl font-bold text-slate-700 mb-8 leading-snug">
-          {stat.label}
-        </h3>
-
-        {/* Animated progress bar */}
+        {/* Bar */}
         <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
           <motion.div
-            style={{ width: barWidth }}
-            className="h-full rounded-full bg-gradient-to-r from-[#7391D1] to-[#87CEFA] shadow-[0_0_12px_rgba(115,145,209,0.5)]"
+            initial={{ width: 0 }}
+            animate={isInView ? { width: `${stat.value}%` } : {}}
+            transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
+            className={`h-full rounded-full bg-gradient-to-r ${color} shadow-[0_0_8px_rgba(115,145,209,0.4)]`}
           />
         </div>
-
-        {/* Share of portfolio label */}
-        <p className="text-xs text-slate-400 font-medium mt-3">Share of product portfolio</p>
+        <p className="text-[10px] text-slate-400 mt-1 font-medium">Share of product portfolio</p>
       </div>
     </motion.div>
   );
 }
 
 export default function Statistics() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
+  const backgroundX = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  // Dot progress indicator
-  const activeDot = useTransform(scrollYProgress, (v) =>
-    Math.min(Math.floor(v * stats.length), stats.length - 1)
-  );
+  const headerRef = useRef<HTMLDivElement>(null);
+  const headerInView = useInView(headerRef, { once: true });
 
   return (
-    <section id="statistics" className="relative bg-blue-50">
-      {/* Header — scrolls away normally */}
-      <div className="py-20 text-center relative z-10">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/5 blur-[100px] rounded-full" />
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="relative z-10"
-        >
-          <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/5 text-primary text-xs font-semibold tracking-widest uppercase mb-6">
-            Portfolio Breakdown
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-            Product Distribution
-          </h2>
-          <p className="text-lg text-slate-600">
-            Scroll to explore our key product supply portfolio across sectors.
-          </p>
-        </motion.div>
-      </div>
+    <section id="statistics" ref={sectionRef} className="py-28 bg-blue-50 relative overflow-hidden">
+      {/* Animated background orbs */}
+      <motion.div
+        style={{ x: backgroundX }}
+        className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"
+      />
+      <motion.div
+        style={{ x: useTransform(scrollYProgress, [0, 1], ["10%", "-10%"]) }}
+        className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#87CEFA]/8 rounded-full blur-[100px] pointer-events-none"
+      />
 
-      {/* Sticky scroll container — height = stats.length * 100vh */}
-      <div
-        ref={containerRef}
-        style={{ height: `${stats.length * 100}vh` }}
-        className="relative"
-      >
-        {/* Sticky viewport */}
-        <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-          {/* Background glow that shifts */}
+      <div className="container mx-auto px-4 lg:px-8 max-w-6xl relative z-10">
+        {/* Header */}
+        <div ref={headerRef} className="text-center mb-16">
           <motion.div
-            style={{
-              background: useTransform(
-                scrollYProgress,
-                [0, 0.5, 1],
-                [
-                  "radial-gradient(ellipse at 30% 50%, rgba(115,145,209,0.12), transparent 70%)",
-                  "radial-gradient(ellipse at 50% 50%, rgba(135,206,250,0.12), transparent 70%)",
-                  "radial-gradient(ellipse at 70% 50%, rgba(115,145,209,0.12), transparent 70%)",
-                ]
-              ),
-            }}
-            className="absolute inset-0 pointer-events-none"
-          />
-
-          {/* Cards stacked absolutely */}
-          <div className="relative w-full h-[70vh] max-w-2xl mx-auto">
-            {stats.map((stat, i) => (
-              <StatCard
-                key={stat.label}
-                stat={stat}
-                index={i}
-                scrollYProgress={scrollYProgress}
-              />
-            ))}
-          </div>
-
-          {/* Dot navigation — right side */}
-          <div className="absolute right-6 md:right-10 top-1/2 -translate-y-1/2 flex flex-col gap-2.5">
-            {stats.map((_, i) => (
-              <DotIndicator key={i} index={i} activeDot={activeDot} total={stats.length} />
-            ))}
-          </div>
-
-          {/* Scroll hint */}
-          <motion.div
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-400"
-            animate={{ y: [0, 6, 0] }}
-            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={headerInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/5 text-primary text-xs font-semibold tracking-widest uppercase mb-6"
           >
-            <span className="text-[10px] font-semibold tracking-widest uppercase">Scroll</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
+            Portfolio Breakdown
           </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={headerInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-3xl md:text-5xl font-bold text-slate-800 mb-4"
+          >
+            Product Distribution
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={headerInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg text-slate-600 max-w-xl mx-auto"
+          >
+            Breakdown of our key product supply portfolio across sectors.
+          </motion.p>
+        </div>
+
+        {/* Two-column staggered grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+          {stats.map((stat, i) => (
+            <StatCard key={stat.label} stat={stat} index={i} />
+          ))}
         </div>
       </div>
     </section>
-  );
-}
-
-function DotIndicator({ index, activeDot, total }: { index: number; activeDot: any; total: number }) {
-  const isActive = useTransform(activeDot, (v: number) => v === index);
-  const scale = useTransform(isActive, (a: boolean) => (a ? 1 : 0.6));
-  const opacity = useTransform(isActive, (a: boolean) => (a ? 1 : 0.35));
-
-  return (
-    <motion.div
-      style={{ scale, opacity }}
-      className="w-2 h-2 rounded-full bg-primary cursor-pointer"
-      title={`Stat ${index + 1} of ${total}`}
-    />
   );
 }
