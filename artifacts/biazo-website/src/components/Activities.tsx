@@ -100,6 +100,7 @@ export default function Activities() {
                 <img
                   src={sector.image}
                   alt={sector.name}
+                  loading="lazy"
                   className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700 group-hover:scale-105"
                 />
               </div>

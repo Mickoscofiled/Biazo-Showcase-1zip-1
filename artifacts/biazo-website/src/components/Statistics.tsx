@@ -91,29 +91,37 @@ export default function Statistics() {
           whileInView="show"
           viewport={{ once: true, margin: "-50px" }}
           variants={containerVariant}
-          className="space-y-5"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-6"
         >
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
               variants={itemVariant}
-              className="group"
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="group relative p-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(115,145,209,0.15)] transition-all duration-300 overflow-hidden flex flex-col justify-between h-full"
               data-testid={`stat-${stat.label.toLowerCase().replace(/\s+/g, '-')}`}
             >
-              <div className="flex justify-between items-end mb-2">
-                <span className="font-semibold text-slate-700 text-sm group-hover:text-primary transition-colors">{stat.label}</span>
-                <span className="text-primary font-bold text-sm tabular-nums">
-                  <CountUp end={stat.value} />%
-                </span>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors duration-500 pointer-events-none" />
+
+              <div>
+                <div className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-primary to-slate-400 tabular-nums drop-shadow-sm mb-2">
+                  <CountUp end={stat.value} /><span className="text-2xl md:text-3xl opacity-80">%</span>
+                </div>
+                <h3 className="font-bold text-slate-800 text-sm sm:text-base leading-tight group-hover:text-primary transition-colors">
+                  {stat.label}
+                </h3>
               </div>
-              <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${stat.value}%` }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.5, delay: i * 0.05, ease: "easeOut" as any }}
-                  className="h-full rounded-full bg-gradient-to-r from-primary to-[#a3b8e0] shadow-[0_0_8px_rgba(115,145,209,0.4)]"
-                />
+
+              <div className="mt-6">
+                <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${stat.value}%` }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.5, delay: i * 0.05, ease: "easeOut" as any }}
+                    className="h-full rounded-full bg-gradient-to-r from-primary to-[#a3b8e0] shadow-[0_0_8px_rgba(115,145,209,0.4)]"
+                  />
+                </div>
               </div>
             </motion.div>
           ))}
