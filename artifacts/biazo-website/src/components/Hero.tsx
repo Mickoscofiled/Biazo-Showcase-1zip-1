@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ChevronDown, Globe2, Shield, Truck } from "lucide-react";
+import { ArrowRight, ChevronDown, Globe2, Shield, Truck, PackageCheck } from "lucide-react";
 import logoPath from "@assets/biazo-logo-transparent.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -104,6 +104,7 @@ export default function Hero() {
               { icon: <Globe2 className="w-5 h-5" />, label: "UAE & Uganda Hubs" },
               { icon: <Shield className="w-5 h-5" />, label: "15+ Years Experience" },
               { icon: <Truck className="w-5 h-5" />, label: "Global Supply Chain" },
+              { icon: <PackageCheck className="w-5 h-5" />, label: "500+ Successful Shipments" },
             ].map((badge) => (
               <div key={badge.label} className="flex items-center gap-2.5 text-slate-400 text-sm font-medium">
                 <div className="text-[#7391D1]">{badge.icon}</div>
