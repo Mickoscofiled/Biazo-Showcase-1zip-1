@@ -25,10 +25,9 @@ function CountUp({ end, decimals = 1 }: { end: number; decimals?: number }) {
   const rounded = useTransform(count, (latest: number) => latest.toFixed(decimals));
 
   useEffect(() => {
-    if (isInView) {
-      const controls = animate(count, end, { duration: 1.8, ease: "easeOut" });
-      return controls.stop;
-    }
+    if (!isInView) return;
+    const controls = animate(count, end, { duration: 1.8, ease: "easeOut" });
+    return controls.stop;
   }, [isInView, end, count]);
 
   useMotionValueEvent(rounded, "change", (v) => {
