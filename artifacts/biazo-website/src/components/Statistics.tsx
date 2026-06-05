@@ -1,4 +1,4 @@
-import { motion, useInView, useMotionValue, useTransform, animate, useScroll } from "framer-motion";
+import { motion, useInView, useMotionValue, useTransform, animate, useScroll, useMotionValueEvent } from "framer-motion";
 import { useRef, useEffect } from "react";
 
 const stats = [
@@ -31,12 +31,9 @@ function CountUp({ end, decimals = 1 }: { end: number; decimals?: number }) {
     }
   }, [isInView, end, count]);
 
-  useEffect(() => {
-    const unsub = rounded.on("change", (v) => {
-      if (ref.current) ref.current.textContent = v;
-    });
-    return unsub;
-  }, [rounded]);
+  useMotionValueEvent(rounded, "change", (v) => {
+    if (ref.current) ref.current.textContent = v;
+  });
 
   return <span ref={ref}>0.0</span>;
 }
