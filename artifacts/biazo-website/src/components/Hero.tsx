@@ -41,7 +41,7 @@ export default function Hero() {
             <div className="relative inline-block">
               <div 
                 data-testid="img-hero-logo"
-                className="h-60 md:h-80 w-80 md:w-96 drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
+                className="h-72 md:h-96 w-96 md:w-[28rem] drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
                 style={{
                   backgroundColor: '#87CEFA',
                   WebkitMaskImage: `url(${logoPath})`,
