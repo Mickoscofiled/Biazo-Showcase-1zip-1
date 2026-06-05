@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Wrench, Laptop, Zap, Settings, Pipette, FlaskConical, Construction, Car } from "lucide-react";
+import { Wrench, Laptop, Zap, Settings, Pipette, FlaskConical, Construction, Car, SprayCan } from "lucide-react";
 
 const products = [
   {
@@ -41,6 +41,11 @@ const products = [
     title: "Industrial & Lab Chemicals",
     icon: <FlaskConical className="w-7 h-7 text-blue-600" />,
     items: ["Water treatment chemicals", "Scale inhibitors", "Antidote & Buffer solution", "Lab chemicals", "Solvents & Adhesives", "Oxidizers & Reducing agents", "Others"],
+  },
+  {
+    title: "Cleaning Supplies",
+    icon: <SprayCan className="w-7 h-7 text-blue-600" />,
+    items: ["Disinfectants & Sanitizers", "Detergents & Degreasers", "Industrial cleaning agents", "Personal hygiene products", "Cleaning equipment & consumables", "Others"],
   },
 ];
 

@@ -85,7 +85,7 @@ export default function OurBrands() {
             variants={itemVariant}
             className="text-lg text-slate-600 max-w-2xl mx-auto"
           >
-            We represent and supply world-class brands across six major product categories, bringing trusted global manufacturers to East Africa.
+            We represent and supply world-class brands across five major product categories, bringing trusted global manufacturers to East Africa.
           </motion.p>
         </motion.div>
 
