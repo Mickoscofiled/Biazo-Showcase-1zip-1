@@ -43,7 +43,7 @@ export default function Hero() {
                 src={logoPath}
                 alt="Biazo International Logo"
                 data-testid="img-hero-logo"
-                className="h-28 md:h-40 w-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.6)] brightness-0 invert"
+                className="h-28 md:h-40 w-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
               />
             </div>
           </motion.div>
@@ -73,7 +73,7 @@ export default function Hero() {
             variants={textItem}
             className="text-lg md:text-xl text-blue-50 max-w-2xl mx-auto leading-relaxed drop-shadow-sm font-medium"
           >
-            Biazo International connects markets with essential products across Agriculture, Construction, Mining, Oil & Gas, and Healthcare — delivering value through our dual hubs in the UAE and Uganda.
+            Supplying mining, oil & gas, infrastructure, and industrial projects across East Africa with reliable sourcing, technical expertise, and efficient logistics from our UAE, Uganda, Zimbabwe Hubs
           </motion.p>
 
           {/* CTA Buttons */}
