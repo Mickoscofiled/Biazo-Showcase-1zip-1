@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Tractor, HardHat, Pickaxe, Flame, FlaskConical, Wrench, PipetteIcon, AirVent, Monitor, Shield } from "lucide-react";
+import { Tractor, HardHat, Pickaxe, Flame, FlaskConical, Wrench, PipetteIcon, AirVent, Monitor, Shield, Truck } from "lucide-react";
 
 import agriImg from "@/assets/sectors/agriculture.png";
 import constImg from "@/assets/sectors/construction.png";
@@ -10,6 +10,7 @@ import weldingImg from "@/assets/sectors/cutting-welding.jpg";
 import hdpeImg from "@/assets/sectors/hdpe-pipes.jpg";
 import steelImg from "@/assets/sectors/steel-pipes.jpg";
 import ppeImg from "@/assets/sectors/ppe.jpg";
+import ivecoImg from "@/assets/sectors/iveco.png";
 import acImg from "@/assets/sectors/air-conditioners.png";
 import itImg from "@/assets/sectors/it-networking.png";
 
@@ -24,7 +25,8 @@ const sectors = [
   { name: "Galvanized & Steel Pipes", icon: <PipetteIcon className="w-5 h-5" /> },
   { name: "PPE (Personal Protective Equipment)", icon: <Shield className="w-5 h-5" /> },
   { name: "Air conditioners, Accessories and spare parts", icon: <AirVent className="w-5 h-5" /> },
-  { name: "IT Equipment, Networking & Communication", icon: <Monitor className="w-5 h-5" /> }
+  { name: "IT Equipment, Networking & Communication", icon: <Monitor className="w-5 h-5" /> },
+  { name: "IVECO Truck/Vehicle Spare Parts", icon: <Truck className="w-5 h-5" /> }
 ];
 
 const sectorImages = [
@@ -39,6 +41,7 @@ const sectorImages = [
   { name: "PPE (Personal Protective Equipment)", image: ppeImg },
   { name: "Air conditioners, Accessories and spare parts", image: acImg },
   { name: "IT Equipment, Networking & Communication", image: itImg },
+  { name: "IVECO Truck/Vehicle Spare Parts", image: ivecoImg },
 ];
 
 export default function Activities() {
