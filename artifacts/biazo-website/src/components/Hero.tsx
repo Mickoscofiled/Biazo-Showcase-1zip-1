@@ -40,12 +40,13 @@ export default function Hero() {
               className="absolute inset-0 rounded-full bg-white/30 blur-3xl scale-150"
             />
             <div className="relative flex justify-center mb-2">
-              <img 
-                src={fixedLogoPath}
-                alt="Biazo Crest"
-                className="w-48 md:w-64 h-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
-                style={{ mixBlendMode: 'screen' }}
-              />
+              <div className="w-48 md:w-64 h-28 md:h-36 overflow-hidden flex justify-center items-start">
+                <img 
+                  src={logoPath}
+                  alt="Biazo Crest"
+                  className="w-full h-auto object-contain object-top drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
+                />
+              </div>
             </div>
             <h2 className="relative text-2xl md:text-4xl font-extrabold text-[#87CEFA] tracking-wide leading-tight drop-shadow-[0_0_20px_rgba(135,206,250,0.4)] text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
               Biazo International
