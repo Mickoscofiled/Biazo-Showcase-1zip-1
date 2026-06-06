@@ -40,9 +40,9 @@ export default function Hero() {
               className="absolute inset-0 rounded-full bg-white/30 blur-3xl scale-150"
             />
             <div className="relative flex justify-center mb-2">
-              <div className="w-48 md:w-64 h-20 md:h-24 overflow-hidden flex justify-center items-start">
+              <div className="w-64 md:w-96 h-28 md:h-40 overflow-hidden flex justify-center items-start">
                 <div 
-                  className="w-full h-64 md:h-80 drop-shadow-[0_0_30px_rgba(135,206,250,0.5)]"
+                  className="w-full h-80 md:h-[28rem] drop-shadow-[0_0_30px_rgba(135,206,250,0.5)]"
                   style={{
                     backgroundColor: '#87CEFA',
                     WebkitMaskImage: `url(${logoPath})`,
@@ -57,10 +57,10 @@ export default function Hero() {
                 />
               </div>
             </div>
-            <h2 className="relative text-2xl md:text-4xl font-extrabold text-[#87CEFA] tracking-wide leading-tight drop-shadow-[0_0_20px_rgba(135,206,250,0.4)] text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+            <h2 className="relative text-3xl md:text-5xl font-extrabold text-[#87CEFA] tracking-wide leading-tight drop-shadow-[0_0_20px_rgba(135,206,250,0.4)] text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
               Biazo International
             </h2>
-            <p className="relative text-lg md:text-2xl text-[#87CEFA]/80 tracking-[0.12em] font-medium -mt-1 text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+            <p className="relative text-xl md:text-3xl text-[#87CEFA]/80 tracking-[0.12em] font-medium -mt-1 text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
               General Trading FZ-LLC
             </p>
           </motion.div>
