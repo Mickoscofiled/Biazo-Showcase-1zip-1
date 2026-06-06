@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { Target, Lightbulb, TrendingUp } from "lucide-react";
+import missionImg from "@/assets/mission.png";
+import visionImg from "@/assets/vision.png";
+import goalImg from "@/assets/goal.png";
 
 export default function Mission() {
   const cards = [
@@ -7,22 +10,19 @@ export default function Mission() {
       title: "Our Mission",
       icon: <Target className="w-9 h-9 text-blue-600" />,
       content: "To serve, support, and collaborate with our clients to deliver timely services with commitment, integrity, and professionalism.",
-      border: "border-blue-200 hover:border-blue-400",
-      bg: "bg-blue-50 hover:bg-blue-100"
+      image: missionImg
     },
     {
       title: "Our Vision",
       icon: <Lightbulb className="w-9 h-9 text-sky-500" />,
       content: "To be a leading, trusted partner that delivers outstanding, timely services and creates significant value.",
-      border: "border-blue-200 hover:border-sky-400",
-      bg: "bg-blue-50 hover:bg-sky-100"
+      image: visionImg
     },
     {
       title: "Our Goal",
       icon: <TrendingUp className="w-9 h-9 text-blue-500" />,
       content: "Global leader in providing innovative and comprehensive solutions to empower industries across continents.",
-      border: "border-blue-200 hover:border-blue-400",
-      bg: "bg-blue-50 hover:bg-blue-100"
+      image: goalImg
     }
   ];
 
@@ -77,15 +77,26 @@ export default function Mission() {
               variants={itemVariant}
               whileHover={{ y: -5 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className={`group relative p-8 rounded-2xl border border-blue-100 hover:border-primary/20 bg-blue-50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 overflow-hidden`}
+              className="group relative p-8 rounded-2xl border border-blue-100 hover:border-primary/20 bg-white transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 overflow-hidden min-h-[320px] flex flex-col justify-end"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:bg-primary/10 transition-all" />
-              <div className="relative">
+              {/* Soft Background Image */}
+              <div className="absolute inset-0 z-0 opacity-15 group-hover:opacity-25 transition-opacity duration-500">
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent z-10" />
+                <img 
+                  src={card.image} 
+                  alt="" 
+                  className="w-full h-full object-cover object-top mix-blend-multiply filter grayscale-[30%]" 
+                />
+              </div>
+
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl -mr-8 -mt-8 group-hover:bg-primary/10 transition-all z-0" />
+              
+              <div className="relative z-10">
                 <div className="mb-6 p-4 bg-primary/5 border border-primary/10 inline-block rounded-xl group-hover:scale-110 transition-transform">
                   <div className="text-primary">{card.icon}</div>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-800 mb-4 group-hover:text-primary transition-colors">{card.title}</h3>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-600 leading-relaxed font-medium">
                   {card.content}
                 </p>
               </div>
