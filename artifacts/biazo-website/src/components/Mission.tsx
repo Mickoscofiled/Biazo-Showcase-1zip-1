@@ -80,12 +80,12 @@ export default function Mission() {
               className="group relative p-8 rounded-2xl border border-blue-100 hover:border-primary/20 bg-white transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 overflow-hidden min-h-[320px] flex flex-col justify-end"
             >
               {/* Soft Background Image */}
-              <div className="absolute inset-0 z-0 opacity-15 group-hover:opacity-25 transition-opacity duration-500">
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent z-10" />
+              <div className="absolute inset-0 z-0 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent z-10 h-full" />
                 <img 
                   src={card.image} 
                   alt="" 
-                  className="w-full h-full object-cover object-top mix-blend-multiply filter grayscale-[30%]" 
+                  className="w-full h-full object-cover object-top mix-blend-multiply" 
                 />
               </div>
 
