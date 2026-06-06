@@ -62,7 +62,7 @@ const brandDomains: Record<string, string> = {
   "Tolsen": "tolsentools.com"
 };
 
-const BrandPill = ({ name, index }: { name: string, index: number }) => {
+const BrandCard = ({ name, index }: { name: string, index: number }) => {
   const [imgError, setImgError] = useState(false);
   const domain = brandDomains[name] || `${name.toLowerCase().replace(/\s+/g, '')}.com`;
 
@@ -71,20 +71,24 @@ const BrandPill = ({ name, index }: { name: string, index: number }) => {
       initial={{ opacity: 0, scale: 0.85 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.3, delay: index * 0.03 }}
-      className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full active:scale-95 bg-blue-100 hover:bg-primary border border-blue-200 hover:border-primary text-slate-600 hover:text-white text-sm font-semibold tracking-wide transition-all duration-200 cursor-default hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/20 group/pill"
+      transition={{ duration: 0.3, delay: (index % 10) * 0.05 }}
+      className="flex flex-col items-center justify-between w-28 h-32 md:w-36 md:h-40 bg-white rounded-xl shadow-sm border border-slate-100/60 p-4 hover:shadow-lg hover:shadow-blue-900/5 hover:-translate-y-1 transition-all duration-300"
     >
-      {!imgError && (
-        <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center p-0.5 overflow-hidden shadow-sm shrink-0 group-hover/pill:brightness-110">
+      <div className="flex-1 flex items-center justify-center w-full mb-2">
+        {!imgError ? (
           <img 
             src={`https://logo.clearbit.com/${domain}`} 
             alt={`${name} logo`} 
-            className="w-full h-full object-contain"
+            className="w-16 h-16 md:w-20 md:h-20 object-contain"
             onError={() => setImgError(true)}
           />
-        </div>
-      )}
-      <span>{name}</span>
+        ) : (
+          <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-slate-50/50 rounded-full text-slate-300 border border-slate-100">
+            <span className="text-xl font-bold">{name.charAt(0)}</span>
+          </div>
+        )}
+      </div>
+      <span className="text-xs md:text-sm font-semibold text-slate-700 text-center line-clamp-1 w-full">{name}</span>
     </motion.div>
   );
 };
@@ -209,9 +213,9 @@ export default function OurBrands() {
 
                 <div className="w-full h-px bg-slate-100 mb-6" />
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-4 md:gap-6">
                   {brand.brandNames.map((name, j) => (
-                    <BrandPill key={name} name={name} index={j} />
+                    <BrandCard key={name} name={name} index={j} />
                   ))}
                 </div>
               </div>
