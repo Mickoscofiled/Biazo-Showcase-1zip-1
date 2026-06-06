@@ -194,9 +194,9 @@ export default function OurBrands() {
           className="w-full flex justify-center"
         >
           <motion.div
-            whileHover={{ scale: 1.015, y: -4 }}
+            whileHover={{ scale: 1.03, y: -8 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="w-full cursor-pointer rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/10 border border-slate-200/60 hover:shadow-[0_30px_80px_rgba(59,130,246,0.18)] transition-shadow duration-500"
+            className="w-full cursor-pointer rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/10 border border-slate-200/60 hover:shadow-[0_40px_100px_rgba(59,130,246,0.25)] transition-shadow duration-500"
           >
             <img 
               src={mockupImg} 
