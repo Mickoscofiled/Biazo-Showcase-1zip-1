@@ -38,20 +38,20 @@ export default function Hero() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as any }}
               className="absolute inset-0 rounded-full bg-white/30 blur-3xl scale-150"
             />
-            <div className="relative inline-block">
+            <div className="relative flex justify-center overflow-hidden h-36 md:h-48 w-72 md:w-96 mb-2">
               <div 
                 data-testid="img-hero-logo"
-                className="h-56 md:h-72 w-72 md:w-80 drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
+                className="h-64 md:h-80 w-72 md:w-96 drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
                 style={{
                   backgroundColor: '#87CEFA',
                   WebkitMaskImage: `url(${logoPath})`,
                   maskImage: `url(${logoPath})`,
-                  WebkitMaskSize: '160% auto',
-                  maskSize: '160% auto',
+                  WebkitMaskSize: 'contain',
+                  maskSize: 'contain',
                   WebkitMaskRepeat: 'no-repeat',
                   maskRepeat: 'no-repeat',
-                  WebkitMaskPosition: 'center 0%',
-                  maskPosition: 'center 0%',
+                  WebkitMaskPosition: 'center top',
+                  maskPosition: 'center top',
                 }}
               />
             </div>
