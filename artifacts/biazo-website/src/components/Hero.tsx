@@ -41,20 +41,27 @@ export default function Hero() {
             <div className="relative inline-block">
               <div 
                 data-testid="img-hero-logo"
-                className="h-72 md:h-96 w-96 md:w-[28rem] drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
+                className="h-56 md:h-72 w-72 md:w-80 drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
                 style={{
                   backgroundColor: '#87CEFA',
                   WebkitMaskImage: `url(${logoPath})`,
                   maskImage: `url(${logoPath})`,
-                  WebkitMaskSize: 'contain',
-                  maskSize: 'contain',
+                  WebkitMaskSize: '160% auto',
+                  maskSize: '160% auto',
                   WebkitMaskRepeat: 'no-repeat',
                   maskRepeat: 'no-repeat',
-                  WebkitMaskPosition: 'center',
-                  maskPosition: 'center',
+                  WebkitMaskPosition: 'center 0%',
+                  maskPosition: 'center 0%',
                 }}
               />
             </div>
+            {/* Company name as HTML text so every letter is equally visible */}
+            <h2 className="text-3xl md:text-[2.7rem] font-extrabold text-[#87CEFA] tracking-wide leading-tight drop-shadow-[0_0_20px_rgba(135,206,250,0.4)]" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+              Biazo International
+            </h2>
+            <p className="text-xl md:text-2xl text-[#87CEFA]/80 tracking-[0.15em] font-medium -mt-3" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+              General Trading FZ-LLC
+            </p>
           </motion.div>
 
           {/* Status badge */}
