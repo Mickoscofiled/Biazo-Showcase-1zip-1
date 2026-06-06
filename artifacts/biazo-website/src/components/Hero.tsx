@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown, Globe2, Shield, Truck, PackageCheck } from "lucide-react";
 import logoPath from "@assets/biazo-logo-transparent.png";
+import fixedLogoPath from "@assets/biazo-logo-fixed.jpeg";
 import heroBg from "@/assets/hero-bg.jpg";
 
 export default function Hero() {
