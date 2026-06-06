@@ -39,16 +39,20 @@ export default function Hero() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as any }}
               className="absolute inset-0 rounded-full bg-white/30 blur-3xl scale-150"
             />
-            <div className="relative flex justify-center w-64 md:w-80 h-auto mb-1">
-              <div className="w-full h-full flex justify-center items-start bg-white/90 p-4 rounded-2xl drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]">
-                <img 
-                  src={fixedLogoPath}
-                  alt="Biazo International General Trading FZ-LLC"
-                  className="w-full h-auto object-contain object-center"
-                  style={{ mixBlendMode: 'multiply' }}
-                />
-              </div>
+            <div className="relative flex justify-center mb-2">
+              <img 
+                src={fixedLogoPath}
+                alt="Biazo Crest"
+                className="w-48 md:w-64 h-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
+                style={{ mixBlendMode: 'screen' }}
+              />
             </div>
+            <h2 className="relative text-2xl md:text-4xl font-extrabold text-[#87CEFA] tracking-wide leading-tight drop-shadow-[0_0_20px_rgba(135,206,250,0.4)] text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+              Biazo International
+            </h2>
+            <p className="relative text-lg md:text-2xl text-[#87CEFA]/80 tracking-[0.12em] font-medium -mt-1 text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+              General Trading FZ-LLC
+            </p>
           </motion.div>
 
           {/* Status badge */}
