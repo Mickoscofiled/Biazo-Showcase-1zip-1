@@ -72,23 +72,18 @@ const BrandCard = ({ name, index }: { name: string, index: number }) => {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3, delay: (index % 10) * 0.05 }}
-      className="flex flex-col items-center justify-between w-28 h-32 md:w-36 md:h-40 bg-white rounded-xl shadow-sm border border-slate-100/60 p-4 hover:shadow-lg hover:shadow-blue-900/5 hover:-translate-y-1 transition-all duration-300"
+      className="flex items-center justify-center w-28 h-12 md:w-32 md:h-14 bg-white rounded-xl shadow-sm border border-slate-200/60 p-2.5 hover:shadow-md hover:border-slate-300 transition-all duration-300"
     >
-      <div className="flex-1 flex items-center justify-center w-full mb-2">
-        {!imgError ? (
-          <img 
-            src={`https://logo.clearbit.com/${domain}`} 
-            alt={`${name} logo`} 
-            className="w-16 h-16 md:w-20 md:h-20 object-contain"
-            onError={() => setImgError(true)}
-          />
-        ) : (
-          <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-slate-50/50 rounded-full text-slate-300 border border-slate-100">
-            <span className="text-xl font-bold">{name.charAt(0)}</span>
-          </div>
-        )}
-      </div>
-      <span className="text-xs md:text-sm font-semibold text-slate-700 text-center line-clamp-1 w-full">{name}</span>
+      {!imgError ? (
+        <img 
+          src={`https://logo.clearbit.com/${domain}`} 
+          alt={`${name} logo`} 
+          className="w-full h-full object-contain"
+          onError={() => setImgError(true)}
+        />
+      ) : (
+        <span className="text-[10px] md:text-xs font-bold text-slate-400 text-center line-clamp-1">{name}</span>
+      )}
     </motion.div>
   );
 };
@@ -213,7 +208,7 @@ export default function OurBrands() {
 
                 <div className="w-full h-px bg-slate-100 mb-6" />
 
-                <div className="flex flex-wrap gap-4 md:gap-6">
+                <div className="flex flex-wrap gap-3 md:gap-4">
                   {brand.brandNames.map((name, j) => (
                     <BrandCard key={name} name={name} index={j} />
                   ))}
