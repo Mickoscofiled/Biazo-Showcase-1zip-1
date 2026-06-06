@@ -85,24 +85,23 @@ const BrandPill = ({ name, index }: { name: string; index: number }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.25, delay: (index % 12) * 0.04 }}
       whileHover={{ y: -3, scale: 1.05, boxShadow: "0 8px 24px rgba(59,130,246,0.15)" }}
-      className="relative flex items-center justify-center bg-white border border-slate-200 rounded-xl px-4 py-3 cursor-pointer transition-colors duration-200 hover:border-blue-300 group"
-      style={{ minWidth: "90px", height: "56px" }}
+      className="flex flex-col items-center justify-center gap-1.5 bg-white border border-slate-200 rounded-xl px-4 py-3 cursor-pointer hover:border-blue-300 transition-all duration-200 group"
+      style={{ minWidth: "90px", width: "100px" }}
     >
       {!hasError ? (
         <img
           src={imgSrc}
           alt={`${name} logo`}
           onError={handleError}
-          className="max-w-full max-h-full object-contain"
-          style={{ maxWidth: "90px", maxHeight: "36px" }}
+          className="object-contain"
+          style={{ maxWidth: "72px", maxHeight: "32px" }}
         />
       ) : (
-        <span className="text-xs font-bold text-slate-600 text-center leading-tight">{name}</span>
+        <div className="w-9 h-9 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center">
+          <span className="text-sm font-bold text-blue-400">{name.charAt(0)}</span>
+        </div>
       )}
-      {/* Tooltip on hover */}
-      <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] font-semibold px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none z-10">
-        {name}
-      </div>
+      <span className="text-[10px] font-semibold text-slate-500 text-center leading-tight line-clamp-1 w-full text-center group-hover:text-blue-600 transition-colors">{name}</span>
     </motion.div>
   );
 };
