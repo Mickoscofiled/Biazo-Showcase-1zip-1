@@ -40,7 +40,7 @@ export default function Hero() {
               className="absolute inset-0 rounded-full bg-white/30 blur-3xl scale-150"
             />
             <div className="relative flex justify-center mb-2">
-              <div className="w-48 md:w-64 h-28 md:h-36 overflow-hidden flex justify-center items-start">
+              <div className="w-48 md:w-64 h-20 md:h-24 overflow-hidden flex justify-center items-start">
                 <div 
                   className="w-full h-64 md:h-80 drop-shadow-[0_0_30px_rgba(135,206,250,0.5)]"
                   style={{
