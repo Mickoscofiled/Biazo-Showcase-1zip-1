@@ -159,32 +159,6 @@ export default function OurBrands() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(115,145,209,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(115,145,209,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={containerVariant}
-          className="text-center mb-16"
-        >
-          <motion.div
-            variants={itemVariant}
-            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-widest uppercase mb-6"
-          >
-            What We Carry
-          </motion.div>
-          <motion.h2
-            variants={itemVariant}
-            className="text-3xl md:text-5xl font-bold text-slate-800 mb-4"
-          >
-            Our Brands
-          </motion.h2>
-          <motion.p
-            variants={itemVariant}
-            className="text-lg text-slate-600 max-w-2xl mx-auto"
-          >
-            We represent and supply world-class brands across five major product categories, bringing trusted global manufacturers to East Africa.
-          </motion.p>
-        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
