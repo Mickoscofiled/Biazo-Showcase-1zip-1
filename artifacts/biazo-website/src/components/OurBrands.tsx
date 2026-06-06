@@ -63,8 +63,9 @@ const brandDomains: Record<string, string> = {
 };
 
 const BrandCard = ({ name, index }: { name: string, index: number }) => {
-  const [imgError, setImgError] = useState(false);
   const domain = brandDomains[name] || `${name.toLowerCase().replace(/\s+/g, '')}.com`;
+  const [imgSrc, setImgSrc] = useState(`https://logo.clearbit.com/${domain}`);
+  const [hasError, setHasError] = useState(false);
 
   return (
     <motion.div
@@ -74,12 +75,20 @@ const BrandCard = ({ name, index }: { name: string, index: number }) => {
       transition={{ duration: 0.3, delay: (index % 10) * 0.05 }}
       className="flex items-center justify-center w-28 h-12 md:w-32 md:h-14 bg-white rounded-xl shadow-sm border border-slate-200/60 p-2.5 hover:shadow-md hover:border-slate-300 transition-all duration-300"
     >
-      {!imgError ? (
+      {!hasError ? (
         <img 
-          src={`https://logo.clearbit.com/${domain}`} 
+          src={imgSrc} 
           alt={`${name} logo`} 
           className="w-full h-full object-contain"
-          onError={() => setImgError(true)}
+          onError={() => {
+            if (imgSrc.includes('clearbit')) {
+              setImgSrc(`https://icons.duckduckgo.com/ip3/${domain}.ico`);
+            } else if (imgSrc.includes('duckduckgo')) {
+              setImgSrc(`https://www.google.com/s2/favicons?domain=${domain}&sz=128`);
+            } else {
+              setHasError(true);
+            }
+          }}
         />
       ) : (
         <span className="text-[10px] md:text-xs font-bold text-slate-400 text-center line-clamp-1">{name}</span>
