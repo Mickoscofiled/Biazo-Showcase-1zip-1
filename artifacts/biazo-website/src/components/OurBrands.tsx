@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Car, Settings, Laptop, Zap, Wrench } from "lucide-react";
+import mockupImg from "@/assets/brands-mockup.png";
 
 const brandDomains: Record<string, string> = {
   "MAN": "man.eu",
@@ -190,41 +191,13 @@ export default function OurBrands() {
           whileInView="show"
           viewport={{ once: true, margin: "-50px" }}
           variants={containerVariant}
-          className="space-y-6"
+          className="w-full flex justify-center"
         >
-          {brands.map((brand, i) => (
-            <motion.div
-              key={brand.title}
-              variants={itemVariant}
-              data-testid={`card-brand-${i}`}
-              className="group relative rounded-2xl bg-blue-50 border border-blue-100 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 group-hover:bg-primary/10 transition-all duration-500 pointer-events-none" />
-
-              <div className="p-7 lg:p-8">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-5 mb-6">
-                  <div className="p-3.5 rounded-xl bg-primary/5 border border-primary/10 group-hover:bg-primary/10 transition-all duration-300 self-start shrink-0">
-                    <div className="text-primary">{brand.icon}</div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-xl font-bold text-slate-800 group-hover:text-primary transition-colors leading-tight mb-1">
-                      {brand.title}
-                    </h3>
-                    <p className="text-xs text-primary font-semibold tracking-wide uppercase mb-2">{brand.subtitle}</p>
-                    <p className="text-sm text-slate-500 leading-relaxed">{brand.description}</p>
-                  </div>
-                </div>
-
-                <div className="w-full h-px bg-slate-100 mb-6" />
-
-                <div className="flex flex-wrap gap-3 md:gap-4">
-                  {brand.brandNames.map((name, j) => (
-                    <BrandCard key={name} name={name} index={j} />
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          ))}
+          <img 
+            src={mockupImg} 
+            alt="Our Brands" 
+            className="w-full h-auto object-contain rounded-2xl shadow-xl shadow-blue-900/5 border border-slate-100"
+          />
         </motion.div>
 
         <motion.div
