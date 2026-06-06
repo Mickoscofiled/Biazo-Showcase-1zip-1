@@ -187,17 +187,23 @@ export default function OurBrands() {
         </motion.div>
 
         <motion.div
-          initial="hidden"
-          whileInView="show"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          variants={containerVariant}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           className="w-full flex justify-center"
         >
-          <img 
-            src={mockupImg} 
-            alt="Our Brands" 
-            className="w-full h-auto object-contain rounded-2xl shadow-xl shadow-blue-900/5 border border-slate-100"
-          />
+          <motion.div
+            whileHover={{ scale: 1.015, y: -4 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="w-full cursor-pointer rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/10 border border-slate-200/60 hover:shadow-[0_30px_80px_rgba(59,130,246,0.18)] transition-shadow duration-500"
+          >
+            <img 
+              src={mockupImg} 
+              alt="Our Brands" 
+              className="w-full h-auto object-contain"
+            />
+          </motion.div>
         </motion.div>
 
         <motion.div
