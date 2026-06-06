@@ -32,34 +32,34 @@ export default function Hero() {
           className="flex flex-col items-center gap-7"
         >
           {/* Logo with glow */}
-          <motion.div variants={textItem} className="relative mb-4">
+          <motion.div variants={textItem} className="relative mb-4 flex flex-col items-center w-full">
             <motion.div
               animate={{ scale: [1, 1.06, 1], opacity: [0.4, 0.6, 0.4] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as any }}
               className="absolute inset-0 rounded-full bg-white/30 blur-3xl scale-150"
             />
-            <div className="relative flex justify-center overflow-hidden w-64 md:w-80 h-[105px] md:h-[130px] mb-2">
+            <div className="relative flex justify-center overflow-hidden w-56 md:w-72 h-28 md:h-36 mb-1">
               <div 
                 data-testid="img-hero-logo"
-                className="w-full drop-shadow-[0_0_30px_rgba(255,255,255,0.6)] h-[240px] md:h-[300px]"
+                className="w-full h-64 md:h-80 drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
                 style={{
                   backgroundColor: '#87CEFA',
                   WebkitMaskImage: `url(${logoPath})`,
                   maskImage: `url(${logoPath})`,
-                  WebkitMaskSize: 'contain',
-                  maskSize: 'contain',
+                  WebkitMaskSize: '100% auto',
+                  maskSize: '100% auto',
                   WebkitMaskRepeat: 'no-repeat',
                   maskRepeat: 'no-repeat',
-                  WebkitMaskPosition: 'center top',
-                  maskPosition: 'center top',
+                  WebkitMaskPosition: 'top center',
+                  maskPosition: 'top center',
                 }}
               />
             </div>
             {/* Company name as HTML text so every letter is equally visible */}
-            <h2 className="text-3xl md:text-[2.7rem] font-extrabold text-[#87CEFA] tracking-wide leading-tight drop-shadow-[0_0_20px_rgba(135,206,250,0.4)]" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+            <h2 className="relative text-3xl md:text-[2.7rem] font-extrabold text-[#87CEFA] tracking-wide leading-tight drop-shadow-[0_0_20px_rgba(135,206,250,0.4)] text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
               Biazo International
             </h2>
-            <p className="text-xl md:text-2xl text-[#87CEFA]/80 tracking-[0.15em] font-medium -mt-3" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+            <p className="relative text-xl md:text-2xl text-[#87CEFA]/80 tracking-[0.15em] font-medium -mt-2 text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
               General Trading FZ-LLC
             </p>
           </motion.div>
