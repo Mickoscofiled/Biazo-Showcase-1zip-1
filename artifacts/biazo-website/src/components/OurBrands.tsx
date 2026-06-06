@@ -1,5 +1,93 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Car, Settings, Laptop, Zap, Wrench } from "lucide-react";
+
+const brandDomains: Record<string, string> = {
+  "MAN": "man.eu",
+  "Shell": "shell.com",
+  "CAT": "caterpillar.com",
+  "Toyota": "toyota.com",
+  "Mobil": "mobil.com",
+  "Sullair": "sullair.com",
+  "Belzona": "belzona.com",
+  "Bridgestone": "bridgestone.com",
+  "Bestolife": "bestolife.com",
+  "Moly Slip": "molyslip.com",
+  "TotalEnergies": "totalenergies.com",
+  "Storike": "storike.com",
+  "XCMG": "xcmg.com",
+  "Perkins": "perkins.com",
+  "Atlas Copco": "atlascopco.com",
+  "IVECO": "iveco.com",
+  "Yokohama Tyres": "yokohamatire.com",
+  "CIGWELD": "cigweld.com.au",
+  "AFROX": "afrox.co.za",
+  "Lincoln Electric": "lincolnelectric.com",
+  "TWECO": "esab.com",
+  "Harris": "harrisproductsgroup.com",
+  "Victor": "esab.com",
+  "ESAB": "esab.com",
+  "Miller": "millerwelds.com",
+  "Bossweld": "bossweld.com.au",
+  "APC": "apc.com",
+  "CyberPower": "cyberpowersystems.com",
+  "Dell": "dell.com",
+  "D-Link": "dlink.com",
+  "Ducab": "ducab.com",
+  "Huadong": "huadongcable.com",
+  "Nexans": "nexans.com",
+  "RR Kabel": "rrkabel.com",
+  "OSRAM": "osram.com",
+  "Philips": "philips.com",
+  "Schneider Electric": "se.com",
+  "Gewiss": "gewiss.com",
+  "Chint Electric": "chintglobal.com",
+  "ABB": "abb.com",
+  "Legrand": "legrand.com",
+  "Hager": "hager.com",
+  "Mitsubishi Electric": "mitsubishielectric.com",
+  "Siemens": "siemens.com",
+  "Eaton": "eaton.com",
+  "3M": "3m.com",
+  "HellermannTyton": "hellermanntyton.com",
+  "Bosch": "bosch.com",
+  "Makita": "makitatools.com",
+  "Ronix": "ronixtools.com",
+  "Gedore": "gedore.com",
+  "Kindrick": "kendrick.com",
+  "Kapro": "kapro.com",
+  "Total": "totaltools.com.au",
+  "Fluke": "fluke.com",
+  "Stanley": "stanleytools.com",
+  "Tolsen": "tolsentools.com"
+};
+
+const BrandPill = ({ name, index }: { name: string, index: number }) => {
+  const [imgError, setImgError] = useState(false);
+  const domain = brandDomains[name] || `${name.toLowerCase().replace(/\s+/g, '')}.com`;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.85 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.3, delay: index * 0.03 }}
+      className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full active:scale-95 bg-blue-100 hover:bg-primary border border-blue-200 hover:border-primary text-slate-600 hover:text-white text-sm font-semibold tracking-wide transition-all duration-200 cursor-default hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/20 group/pill"
+    >
+      {!imgError && (
+        <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center p-0.5 overflow-hidden shadow-sm shrink-0 group-hover/pill:brightness-110">
+          <img 
+            src={`https://logo.clearbit.com/${domain}`} 
+            alt={`${name} logo`} 
+            className="w-full h-full object-contain"
+            onError={() => setImgError(true)}
+          />
+        </div>
+      )}
+      <span>{name}</span>
+    </motion.div>
+  );
+};
 
 const WA_URL =
   "https://wa.me/971504620492?text=Hello%20Biazo%20International%2C%20I%20would%20like%20to%20inquire%20about%20your%20brand%20products.";
@@ -123,16 +211,7 @@ export default function OurBrands() {
 
                 <div className="flex flex-wrap gap-2">
                   {brand.brandNames.map((name, j) => (
-                    <motion.span
-                      key={name}
-                      initial={{ opacity: 0, scale: 0.85 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: j * 0.03 }}
-                      className="inline-flex items-center px-4 py-2 rounded-full active:scale-95 bg-blue-100 hover:bg-primary border border-blue-200 hover:border-primary text-slate-600 hover:text-white text-sm font-semibold tracking-wide transition-all duration-200 cursor-default hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/20"
-                    >
-                      {name}
-                    </motion.span>
+                    <BrandPill key={name} name={name} index={j} />
                   ))}
                 </div>
               </div>
