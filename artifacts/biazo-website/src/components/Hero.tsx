@@ -39,20 +39,11 @@ export default function Hero() {
               className="absolute inset-0 rounded-full bg-white/30 blur-3xl scale-150"
             />
             <div className="relative inline-block">
-              <div 
+              <img 
+                src={logoPath}
+                alt="Biazo International General Trading FZ-LLC"
                 data-testid="img-hero-logo"
-                className="h-72 md:h-96 w-96 md:w-[28rem] drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
-                style={{
-                  backgroundColor: '#87CEFA',
-                  WebkitMaskImage: `url(${logoPath})`,
-                  maskImage: `url(${logoPath})`,
-                  WebkitMaskSize: 'contain',
-                  maskSize: 'contain',
-                  WebkitMaskRepeat: 'no-repeat',
-                  maskRepeat: 'no-repeat',
-                  WebkitMaskPosition: 'center',
-                  maskPosition: 'center',
-                }}
+                className="h-72 md:h-96 w-auto drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
               />
             </div>
           </motion.div>
