@@ -41,10 +41,19 @@ export default function Hero() {
             />
             <div className="relative flex justify-center mb-2">
               <div className="w-48 md:w-64 h-28 md:h-36 overflow-hidden flex justify-center items-start">
-                <img 
-                  src={logoPath}
-                  alt="Biazo Crest"
-                  className="w-full h-auto object-contain object-top drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
+                <div 
+                  className="w-full h-64 md:h-80 drop-shadow-[0_0_30px_rgba(135,206,250,0.5)]"
+                  style={{
+                    backgroundColor: '#87CEFA',
+                    WebkitMaskImage: `url(${logoPath})`,
+                    maskImage: `url(${logoPath})`,
+                    WebkitMaskSize: '100% auto',
+                    maskSize: '100% auto',
+                    WebkitMaskRepeat: 'no-repeat',
+                    maskRepeat: 'no-repeat',
+                    WebkitMaskPosition: 'top center',
+                    maskPosition: 'top center',
+                  }}
                 />
               </div>
             </div>
