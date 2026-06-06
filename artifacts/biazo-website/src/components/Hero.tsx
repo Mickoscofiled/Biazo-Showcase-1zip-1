@@ -38,10 +38,10 @@ export default function Hero() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as any }}
               className="absolute inset-0 rounded-full bg-white/30 blur-3xl scale-150"
             />
-            <div className="relative flex justify-center overflow-hidden h-36 md:h-48 w-72 md:w-96 mb-2">
+            <div className="relative flex justify-center overflow-hidden w-64 md:w-80 h-[105px] md:h-[130px] mb-2">
               <div 
                 data-testid="img-hero-logo"
-                className="h-64 md:h-80 w-72 md:w-96 drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
+                className="w-full drop-shadow-[0_0_30px_rgba(255,255,255,0.6)] h-[240px] md:h-[300px]"
                 style={{
                   backgroundColor: '#87CEFA',
                   WebkitMaskImage: `url(${logoPath})`,
