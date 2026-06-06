@@ -38,30 +38,16 @@ export default function Hero() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as any }}
               className="absolute inset-0 rounded-full bg-white/30 blur-3xl scale-150"
             />
-            <div className="relative flex justify-center overflow-hidden w-56 md:w-72 h-28 md:h-36 mb-1">
-              <div 
-                data-testid="img-hero-logo"
-                className="w-full h-64 md:h-80 drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]"
-                style={{
-                  backgroundColor: '#87CEFA',
-                  WebkitMaskImage: `url(${logoPath})`,
-                  maskImage: `url(${logoPath})`,
-                  WebkitMaskSize: '100% auto',
-                  maskSize: '100% auto',
-                  WebkitMaskRepeat: 'no-repeat',
-                  maskRepeat: 'no-repeat',
-                  WebkitMaskPosition: 'top center',
-                  maskPosition: 'top center',
-                }}
-              />
+            <div className="relative flex justify-center w-64 md:w-80 h-auto mb-1">
+              <div className="w-full h-full flex justify-center items-start bg-white/90 p-4 rounded-2xl drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]">
+                <img 
+                  src={fixedLogoPath}
+                  alt="Biazo International General Trading FZ-LLC"
+                  className="w-full h-auto object-contain object-center"
+                  style={{ mixBlendMode: 'multiply' }}
+                />
+              </div>
             </div>
-            {/* Company name as HTML text so every letter is equally visible */}
-            <h2 className="relative text-3xl md:text-[2.7rem] font-extrabold text-[#87CEFA] tracking-wide leading-tight drop-shadow-[0_0_20px_rgba(135,206,250,0.4)] text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
-              Biazo International
-            </h2>
-            <p className="relative text-xl md:text-2xl text-[#87CEFA]/80 tracking-[0.15em] font-medium -mt-2 text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
-              General Trading FZ-LLC
-            </p>
           </motion.div>
 
           {/* Status badge */}
