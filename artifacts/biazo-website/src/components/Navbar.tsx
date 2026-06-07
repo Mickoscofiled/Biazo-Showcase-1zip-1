@@ -5,6 +5,7 @@ import logoPath from "@assets/biazo-logo-transparent.png";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
+  { name: "Home", href: "#" },
   { name: "About", href: "#about" },
   { name: "Mission", href: "#mission" },
   { name: "Sectors", href: "#sectors" },
