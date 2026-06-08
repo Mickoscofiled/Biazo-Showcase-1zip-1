@@ -17,26 +17,26 @@ const brandDomains: Record<string, string> = {
   "Bestolife": "bestolife.com",
   "Moly Slip": "molyslip.com",
   "TotalEnergies": "totalenergies.com",
-  "Storike": "storike.com",
+  "Storike": "cnstorike.com",
   "XCMG": "xcmg.com",
-  "Perkins": "perkins.com",
+  "Perkins": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Perkins_Engines_logo.svg/256px-Perkins_Engines_logo.svg.png",
   "Atlas Copco": "atlascopco.com",
-  "IVECO": "iveco.com",
+  "IVECO": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Iveco_logo.svg/256px-Iveco_logo.svg.png",
   "Yokohama Tyres": "yokohamatire.com",
   "CIGWELD": "cigweld.com.au",
   "AFROX": "afrox.co.za",
   "Lincoln Electric": "lincolnelectric.com",
-  "TWECO": "esab.com",
+  "TWECO": "tweco.com",
   "Harris": "harrisproductsgroup.com",
-  "Victor": "esab.com",
-  "ESAB": "esab.com",
+  "Victor": "victortechnologies.com",
+  "ESAB": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/ESAB_logo.svg/256px-ESAB_logo.svg.png",
   "Miller": "millerwelds.com",
   "Bossweld": "bossweld.com.au",
   "APC": "apc.com",
   "CyberPower": "cyberpowersystems.com",
   "Dell": "dell.com",
   "D-Link": "dlink.com",
-  "Ducab": "ducab.com",
+  "Ducab": "favicon:ducab.com",
   "Huadong": "huadongcable.com",
   "Nexans": "nexans.com",
   "RR Kabel": "rrkabel.com",
@@ -52,7 +52,7 @@ const brandDomains: Record<string, string> = {
   "Siemens": "siemens.com",
   "Eaton": "eaton.com",
   "3M": "3m.com",
-  "HellermannTyton": "hellermanntyton.com",
+  "HellermannTyton": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/HellermannTyton_logo.svg/256px-HellermannTyton_logo.svg.png",
   "Bosch": "bosch.com",
   "Makita": "makitatools.com",
   "Ronix": "ronixtools.com",
@@ -66,13 +66,23 @@ const brandDomains: Record<string, string> = {
 };
 
 const BrandPill = ({ name, index }: { name: string; index: number }) => {
-  const domain = brandDomains[name] || `${name.toLowerCase().replace(/\s+/g, "")}.com`;
-  const [imgSrc, setImgSrc] = useState(`https://logo.clearbit.com/${domain}`);
+  const domainOrUrl = brandDomains[name] || `${name.toLowerCase().replace(/\s+/g, "")}.com`;
+  let initialSrc = "";
+  if (domainOrUrl.startsWith("http")) {
+    initialSrc = domainOrUrl;
+  } else if (domainOrUrl.startsWith("favicon:")) {
+    initialSrc = `https://www.google.com/s2/favicons?domain=${domainOrUrl.replace("favicon:", "")}&sz=128`;
+  } else {
+    initialSrc = `https://logo.clearbit.com/${domainOrUrl}`;
+  }
+
+  const [imgSrc, setImgSrc] = useState(initialSrc);
   const [hasError, setHasError] = useState(false);
 
   const handleError = () => {
     if (imgSrc.includes("clearbit")) {
-      setImgSrc(`https://www.google.com/s2/favicons?domain=${domain}&sz=128`);
+      const cleanDomain = domainOrUrl.replace("favicon:", "");
+      setImgSrc(`https://www.google.com/s2/favicons?domain=${cleanDomain}&sz=128`);
     } else {
       setHasError(true);
     }
