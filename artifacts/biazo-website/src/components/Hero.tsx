@@ -33,9 +33,6 @@ export default function Hero() {
 
       {/* Dark Overlay for Text Readability */}
       <div className="absolute inset-0 bg-black/50 pointer-events-none" />
-      
-      {/* Subtle grid overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none" />
 
       <div className="container relative z-10 px-4 lg:px-8 max-w-6xl mx-auto text-center">
         <motion.div
