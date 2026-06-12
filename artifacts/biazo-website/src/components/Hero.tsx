@@ -27,7 +27,7 @@ export default function Hero() {
 
   return (
     <section 
-      className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden text-white bg-slate-900"
+      className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden text-white bg-black"
     >
       {/* Background Video */}
       <video
