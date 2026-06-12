@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ChevronDown, Globe2, Shield, Truck, PackageCheck } from "lucide-react";
 import logoPath from "@/assets/biazo-logo-transparent.webp";
 import fixedLogoPath from "@/assets/biazo-logo-fixed.jpeg";
@@ -7,6 +7,7 @@ import heroVideo from "@/assets/hero-video.mp4";
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isVideoReady, setIsVideoReady] = useState(false);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -27,7 +28,7 @@ export default function Hero() {
 
   return (
     <section 
-      className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden text-white"
+      className={`relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden text-white transition-opacity duration-1000 ease-in-out ${isVideoReady ? 'opacity-100' : 'opacity-0'}`}
     >
       {/* Background Video */}
       <video
@@ -36,6 +37,7 @@ export default function Hero() {
         loop
         muted
         playsInline
+        onCanPlay={() => setIsVideoReady(true)}
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         style={{ scale: 1.08 }} // Zooms in slightly to help hide edge watermarks
       >
@@ -55,10 +57,19 @@ export default function Hero() {
           {/* Optimized Logo */}
           <motion.div variants={textItem} className="relative mb-4 flex flex-col items-center w-full">
             <div className="relative flex justify-center mb-4">
-              <img 
-                src={logoPath} 
-                alt="Biazo International Logo" 
-                className="w-64 md:w-96 h-auto drop-shadow-xl"
+              <div 
+                className="w-64 md:w-96 h-24 md:h-32 drop-shadow-xl"
+                style={{
+                  backgroundColor: '#87CEFA',
+                  WebkitMaskImage: `url(${logoPath})`,
+                  maskImage: `url(${logoPath})`,
+                  WebkitMaskSize: 'contain',
+                  maskSize: 'contain',
+                  WebkitMaskRepeat: 'no-repeat',
+                  maskRepeat: 'no-repeat',
+                  WebkitMaskPosition: 'center',
+                  maskPosition: 'center',
+                }}
               />
             </div>
             <h2 className="relative text-3xl md:text-5xl font-extrabold text-[#87CEFA] tracking-wide leading-tight text-center drop-shadow-lg" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
