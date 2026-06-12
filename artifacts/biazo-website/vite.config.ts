@@ -38,6 +38,23 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    target: "es2020",
+    cssMinify: "lightningcss",
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          // Split heavy vendor libraries into separate cacheable chunks
+          if (id.includes("node_modules")) {
+            if (id.includes("framer-motion")) return "vendor-framer";
+            if (id.includes("react-dom") || id.includes("react")) return "vendor-react";
+            if (id.includes("lucide-react")) return "vendor-icons";
+            if (id.includes("@radix-ui")) return "vendor-radix";
+            if (id.includes("recharts") || id.includes("d3-")) return "vendor-charts";
+            return "vendor";
+          }
+        },
+      },
+    },
   },
   server: {
     port,
