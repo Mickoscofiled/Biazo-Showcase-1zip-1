@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Car, Settings, Laptop, Zap, Wrench } from "lucide-react";
 import twecoLogo from "@/assets/brands/tweco.png";
+import ducabLogo from "@/assets/brands/ducab.png";
 
 const WA_URL =
   "https://wa.me/971504620492?text=Hello%20Biazo%20International%2C%20I%20would%20like%20to%20inquire%20about%20your%20brand%20products.";
@@ -37,7 +38,7 @@ const brandDomains: Record<string, string> = {
   "CyberPower": "cyberpowersystems.com",
   "Dell": "dell.com",
   "D-Link": "dlink.com",
-  "Ducab": "https://upload.wikimedia.org/wikipedia/commons/3/30/Ducab_logo_English_and_Arabic.svg",
+  "Ducab": ducabLogo,
   "Huadong": "huadongcable.com",
   "Nexans": "nexans.com",
   "RR Kabel": "rrkabel.com",
