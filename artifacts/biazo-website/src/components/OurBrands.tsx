@@ -26,7 +26,7 @@ const brandDomains: Record<string, string> = {
   "CIGWELD": "cigweld.com.au",
   "AFROX": "afrox.co.za",
   "Lincoln Electric": "lincolnelectric.com",
-  "TWECO": "https://cyberweld.com/cdn/shop/collections/tweco-logo-2016-525x205.png?v=1614352697",
+  "TWECO": "/tweco-logo.png",
   "Harris": "harrisproductsgroup.com",
   "Victor": "victortechnologies.com",
   "ESAB": "https://upload.wikimedia.org/wikipedia/commons/4/42/ESAB.svg",
@@ -68,7 +68,7 @@ const brandDomains: Record<string, string> = {
 const BrandPill = ({ name }: { name: string }) => {
   const domainOrUrl = brandDomains[name] || `${name.toLowerCase().replace(/\s+/g, "")}.com`;
   let initialSrc = "";
-  if (domainOrUrl.startsWith("http")) {
+  if (domainOrUrl.startsWith("http") || domainOrUrl.startsWith("/")) {
     initialSrc = domainOrUrl;
   } else if (domainOrUrl.startsWith("favicon:")) {
     initialSrc = `https://www.google.com/s2/favicons?domain=${domainOrUrl.replace("favicon:", "")}&sz=128`;
