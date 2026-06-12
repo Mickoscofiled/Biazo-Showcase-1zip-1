@@ -65,7 +65,7 @@ const brandDomains: Record<string, string> = {
   "Tolsen": "tolsentools.com"
 };
 
-const BrandPill = ({ name, index }: { name: string; index: number }) => {
+const BrandPill = ({ name }: { name: string }) => {
   const domainOrUrl = brandDomains[name] || `${name.toLowerCase().replace(/\s+/g, "")}.com`;
   let initialSrc = "";
   if (domainOrUrl.startsWith("http")) {
@@ -89,13 +89,8 @@ const BrandPill = ({ name, index }: { name: string; index: number }) => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.25, delay: (index % 12) * 0.04 }}
-      whileHover={{ y: -3, scale: 1.05, boxShadow: "0 8px 24px rgba(59,130,246,0.15)" }}
-      className="flex flex-col items-center justify-center gap-1.5 bg-white border border-slate-200 rounded-xl px-4 py-3 cursor-pointer hover:border-blue-300 transition-all duration-200 group"
+    <div
+      className="flex flex-col items-center justify-center gap-1.5 bg-white border border-slate-200 rounded-xl px-4 py-3 cursor-pointer hover:border-blue-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:shadow-[0_8px_24px_rgba(59,130,246,0.12)] transition-all duration-200 ease-out group"
       style={{ minWidth: "90px", width: "100px" }}
     >
       {!hasError ? (
@@ -105,14 +100,15 @@ const BrandPill = ({ name, index }: { name: string; index: number }) => {
           onError={handleError}
           className="object-contain"
           style={{ maxWidth: "72px", maxHeight: "32px" }}
+          loading="lazy"
         />
       ) : (
         <div className="w-9 h-9 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center">
           <span className="text-sm font-bold text-blue-400">{name.charAt(0)}</span>
         </div>
       )}
-      <span className="text-[10px] font-semibold text-slate-500 text-center leading-tight line-clamp-1 w-full text-center group-hover:text-blue-600 transition-colors">{name}</span>
-    </motion.div>
+      <span className="text-[10px] font-semibold text-slate-500 text-center leading-tight line-clamp-1 w-full group-hover:text-blue-600 transition-colors">{name}</span>
+    </div>
   );
 };
 
@@ -218,8 +214,8 @@ export default function OurBrands() {
 
                 {/* Brand Pills */}
                 <div className="flex flex-wrap gap-3">
-                  {brand.brandNames.map((name, j) => (
-                    <BrandPill key={name} name={name} index={j} />
+                  {brand.brandNames.map((name) => (
+                    <BrandPill key={name} name={name} />
                   ))}
                 </div>
               </div>

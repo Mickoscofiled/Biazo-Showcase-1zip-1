@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Target, Lightbulb, TrendingUp } from "lucide-react";
-import missionImg from "@/assets/mission.png";
-import visionImg from "@/assets/vision.png";
-import goalImg from "@/assets/goal.png";
+import missionImg from "@/assets/mission.webp";
+import visionImg from "@/assets/vision.webp";
+import goalImg from "@/assets/goal.webp";
 
 export default function Mission() {
   const cards = [

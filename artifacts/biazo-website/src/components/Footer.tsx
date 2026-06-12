@@ -1,4 +1,4 @@
-import logoPath from "@assets/biazo-logo-transparent.png";
+import logoPath from "@/assets/biazo-logo-transparent.webp";
 import { motion } from "framer-motion";
 
 export default function Footer() {

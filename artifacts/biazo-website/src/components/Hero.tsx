@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown, Globe2, Shield, Truck, PackageCheck } from "lucide-react";
-import logoPath from "@assets/biazo-logo-transparent.png";
-import fixedLogoPath from "@assets/biazo-logo-fixed.jpeg";
+import logoPath from "@/assets/biazo-logo-transparent.webp";
+import fixedLogoPath from "@/assets/biazo-logo-fixed.jpeg";
 import heroBg from "@/assets/hero-bg.jpg";
 
 export default function Hero() {
@@ -35,9 +35,10 @@ export default function Hero() {
           {/* Logo with glow */}
           <motion.div variants={textItem} className="relative mb-4 flex flex-col items-center w-full">
             <motion.div
-              animate={{ scale: [1, 1.06, 1], opacity: [0.4, 0.6, 0.4] }}
+              animate={{ opacity: [0.3, 0.5, 0.3] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as any }}
-              className="absolute inset-0 rounded-full bg-white/30 blur-3xl scale-150"
+              style={{ willChange: "opacity" }}
+              className="absolute inset-0 rounded-full bg-white/20 blur-3xl scale-150 pointer-events-none"
             />
             <div className="relative flex justify-center mb-2">
               <div className="w-64 md:w-96 h-24 md:h-32 overflow-hidden flex justify-center items-start">

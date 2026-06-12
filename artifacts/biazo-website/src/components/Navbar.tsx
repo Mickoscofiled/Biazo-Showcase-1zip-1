@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import logoPath from "@assets/biazo-logo-transparent.png";
+import logoPath from "@/assets/biazo-logo-transparent.webp";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [

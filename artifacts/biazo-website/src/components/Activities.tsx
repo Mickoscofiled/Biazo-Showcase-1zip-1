@@ -1,22 +1,22 @@
 import { motion } from "framer-motion";
 import { Tractor, HardHat, Pickaxe, Flame, FlaskConical, Wrench, PipetteIcon, AirVent, Monitor, Shield, Truck, Hammer, Car, SprayCan } from "lucide-react";
 
-import agriImg from "@/assets/sectors/agriculture.png";
-import constImg from "@/assets/sectors/construction.png";
-import miningImg from "@/assets/sectors/mining.png";
-import oilImg from "@/assets/sectors/oil-gas.png";
-import chemImg from "@/assets/sectors/chemicals.png";
+import agriImg from "@/assets/sectors/agriculture.webp";
+import constImg from "@/assets/sectors/construction.webp";
+import miningImg from "@/assets/sectors/mining.webp";
+import oilImg from "@/assets/sectors/oil-gas.webp";
+import chemImg from "@/assets/sectors/chemicals.webp";
 import weldingImg from "@/assets/sectors/cutting-welding.jpg";
 import hdpeImg from "@/assets/sectors/hdpe-pipes.jpg";
 import steelImg from "@/assets/sectors/steel-pipes.jpg";
 import ppeImg from "@/assets/sectors/ppe.jpg";
-import ivecoImg from "@/assets/sectors/iveco.png";
-import pipeFittingsImg from "@/assets/sectors/pipe-fittings.png";
+import ivecoImg from "@/assets/sectors/iveco.webp";
+import pipeFittingsImg from "@/assets/sectors/pipe-fittings.webp";
 import handToolsImg from "@/assets/sectors/hand-tools.jpg";
 import toyotaImg from "@/assets/sectors/toyota-parts.jpg";
 import cleaningImg from "@/assets/sectors/cleaning-supplies.jpg";
-import acImg from "@/assets/sectors/air-conditioners.png";
-import itImg from "@/assets/sectors/it-networking.png";
+import acImg from "@/assets/sectors/air-conditioners.webp";
+import itImg from "@/assets/sectors/it-networking.webp";
 
 const sectors = [
   { name: "Agricultural Equipment", icon: <Tractor className="w-5 h-5" /> },
@@ -113,16 +113,14 @@ export default function Activities() {
             <motion.div
               key={sector.name}
               variants={itemVariant}
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              className="group relative rounded-3xl overflow-hidden aspect-[4/5] shadow-lg cursor-default hover:shadow-xl hover:shadow-primary/20 transition-shadow duration-300"
+              className="group relative rounded-3xl overflow-hidden aspect-[4/5] shadow-lg cursor-default hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-1.5 transition-all duration-300 ease-out"
             >
               <div className="absolute inset-0 bg-slate-900">
                 <img
                   src={sector.image}
                   alt={sector.name}
                   loading="lazy"
-                  className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500 ease-out"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent" />

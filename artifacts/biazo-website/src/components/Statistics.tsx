@@ -1,4 +1,4 @@
-import { motion, useInView, useMotionValue, useTransform, animate, useScroll, useMotionValueEvent } from "framer-motion";
+import { motion, useInView, useMotionValue, useTransform, animate, useMotionValueEvent } from "framer-motion";
 import { useRef, useEffect } from "react";
 
 const stats = [
@@ -54,9 +54,8 @@ function StatCard({ stat, index }: { stat: typeof stats[0]; index: number }) {
       initial={{ opacity: 0, x: isEven ? -60 : 60 }}
       animate={isInView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.7, delay: 0.05, ease: [0.25, 0.46, 0.45, 0.94] }}
-      whileHover={{ y: -6, scale: 1.02 }}
       data-testid={`stat-${stat.label.toLowerCase().replace(/\s+/g, "-")}`}
-      className="group relative bg-white/80 backdrop-blur-md rounded-2xl border border-white shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_rgba(115,145,209,0.2)] transition-shadow duration-300 overflow-hidden flex items-center gap-6 p-6"
+      className="group relative bg-white/80 backdrop-blur-md rounded-2xl border border-white shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_rgba(115,145,209,0.2)] hover:-translate-y-1.5 hover:scale-[1.02] transition-all duration-300 ease-out overflow-hidden flex items-center gap-6 p-6"
     >
       {/* Glow blob */}
       <div className="absolute -top-8 -right-8 w-28 h-28 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors duration-500 pointer-events-none" />
@@ -94,24 +93,17 @@ function StatCard({ stat, index }: { stat: typeof stats[0]; index: number }) {
 }
 
 export default function Statistics() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
-  const backgroundX = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
-  const backgroundX2 = useTransform(scrollYProgress, [0, 1], ["10%", "-10%"]);
-
   const headerRef = useRef<HTMLDivElement>(null);
   const headerInView = useInView(headerRef, { once: true });
 
   return (
-    <section id="statistics" ref={sectionRef} className="py-28 bg-blue-50 relative overflow-hidden">
-      {/* Animated background orbs */}
-      <motion.div
-        style={{ x: backgroundX }}
-        className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"
+    <section id="statistics" className="py-28 bg-blue-50 relative overflow-hidden">
+      {/* Static background orbs (optimized to prevent scroll paint lag) */}
+      <div
+        className="absolute top-0 left-[15%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"
       />
-      <motion.div
-        style={{ x: backgroundX2 }}
-        className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#87CEFA]/10 rounded-full blur-[100px] pointer-events-none"
+      <div
+        className="absolute bottom-0 right-[15%] w-[400px] h-[400px] bg-[#87CEFA]/10 rounded-full blur-[100px] pointer-events-none"
       />
 
       <div className="container mx-auto px-4 lg:px-8 max-w-6xl relative z-10">
