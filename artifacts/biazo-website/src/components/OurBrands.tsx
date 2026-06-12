@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Car, Settings, Laptop, Zap, Wrench } from "lucide-react";
+import twecoLogo from "@/assets/brands/tweco.png";
 
 const WA_URL =
   "https://wa.me/971504620492?text=Hello%20Biazo%20International%2C%20I%20would%20like%20to%20inquire%20about%20your%20brand%20products.";
@@ -26,7 +27,7 @@ const brandDomains: Record<string, string> = {
   "CIGWELD": "cigweld.com.au",
   "AFROX": "afrox.co.za",
   "Lincoln Electric": "lincolnelectric.com",
-  "TWECO": "/tweco-logo.png",
+  "TWECO": twecoLogo,
   "Harris": "harrisproductsgroup.com",
   "Victor": "victortechnologies.com",
   "ESAB": "https://upload.wikimedia.org/wikipedia/commons/4/42/ESAB.svg",
@@ -68,7 +69,7 @@ const brandDomains: Record<string, string> = {
 const BrandPill = ({ name }: { name: string }) => {
   const domainOrUrl = brandDomains[name] || `${name.toLowerCase().replace(/\s+/g, "")}.com`;
   let initialSrc = "";
-  if (domainOrUrl.startsWith("http") || domainOrUrl.startsWith("/")) {
+  if (domainOrUrl.startsWith("http") || domainOrUrl.startsWith("/") || domainOrUrl.startsWith(".") || domainOrUrl.match(/\.(png|jpe?g|svg|webp|gif)$/i)) {
     initialSrc = domainOrUrl;
   } else if (domainOrUrl.startsWith("favicon:")) {
     initialSrc = `https://www.google.com/s2/favicons?domain=${domainOrUrl.replace("favicon:", "")}&sz=128`;
