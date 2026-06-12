@@ -3,6 +3,7 @@ import { ArrowRight, ChevronDown, Globe2, Shield, Truck, PackageCheck } from "lu
 import logoPath from "@/assets/biazo-logo-transparent.webp";
 import fixedLogoPath from "@/assets/biazo-logo-fixed.jpeg";
 import heroBg from "@/assets/hero-bg.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 
 export default function Hero() {
   const textContainer = {
@@ -16,11 +17,22 @@ export default function Hero() {
 
   return (
     <section 
-      className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden text-white bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${heroBg})` }}
+      className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden text-white"
     >
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        style={{ scale: 1.08 }} // Zooms in slightly to help hide edge watermarks
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
+
       {/* Dark Overlay for Text Readability */}
-      <div className="absolute inset-0 bg-black/40 pointer-events-none" />
+      <div className="absolute inset-0 bg-black/50 pointer-events-none" />
       
       {/* Subtle grid overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none" />
