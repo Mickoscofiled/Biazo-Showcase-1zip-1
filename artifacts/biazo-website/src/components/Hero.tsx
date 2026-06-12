@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 import { ArrowRight, ChevronDown, Globe2, Shield, Truck, PackageCheck } from "lucide-react";
 import logoPath from "@/assets/biazo-logo-transparent.webp";
 import fixedLogoPath from "@/assets/biazo-logo-fixed.jpeg";
@@ -6,6 +7,16 @@ import heroBg from "@/assets/hero-bg.jpg";
 import heroVideo from "@/assets/hero-video.mp4";
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.log("Video autoplay failed:", error);
+      });
+    }
+  }, []);
+
   const textContainer = {
     hidden: { opacity: 0 },
     show: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 0.3 } }
@@ -21,10 +32,12 @@ export default function Hero() {
     >
       {/* Background Video */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
+        poster={heroBg}
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         style={{ scale: 1.08 }} // Zooms in slightly to help hide edge watermarks
       >
