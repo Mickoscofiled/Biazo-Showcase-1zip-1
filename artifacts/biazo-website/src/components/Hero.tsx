@@ -52,33 +52,16 @@ export default function Hero() {
           animate="show"
           className="flex flex-col items-center gap-7"
         >
-          {/* Logo with glow */}
+          {/* Optimized Logo */}
           <motion.div variants={textItem} className="relative mb-4 flex flex-col items-center w-full">
-            <motion.div
-              animate={{ opacity: [0.3, 0.5, 0.3] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as any }}
-              style={{ willChange: "opacity" }}
-              className="absolute inset-0 rounded-full bg-white/20 blur-3xl scale-150 pointer-events-none"
-            />
-            <div className="relative flex justify-center mb-2">
-              <div className="w-64 md:w-96 h-24 md:h-32 overflow-hidden flex justify-center items-start">
-                <div 
-                  className="w-full h-80 md:h-[28rem] drop-shadow-[0_0_30px_rgba(135,206,250,0.5)]"
-                  style={{
-                    backgroundColor: '#87CEFA',
-                    WebkitMaskImage: `url(${logoPath})`,
-                    maskImage: `url(${logoPath})`,
-                    WebkitMaskSize: '100% auto',
-                    maskSize: '100% auto',
-                    WebkitMaskRepeat: 'no-repeat',
-                    maskRepeat: 'no-repeat',
-                    WebkitMaskPosition: 'top center',
-                    maskPosition: 'top center',
-                  }}
-                />
-              </div>
+            <div className="relative flex justify-center mb-4">
+              <img 
+                src={logoPath} 
+                alt="Biazo International Logo" 
+                className="w-64 md:w-96 h-auto drop-shadow-xl"
+              />
             </div>
-            <h2 className="relative text-3xl md:text-5xl font-extrabold text-[#87CEFA] tracking-wide leading-tight drop-shadow-[0_0_20px_rgba(135,206,250,0.4)] text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+            <h2 className="relative text-3xl md:text-5xl font-extrabold text-[#87CEFA] tracking-wide leading-tight text-center drop-shadow-lg" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
               Biazo International
             </h2>
             <p className="relative text-xl md:text-3xl text-[#87CEFA]/80 tracking-[0.12em] font-medium -mt-1 text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
