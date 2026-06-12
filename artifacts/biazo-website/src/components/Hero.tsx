@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react";
 import { ArrowRight, ChevronDown, Globe2, Shield, Truck, PackageCheck } from "lucide-react";
 import logoPath from "@/assets/biazo-logo-transparent.webp";
 import fixedLogoPath from "@/assets/biazo-logo-fixed.jpeg";
-import heroBg from "@/assets/hero-bg.jpg";
 import heroVideo from "@/assets/hero-video.mp4";
 
 export default function Hero() {
@@ -28,7 +27,7 @@ export default function Hero() {
 
   return (
     <section 
-      className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden text-white"
+      className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden text-white bg-slate-900"
     >
       {/* Background Video */}
       <video
@@ -37,7 +36,6 @@ export default function Hero() {
         loop
         muted
         playsInline
-        poster={heroBg}
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         style={{ scale: 1.08 }} // Zooms in slightly to help hide edge watermarks
       >
