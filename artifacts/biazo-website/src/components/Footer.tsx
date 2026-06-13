@@ -35,6 +35,7 @@ export default function Footer() {
               alt="Biazo Logo"
               data-testid="img-footer-logo"
               className="h-16 w-auto object-contain mb-6 brightness-0 invert opacity-90"
+              loading="lazy"
             />
             <p className="max-w-sm text-sm leading-relaxed text-slate-400 mb-6">
               Biazo International General Trading FZ-LLC is a premier general trading company bridging UAE and East Africa with high-quality industrial supplies and solutions.
