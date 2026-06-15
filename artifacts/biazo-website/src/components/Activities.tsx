@@ -107,13 +107,13 @@ export default function Activities() {
           whileInView="show"
           viewport={{ once: true, margin: "-50px" }}
           variants={containerVariant}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 max-w-7xl mx-auto mb-16"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 max-w-7xl mx-auto mb-16"
         >
           {sectorImages.map((sector, i) => (
             <motion.div
               key={sector.name}
               variants={itemVariant}
-              className="group relative rounded-3xl overflow-hidden aspect-[4/5] shadow-lg cursor-default hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-1.5 transition-all duration-300 ease-out"
+              className="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-md cursor-default hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 transition-all duration-300 ease-out"
             >
               <div className="absolute inset-0 bg-slate-900">
                 <img
@@ -124,11 +124,11 @@ export default function Activities() {
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-6 w-full text-left">
-                <h3 className="text-2xl font-bold text-white mb-1 drop-shadow-md transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+              <div className="absolute bottom-0 left-0 p-4 w-full text-left">
+                <h3 className="text-sm font-bold text-white mb-1 drop-shadow-md transform translate-y-1 group-hover:translate-y-0 transition-transform duration-300 leading-tight">
                   {sector.name}
                 </h3>
-                <div className="h-1 w-8 bg-primary rounded-full mt-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-4 group-hover:translate-x-0" />
+                <div className="h-0.5 w-6 bg-primary rounded-full mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-3 group-hover:translate-x-0" />
               </div>
             </motion.div>
           ))}
