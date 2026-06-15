@@ -43,7 +43,7 @@ export default function PipesSteelCatalogue() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.5 }}
           className="text-center mb-10"
         >
@@ -76,7 +76,7 @@ export default function PipesSteelCatalogue() {
               id={`cat-${cat.id}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className="flex flex-col rounded-xl bg-white border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-md transition-shadow pb-4"
             >
@@ -114,7 +114,7 @@ export default function PipesSteelCatalogue() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ delay: 0.2 }}
           className="mt-8 py-4 px-6 rounded-xl bg-primary flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg shadow-primary/15"
         >

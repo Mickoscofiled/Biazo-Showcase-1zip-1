@@ -70,7 +70,7 @@ export default function Products() {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: false, margin: "-50px" }}
           variants={containerVariant}
           className="text-center mb-16"
         >
@@ -97,7 +97,7 @@ export default function Products() {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: false, margin: "-50px" }}
           variants={containerVariant}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >

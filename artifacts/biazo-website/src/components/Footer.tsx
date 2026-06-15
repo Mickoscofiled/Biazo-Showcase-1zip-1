@@ -25,7 +25,7 @@ export default function Footer() {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: false, margin: "-50px" }}
           variants={containerVariant}
           className="grid md:grid-cols-4 gap-8 mb-10"
         >
@@ -85,7 +85,7 @@ export default function Footer() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="pt-8 border-t border-white/5 text-xs flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500"
         >

@@ -99,7 +99,7 @@ function CategoryCard({ cat, index }: { cat: typeof categories[number]; index: n
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
       transition={{ duration: 0.4, delay: index * 0.08 }}
       className="group p-4 rounded-xl bg-white border border-slate-200/80 hover:border-blue-200 transition-all duration-200 hover:shadow-md hover:shadow-blue-900/5"
     >
@@ -191,7 +191,7 @@ export default function GeologicalCatalogue() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ delay: 0.2 }}
           className="mt-8 py-4 px-6 rounded-xl bg-white border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4"
         >

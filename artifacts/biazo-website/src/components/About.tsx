@@ -42,7 +42,7 @@ export default function About() {
           <motion.div
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: false, margin: "-100px" }}
             variants={containerVariant}
           >
             <motion.div variants={itemVariant} className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/5 text-primary text-xs font-semibold tracking-widest uppercase mb-6">
@@ -73,7 +73,7 @@ export default function About() {
           <motion.div
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: false, margin: "-100px" }}
             variants={containerVariant}
             className="flex flex-col gap-5"
           >

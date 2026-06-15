@@ -79,7 +79,7 @@ export default function Activities() {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: false, margin: "-50px" }}
           variants={containerVariant}
         >
           <motion.div
@@ -105,7 +105,7 @@ export default function Activities() {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: false, margin: "-50px" }}
           variants={containerVariant}
           className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 max-w-7xl mx-auto mb-16"
         >
@@ -139,7 +139,7 @@ export default function Activities() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: false, margin: "-50px" }}
           transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-16 p-8 rounded-2xl bg-blue-100 border border-blue-200 max-w-3xl mx-auto"
         >

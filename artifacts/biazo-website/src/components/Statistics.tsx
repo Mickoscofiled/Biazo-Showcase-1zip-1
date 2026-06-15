@@ -22,7 +22,7 @@ const MAX = 27.3;
 
 function StatRow({ stat, index }: { stat: typeof stats[0]; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-40px" });
+  const isInView = useInView(ref, { once: false, margin: "-40px" });
 
   return (
     <motion.div
@@ -56,7 +56,7 @@ function StatRow({ stat, index }: { stat: typeof stats[0]; index: number }) {
 
 export default function Statistics() {
   const headerRef = useRef<HTMLDivElement>(null);
-  const headerInView = useInView(headerRef, { once: true });
+  const headerInView = useInView(headerRef, { once: false });
 
   return (
     <section id="statistics" className="py-24 bg-white relative overflow-hidden">

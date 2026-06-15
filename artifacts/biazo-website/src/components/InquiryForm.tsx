@@ -80,7 +80,7 @@ export default function InquiryForm() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-green-100 border border-green-200 text-green-600 text-xs font-semibold tracking-widest uppercase mb-6"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
@@ -90,7 +90,7 @@ export default function InquiryForm() {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ delay: 0.05 }}
               className="text-3xl md:text-4xl font-bold text-blue-900 mb-4 leading-tight"
             >
@@ -100,7 +100,7 @@ export default function InquiryForm() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ delay: 0.1 }}
               className="text-blue-600/65 leading-relaxed mb-8"
             >
@@ -110,7 +110,7 @@ export default function InquiryForm() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ delay: 0.15 }}
               className="space-y-4"
             >
@@ -137,7 +137,7 @@ export default function InquiryForm() {
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ delay: 0.2 }}
               className="mt-8 inline-flex items-center gap-2 text-sm text-green-600 hover:text-green-700 transition-colors font-medium"
             >
@@ -152,7 +152,7 @@ export default function InquiryForm() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <div className="rounded-2xl bg-white border border-blue-100 shadow-lg shadow-blue-100 overflow-hidden">

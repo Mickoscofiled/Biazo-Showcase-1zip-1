@@ -172,7 +172,7 @@ export default function OurBrands() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
@@ -189,7 +189,7 @@ export default function OurBrands() {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: false, margin: "-50px" }}
           variants={containerVariant}
           className="space-y-5"
         >
@@ -229,7 +229,7 @@ export default function OurBrands() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ delay: 0.3 }}
           className="mt-12 text-center"
         >

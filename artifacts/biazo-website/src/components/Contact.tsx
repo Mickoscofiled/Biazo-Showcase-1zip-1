@@ -30,7 +30,7 @@ export default function Contact() {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: false, margin: "-50px" }}
           variants={containerVariant}
           className="text-center mb-16"
         >
@@ -61,7 +61,7 @@ export default function Contact() {
           <motion.div
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: false, margin: "-50px" }}
             variants={containerVariant}
             className="flex flex-col gap-4"
           >
@@ -135,7 +135,7 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: false, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="p-8 rounded-2xl bg-primary/5 border border-primary/10 hover:border-primary/20 transition-all"
           >
