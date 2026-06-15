@@ -71,7 +71,7 @@ export default function Activities() {
   };
 
   return (
-    <section id="sectors" className="py-28 bg-blue-50 relative overflow-hidden">
+    <section id="sectors" className="py-28 bg-blue-50 dark:bg-slate-950 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(100,149,237,0.03),transparent_70%)]" />
       {/* clean bg */}
 
@@ -90,13 +90,13 @@ export default function Activities() {
           </motion.div>
           <motion.h2
             variants={itemVariant}
-            className="text-3xl md:text-5xl font-bold mb-6 text-slate-800"
+            className="text-3xl md:text-5xl font-bold mb-6 text-slate-800 dark:text-slate-100"
           >
             Key Activities & Sectors
           </motion.h2>
           <motion.p
             variants={itemVariant}
-            className="text-lg text-slate-600 max-w-2xl mx-auto mb-16"
+            className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-16"
           >
             We supply essential materials and equipment to pivotal industries driving economic growth across the Continent and the UAE.
           </motion.p>
@@ -143,8 +143,8 @@ export default function Activities() {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-16 p-8 rounded-2xl bg-blue-100 border border-blue-200 max-w-3xl mx-auto"
         >
-          <p className="text-slate-600 leading-relaxed text-lg">
-            Leveraging our dual-hub operations in the <span className="text-slate-800 font-semibold">UAE</span> and <span className="text-slate-800 font-semibold">Uganda</span>, we deliver high-performance procurement services across the Continent, anchored by a commitment to operational transparency and efficiency.
+          <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
+            Leveraging our dual-hub operations in the <span className="text-slate-800 dark:text-slate-100 font-semibold">UAE</span> and <span className="text-slate-800 dark:text-slate-100 font-semibold">Uganda</span>, we deliver high-performance procurement services across the Continent, anchored by a commitment to operational transparency and efficiency.
           </p>
         </motion.div>
       </div>

@@ -46,7 +46,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="link-footer-email"
-                className="text-xs text-slate-400 hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-full active:scale-95 border border-white/10 hover:border-[#7391D1]/50 hover:bg-[#7391D1]/10 shadow-sm"
+                className="text-xs text-slate-400 hover:text-white transition-colors bg-white dark:bg-slate-900/5 px-4 py-2 rounded-full active:scale-95 border border-white/10 hover:border-[#7391D1]/50 hover:bg-[#7391D1]/10 shadow-sm"
               >
                 sales@biazointernational.com
               </a>
@@ -89,7 +89,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: false }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="pt-8 border-t border-white/5 text-xs flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500"
+          className="pt-8 border-t border-white/5 text-xs flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 dark:text-slate-400"
         >
           <p>&copy; {new Date().getFullYear()} Biazo International General Trading FZ-LLC. All rights reserved.</p>
           <p>RAKEZ Business Zone, Ras Al Khaimah, UAE</p>

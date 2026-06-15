@@ -31,11 +31,11 @@ function StatRow({ stat, index }: { stat: typeof stats[0]; index: number }) {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.45, delay: index * 0.04, ease: "easeOut" }}
       data-testid={`stat-${stat.label.toLowerCase().replace(/\s+/g, "-")}`}
-      className="border-b border-slate-100 py-4 last:border-b-0"
+      className="border-b border-slate-100 dark:border-slate-800 py-4 last:border-b-0"
     >
       {/* Label + value row */}
       <div className="flex items-center justify-between mb-2">
-        <span className="text-sm font-medium text-slate-700">{stat.label}</span>
+        <span className="text-sm font-medium text-slate-700 dark:text-slate-200">{stat.label}</span>
         <span className="text-sm font-semibold text-blue-500 tabular-nums ml-4 shrink-0">
           {stat.value.toFixed(1)}%
         </span>
@@ -59,7 +59,7 @@ export default function Statistics() {
   const headerInView = useInView(headerRef, { once: false });
 
   return (
-    <section id="statistics" className="py-24 bg-white relative overflow-hidden">
+    <section id="statistics" className="py-24 bg-white dark:bg-slate-900 relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 max-w-3xl relative z-10">
 
         {/* Header */}
@@ -68,7 +68,7 @@ export default function Statistics() {
             initial={{ opacity: 0, y: 16 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-blue-50 text-blue-500 text-xs font-semibold tracking-widest uppercase mb-5"
+            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-blue-50 dark:bg-slate-950 text-blue-500 text-xs font-semibold tracking-widest uppercase mb-5"
           >
             Portfolio Breakdown
           </motion.div>
@@ -76,7 +76,7 @@ export default function Statistics() {
             initial={{ opacity: 0, y: 16 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl md:text-5xl font-bold text-slate-800 mb-3"
+            className="text-3xl md:text-5xl font-bold text-slate-800 dark:text-slate-100 mb-3"
           >
             Product Distribution
           </motion.h2>
@@ -84,7 +84,7 @@ export default function Statistics() {
             initial={{ opacity: 0, y: 16 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base text-slate-500 max-w-xl mx-auto"
+            className="text-base text-slate-500 dark:text-slate-400 max-w-xl mx-auto"
           >
             Breakdown of our key product supply portfolio across sectors.
           </motion.p>

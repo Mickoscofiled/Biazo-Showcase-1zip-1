@@ -83,7 +83,7 @@ export default function Hero() {
           {/* Status badge */}
           <motion.div
             variants={textItem}
-            className="inline-flex items-center gap-2.5 py-2 px-6 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold tracking-widest uppercase text-xs sm:text-sm shadow-[0_8px_16px_rgba(0,0,0,0.1)] shadow-inner"
+            className="inline-flex items-center gap-2.5 py-2 px-6 rounded-full bg-white dark:bg-slate-900/20 backdrop-blur-md border border-white/30 text-white font-bold tracking-widest uppercase text-xs sm:text-sm shadow-[0_8px_16px_rgba(0,0,0,0.1)] shadow-inner"
           >
             <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
             Bridging UAE & East Africa
@@ -121,7 +121,7 @@ export default function Hero() {
             <a
               href="#contact"
               data-testid="link-contact-sales"
-              className="flex items-center gap-2 bg-white/20 text-white border border-white/40 hover:bg-white/30 px-8 py-4 rounded-full active:scale-95 font-extrabold text-lg transition-all backdrop-blur-md hover:-translate-y-1 shadow-[0_10px_25px_rgba(0,0,0,0.1),inset_0_2px_10px_rgba(255,255,255,0.2)]"
+              className="flex items-center gap-2 bg-white dark:bg-slate-900/20 text-white border border-white/40 hover:bg-white dark:bg-slate-900/30 px-8 py-4 rounded-full active:scale-95 font-extrabold text-lg transition-all backdrop-blur-md hover:-translate-y-1 shadow-[0_10px_25px_rgba(0,0,0,0.1),inset_0_2px_10px_rgba(255,255,255,0.2)]"
             >
               Contact Sales
             </a>

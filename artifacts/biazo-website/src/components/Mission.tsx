@@ -40,7 +40,7 @@ export default function Mission() {
   };
 
   return (
-    <section id="mission" className="py-28 bg-blue-50/80 relative overflow-hidden">
+    <section id="mission" className="py-28 bg-blue-50 dark:bg-slate-950/80 relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary/5 blur-[100px] rounded-full" />
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         <motion.div
@@ -58,7 +58,7 @@ export default function Mission() {
           </motion.div>
           <motion.h2
             variants={itemVariant}
-            className="text-3xl md:text-5xl font-bold text-slate-800"
+            className="text-3xl md:text-5xl font-bold text-slate-800 dark:text-slate-100"
           >
             What Drives Us
           </motion.h2>
@@ -77,7 +77,7 @@ export default function Mission() {
               variants={itemVariant}
               whileHover={{ y: -5 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="group relative p-8 rounded-2xl border border-blue-100 hover:border-primary/20 bg-white transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 overflow-hidden min-h-[320px] flex flex-col justify-end"
+              className="group relative p-8 rounded-2xl border border-blue-100 dark:border-slate-800 hover:border-primary/20 bg-white dark:bg-slate-900 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 overflow-hidden min-h-[320px] flex flex-col justify-end"
             >
               {/* Soft Background Image */}
               <div className="absolute inset-0 z-0 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
@@ -96,8 +96,8 @@ export default function Mission() {
                 <div className="mb-6 p-4 bg-primary/5 border border-primary/10 inline-block rounded-xl group-hover:scale-110 transition-transform">
                   <div className="text-primary">{card.icon}</div>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-800 mb-4 group-hover:text-primary transition-colors">{card.title}</h3>
-                <p className="text-slate-600 leading-relaxed font-medium">
+                <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-4 group-hover:text-primary transition-colors">{card.title}</h3>
+                <p className="text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
                   {card.content}
                 </p>
               </div>

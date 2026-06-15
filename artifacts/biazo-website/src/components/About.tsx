@@ -34,7 +34,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-28 bg-white relative overflow-hidden">
+    <section id="about" className="py-28 bg-white dark:bg-slate-900 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -48,17 +48,17 @@ export default function About() {
             <motion.div variants={itemVariant} className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/5 text-primary text-xs font-semibold tracking-widest uppercase mb-6">
               Our Story
             </motion.div>
-            <motion.h2 variants={itemVariant} className="text-3xl md:text-4xl font-bold mb-6 text-slate-800 leading-tight">
+            <motion.h2 variants={itemVariant} className="text-3xl md:text-4xl font-bold mb-6 text-slate-800 dark:text-slate-100 leading-tight">
               A Legacy of Trust<br />and Global Reach
             </motion.h2>
-            <motion.p variants={itemVariant} className="text-lg text-slate-600 mb-6 leading-relaxed">
+            <motion.p variants={itemVariant} className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
               Biazo International General Trading FZ-LLC, incorporated in September 2022 in Ras Al Khaimah (RAKEZ), UAE, stands as a premier trading entity bridging continents.
             </motion.p>
-            <motion.p variants={itemVariant} className="text-lg text-slate-600 mb-8 leading-relaxed">
+            <motion.p variants={itemVariant} className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
               As the sister company to Biazo International Ltd in Uganda (established 2008), we leverage over a decade of hands-on experience in procurement and supply chain management to deliver exceptional value to our partners in East Africa and beyond.
             </motion.p>
 
-            <motion.div variants={itemVariant} className="grid sm:grid-cols-2 gap-8 mt-10 pt-10 border-t border-slate-200">
+            <motion.div variants={itemVariant} className="grid sm:grid-cols-2 gap-8 mt-10 pt-10 border-t border-slate-200 dark:border-slate-700">
               <div>
                 <h4 className="text-5xl font-bold bg-gradient-to-r from-primary to-[#a3b8e0] bg-clip-text text-transparent mb-2">2008</h4>
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider">Uganda Roots Established</p>
@@ -83,14 +83,14 @@ export default function About() {
                 variants={itemVariant}
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="group flex gap-4 p-6 bg-slate-50 hover:bg-white rounded-2xl border border-transparent hover:border-primary/20 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+                className="group flex gap-4 p-6 bg-slate-50 dark:bg-slate-800/50 hover:bg-white dark:bg-slate-900 rounded-2xl border border-transparent hover:border-primary/20 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
               >
                 <div className="shrink-0 mt-1 p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
                   <div className="text-primary">{feature.icon}</div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-800 mb-1.5 group-hover:text-primary transition-colors">{feature.title}</h3>
-                  <p className="text-slate-600 leading-relaxed text-sm">{feature.desc}</p>
+                  <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-1.5 group-hover:text-primary transition-colors">{feature.title}</h3>
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">{feature.desc}</p>
                 </div>
               </motion.div>
             ))}
