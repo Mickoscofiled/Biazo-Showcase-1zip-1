@@ -43,6 +43,8 @@ export default function Footer() {
             <div className="flex gap-3">
               <a
                 href="mailto:sales@biazointernational.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 data-testid="link-footer-email"
                 className="text-xs text-slate-400 hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-full active:scale-95 border border-white/10 hover:border-[#7391D1]/50 hover:bg-[#7391D1]/10 shadow-sm"
               >

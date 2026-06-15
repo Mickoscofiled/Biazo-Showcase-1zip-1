@@ -105,7 +105,7 @@ export default function Contact() {
               <motion.a
                 key={i}
                 href={item.href}
-                target={item.href.startsWith("http") ? "_blank" : undefined}
+                target={item.href.startsWith("tel") ? undefined : "_blank"}
                 rel="noopener noreferrer"
                 variants={itemVariant}
                 data-testid={`link-contact-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
