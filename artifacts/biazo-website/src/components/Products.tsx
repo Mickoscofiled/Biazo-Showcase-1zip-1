@@ -64,7 +64,7 @@ export default function Products() {
   };
 
   return (
-    <section id="products" className="py-28 bg-blue-50 dark:bg-slate-950 relative overflow-hidden">
+    <section id="products" className="py-28 bg-blue-50 relative overflow-hidden">
       <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
         <motion.div
@@ -82,13 +82,13 @@ export default function Products() {
           </motion.div>
           <motion.h2
             variants={itemVariant}
-            className="text-3xl md:text-5xl font-bold text-slate-800 dark:text-slate-100 mb-4"
+            className="text-3xl md:text-5xl font-bold text-slate-800 mb-4"
           >
             Products & Services
           </motion.h2>
           <motion.p
             variants={itemVariant}
-            className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto"
+            className="text-lg text-slate-600 max-w-2xl mx-auto"
           >
             A comprehensive portfolio of high-quality industrial supplies across 9 major categories and more.
           </motion.p>
@@ -106,20 +106,20 @@ export default function Products() {
               key={category.title}
               variants={itemVariant}
               data-testid={`card-product-${idx}`}
-              className="group bg-blue-50 dark:bg-slate-950 p-7 rounded-2xl border border-blue-100 dark:border-slate-800 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1.5 transition-all duration-300 ease-out"
+              className="group bg-blue-50 p-7 rounded-2xl border border-blue-100 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1.5 transition-all duration-300 ease-out"
             >
               <div className="mb-5 bg-primary/5 w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
                 <div className="text-primary">{category.icon}</div>
               </div>
-              <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-4 group-hover:text-primary transition-colors">{category.title}</h3>
+              <h3 className="text-lg font-bold text-slate-800 mb-4 group-hover:text-primary transition-colors">{category.title}</h3>
               <ul className="space-y-2">
                 {category.items.map((item, i) => (
                   <li
                     key={i}
                     className={`text-sm flex items-start gap-2.5 transition-colors ${
                       item === "Others"
-                        ? "text-slate-400 italic group-hover:text-slate-500 dark:text-slate-400"
-                        : "text-slate-600 dark:text-slate-300 group-hover:text-slate-800 dark:text-slate-100"
+                        ? "text-slate-400 italic group-hover:text-slate-500"
+                        : "text-slate-600 group-hover:text-slate-800"
                     }`}
                   >
                     <span className={`w-1.5 h-1.5 rounded-full mt-1.5 shrink-0 transition-colors ${item === "Others" ? "bg-slate-200 group-hover:bg-slate-300" : "bg-primary/60 group-hover:bg-primary"}`} />

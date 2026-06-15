@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "wouter";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import logoPath from "@/assets/biazo-logo-transparent.webp";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "#" },
@@ -21,36 +21,11 @@ const navLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("light");
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 50);
   });
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      setTheme("light");
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  };
 
   return (
     <motion.header
@@ -59,7 +34,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" as any }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-blue-50/95 backdrop-blur-xl shadow-lg shadow-slate-900/5 border-b border-blue-100 dark:bg-slate-900/95 dark:border-slate-800 dark:shadow-black/20"
+          ? "bg-blue-50/95 backdrop-blur-xl shadow-lg shadow-slate-900/5 border-b border-blue-100"
           : "bg-transparent"
       }`}
     >
@@ -68,7 +43,7 @@ export default function Navbar() {
           <Link href="/">
             <div className="relative flex items-center gap-3 cursor-pointer group">
               <div className="relative">
-                <div 
+                <div
                   data-testid="img-navbar-logo"
                   className="h-24 w-40 drop-shadow-sm transition-all duration-300 group-hover:scale-105"
                   style={{
@@ -95,27 +70,16 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-[13px] font-medium transition-colors relative group whitespace-nowrap ${
                   isScrolled
-                    ? "text-slate-600 hover:text-[#7391D1] dark:text-slate-300 dark:hover:text-primary"
+                    ? "text-slate-600 hover:text-[#7391D1]"
                     : "text-white/80 hover:text-white"
                 }`}
               >
                 {link.name}
                 <span className={`absolute -bottom-1 left-0 w-0 h-[1.5px] group-hover:w-full transition-all duration-300 ${
-                  isScrolled ? "bg-[#7391D1] dark:bg-primary" : "bg-white"
+                  isScrolled ? "bg-[#7391D1]" : "bg-white"
                 }`} />
               </a>
             ))}
-            
-            <button
-              onClick={toggleTheme}
-              className={`p-2 rounded-full transition-colors ml-1 ${
-                isScrolled ? "text-slate-600 hover:bg-slate-200/50 dark:text-slate-300 dark:hover:bg-slate-800" : "text-white hover:bg-white/10"
-              }`}
-              aria-label="Toggle dark mode"
-            >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-
             <a
               href="https://wa.me/971504620492?text=Hello%20Biazo%20International%2C%20I%20would%20like%20to%20get%20in%20touch%20regarding%20your%20products%20and%20services."
               target="_blank"
@@ -131,26 +95,15 @@ export default function Navbar() {
           </nav>
 
           {/* Mobile Toggle */}
-          <div className="flex items-center gap-1 lg:hidden">
-            <button
-              onClick={toggleTheme}
-              className={`p-2 rounded-full transition-colors ${
-                isScrolled ? "text-slate-600 hover:bg-slate-200/50 dark:text-slate-300 dark:hover:bg-slate-800" : "text-white hover:bg-white/10"
-              }`}
-              aria-label="Toggle dark mode"
-            >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-            <button
-              className={`p-2 transition-colors ${
-                isScrolled ? "text-slate-600 hover:text-[#7391D1] dark:text-slate-300 dark:hover:text-primary" : "text-white hover:text-white/80"
-              }`}
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              data-testid="button-mobile-menu"
-            >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          <button
+            className={`lg:hidden p-2 transition-colors ${
+              isScrolled ? "text-slate-600 hover:text-[#7391D1]" : "text-white hover:text-white/80"
+            }`}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            data-testid="button-mobile-menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
 
@@ -160,7 +113,7 @@ export default function Navbar() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="lg:hidden bg-blue-50 border-t border-blue-100 shadow-xl dark:bg-slate-900 dark:border-slate-800"
+          className="lg:hidden bg-blue-50 border-t border-blue-100 shadow-xl"
         >
           <div className="container mx-auto px-4 py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
@@ -168,7 +121,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-sm font-medium text-slate-600 py-3 px-4 rounded-xl hover:bg-slate-50 hover:text-[#7391D1] transition-colors dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-primary"
+                className="text-sm font-medium text-slate-600 py-3 px-4 rounded-xl hover:bg-slate-50 hover:text-[#7391D1] transition-colors"
               >
                 {link.name}
               </a>

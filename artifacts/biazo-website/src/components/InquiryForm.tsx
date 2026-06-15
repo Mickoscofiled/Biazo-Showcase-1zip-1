@@ -61,13 +61,13 @@ export default function InquiryForm() {
     setSubmitted(false);
   }
 
-  const fieldBase = "w-full bg-white dark:bg-slate-900 border rounded-xl px-4 py-3 text-blue-900 placeholder-blue-300 text-sm focus:outline-none transition-all duration-200";
+  const fieldBase = "w-full bg-white border rounded-xl px-4 py-3 text-blue-900 placeholder-blue-300 text-sm focus:outline-none transition-all duration-200";
   const fieldOk = `${fieldBase} border-blue-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-200 hover:border-blue-300`;
   const fieldErr = `${fieldBase} border-red-300 focus:border-red-400 focus:ring-1 focus:ring-red-200`;
   const fieldClass = (name: string, hasError: boolean) => hasError ? fieldErr : fieldOk;
 
   return (
-    <section id="inquiry" className="py-24 bg-blue-50 dark:bg-slate-950 relative overflow-hidden">
+    <section id="inquiry" className="py-24 bg-blue-50 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-200/20 blur-[130px] rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-sky-200/20 blur-[110px] rounded-full -translate-x-1/3 translate-y-1/3 pointer-events-none" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.04)_1px,transparent_1px)] bg-[size:70px_70px]" />
@@ -155,8 +155,8 @@ export default function InquiryForm() {
             viewport={{ once: false }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div className="rounded-2xl bg-white dark:bg-slate-900 border border-blue-100 dark:border-slate-800 shadow-lg shadow-blue-100 overflow-hidden">
-              <div className="px-7 pt-7 pb-5 border-b border-blue-100 dark:border-slate-800 flex items-center gap-3 bg-blue-50 dark:bg-slate-950">
+            <div className="rounded-2xl bg-white border border-blue-100 shadow-lg shadow-blue-100 overflow-hidden">
+              <div className="px-7 pt-7 pb-5 border-b border-blue-100 flex items-center gap-3 bg-blue-50">
                 <div className="p-2.5 rounded-xl bg-[#25D366]/10 border border-[#25D366]/20">
                   <svg viewBox="0 0 24 24" className="w-5 h-5 fill-[#25D366]">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.834L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-4.99-1.365l-.358-.213-3.758.98.999-3.648-.234-.374A9.817 9.817 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/>
@@ -205,9 +205,9 @@ export default function InquiryForm() {
                       <div className="relative">
                         <select name="product" value={form.product} onChange={handleChange} onBlur={handleBlur}
                           className={`${fieldClass("product", !!(touched.product && !form.product))} appearance-none pr-10 cursor-pointer`}>
-                          <option value="" disabled className="bg-white dark:bg-slate-900 text-blue-300">Select a product category…</option>
+                          <option value="" disabled className="bg-white text-blue-300">Select a product category…</option>
                           {PRODUCT_CATEGORIES.map((c) => (
-                            <option key={c} value={c} className="bg-white dark:bg-slate-900 text-blue-900">{c}</option>
+                            <option key={c} value={c} className="bg-white text-blue-900">{c}</option>
                           ))}
                         </select>
                         <ChevronDown size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-blue-400 pointer-events-none" />
@@ -240,7 +240,7 @@ export default function InquiryForm() {
                       className={`w-full flex items-center justify-center gap-2.5 py-4 rounded-full active:scale-[0.98] font-semibold text-base transition-all duration-200 ${
                         isValid
                           ? "bg-[#25D366] hover:bg-[#20c05c] text-white shadow-lg shadow-green-200 hover:shadow-green-300 hover:scale-[1.02]"
-                          : "bg-blue-50 dark:bg-slate-950 text-blue-300 border border-blue-100 dark:border-slate-800 cursor-not-allowed"
+                          : "bg-blue-50 text-blue-300 border border-blue-100 cursor-not-allowed"
                       }`}
                     >
                       <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current shrink-0">

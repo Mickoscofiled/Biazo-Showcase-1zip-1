@@ -22,7 +22,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-blue-50 dark:bg-slate-950 relative overflow-hidden">
+    <section id="contact" className="py-24 bg-blue-50 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(115,145,209,0.07),transparent_70%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(115,145,209,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(115,145,209,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
@@ -42,7 +42,7 @@ export default function Contact() {
           </motion.div>
           <motion.h2
             variants={itemVariant}
-            className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-100 mb-4"
+            className="text-4xl md:text-5xl font-bold text-slate-800 mb-4"
           >
             We Look Forward to<br />
             <span className="bg-gradient-to-r from-primary to-[#a3b8e0] bg-clip-text text-transparent">
@@ -51,7 +51,7 @@ export default function Contact() {
           </motion.h2>
           <motion.p
             variants={itemVariant}
-            className="text-xl text-slate-600 dark:text-slate-300 max-w-xl mx-auto"
+            className="text-xl text-slate-600 max-w-xl mx-auto"
           >
             Reach out to discuss your procurement needs. Our global network is ready to serve you.
           </motion.p>
@@ -112,7 +112,7 @@ export default function Contact() {
                 className={`group flex items-center gap-4 p-5 rounded-2xl border transition-all duration-300 ${
                   item.highlight
                     ? "bg-green-50 hover:bg-green-100 border-green-200 hover:border-green-400"
-                    : "bg-blue-50 dark:bg-slate-950 hover:bg-blue-100 border-slate-100 dark:border-slate-800 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
+                    : "bg-blue-50 hover:bg-blue-100 border-slate-100 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
                 }`}
               >
                 <div className={`p-3 rounded-xl transition-colors shrink-0 ${
@@ -125,7 +125,7 @@ export default function Contact() {
                     item.highlight ? "text-green-600" : "text-primary"
                   }`}>{item.label}</p>
                   <p className={`font-medium transition-colors ${
-                    item.highlight ? "text-green-800 group-hover:text-green-600" : "text-slate-800 dark:text-slate-100 group-hover:text-primary"
+                    item.highlight ? "text-green-800 group-hover:text-green-600" : "text-slate-800 group-hover:text-primary"
                   }`}>{item.value}</p>
                 </div>
               </motion.a>
@@ -143,13 +143,13 @@ export default function Contact() {
               <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
                 <MapPin className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-100">Our Locations</h3>
+              <h3 className="text-2xl font-bold text-slate-800">Our Locations</h3>
             </div>
 
             <div className="space-y-8">
               <div className="pl-4 border-l-2 border-primary/40">
-                <h4 className="font-bold text-lg text-slate-700 dark:text-slate-200 mb-2">UAE Headquarters</h4>
-                <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                <h4 className="font-bold text-lg text-slate-700 mb-2">UAE Headquarters</h4>
+                <p className="text-slate-600 leading-relaxed">
                   Ras Al Khaimah, UAE<br />
                   RAKEZ Business Zone-FZ<br />
                   B4209b10-Business Center 04
@@ -157,8 +157,8 @@ export default function Contact() {
               </div>
 
               <div className="pl-4 border-l-2 border-primary/30">
-                <h4 className="font-bold text-lg text-slate-700 dark:text-slate-200 mb-2">Dubai Office</h4>
-                <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                <h4 className="font-bold text-lg text-slate-700 mb-2">Dubai Office</h4>
+                <p className="text-slate-600 leading-relaxed">
                   Abraj Shopping Center<br />
                   903 Sabka Rd, Deira<br />
                   Dubai, UAE
@@ -166,8 +166,8 @@ export default function Contact() {
               </div>
 
               <div className="pl-4 border-l-2 border-primary/20">
-                <h4 className="font-bold text-lg text-slate-700 dark:text-slate-200 mb-2">Branch Offices</h4>
-                <p className="text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+                <h4 className="font-bold text-lg text-slate-700 mb-2">Branch Offices</h4>
+                <p className="text-slate-600 leading-relaxed font-medium">
                   Ethiopia &middot; Uganda &middot; Malawi &middot; Zimbabwe
                 </p>
               </div>

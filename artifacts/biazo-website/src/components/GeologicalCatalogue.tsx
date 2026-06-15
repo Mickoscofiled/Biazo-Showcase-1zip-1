@@ -101,15 +101,15 @@ function CategoryCard({ cat, index }: { cat: typeof categories[number]; index: n
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
       transition={{ duration: 0.4, delay: index * 0.08 }}
-      className="group p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/80 hover:border-blue-200 transition-all duration-200 hover:shadow-md hover:shadow-blue-900/5"
+      className="group p-4 rounded-xl bg-white border border-slate-200 hover:border-blue-200 transition-all duration-200 hover:shadow-md hover:shadow-blue-900/5"
     >
       {/* Header */}
       <div className="flex items-center gap-2.5 mb-3">
-        <div className="p-2 rounded-lg bg-blue-50 dark:bg-slate-950 border border-blue-100 dark:border-slate-800 shrink-0">
+        <div className="p-2 rounded-lg bg-blue-50 border border-blue-100 shrink-0">
           {cat.icon}
         </div>
         <div className="min-w-0">
-          <h3 className="text-sm font-bold text-slate-800 dark:text-slate-100 leading-tight group-hover:text-blue-600 transition-colors">{cat.title}</h3>
+          <h3 className="text-sm font-bold text-slate-800 leading-tight group-hover:text-blue-600 transition-colors">{cat.title}</h3>
         </div>
       </div>
 
@@ -124,7 +124,7 @@ function CategoryCard({ cat, index }: { cat: typeof categories[number]; index: n
               initial={j >= MAX_VISIBLE ? { opacity: 0, height: 0 } : false}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 leading-snug"
+              className="flex items-center gap-1.5 text-xs text-slate-500 leading-snug"
             >
               <span className="w-1 h-1 rounded-full bg-slate-300 shrink-0" />
               {item}
@@ -149,7 +149,7 @@ function CategoryCard({ cat, index }: { cat: typeof categories[number]; index: n
 
 export default function GeologicalCatalogue() {
   return (
-    <section id="geological" className="py-16 bg-slate-50 dark:bg-slate-800/50 relative overflow-hidden">
+    <section id="geological" className="py-16 bg-slate-50 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/8 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/4" />
 
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
@@ -160,8 +160,8 @@ export default function GeologicalCatalogue() {
             <div className="inline-flex items-center gap-2 py-0.5 px-2.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-semibold tracking-widest uppercase mb-3">
               2026/27 Edition
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-100 mb-1.5">Geological Catalogue</h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400 max-w-md">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-1.5">Geological Catalogue</h2>
+            <p className="text-sm text-slate-500 max-w-md">
               Specialist equipment and supplies for geological fieldwork, mining exploration, and sample management — trusted by professionals across the Continent.
             </p>
           </div>
@@ -193,10 +193,10 @@ export default function GeologicalCatalogue() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ delay: 0.2 }}
-          className="mt-8 py-4 px-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-4"
+          className="mt-8 py-4 px-6 rounded-xl bg-white border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <div>
-            <h3 className="text-sm font-bold text-slate-800 dark:text-slate-100">Need pricing or availability?</h3>
+            <h3 className="text-sm font-bold text-slate-800">Need pricing or availability?</h3>
             <p className="text-slate-400 text-xs">Contact our team directly on WhatsApp for fast quotes on any geological product.</p>
           </div>
           <a

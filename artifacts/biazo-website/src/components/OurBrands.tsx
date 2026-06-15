@@ -92,7 +92,7 @@ const BrandPill = ({ name }: { name: string }) => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center gap-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 cursor-pointer hover:border-blue-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:shadow-[0_8px_24px_rgba(59,130,246,0.12)] transition-all duration-200 ease-out group"
+      className="flex flex-col items-center justify-center gap-1.5 bg-white border border-slate-200 rounded-xl px-4 py-3 cursor-pointer hover:border-blue-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:shadow-[0_8px_24px_rgba(59,130,246,0.12)] transition-all duration-200 ease-out group"
       style={{ minWidth: "90px", width: "100px" }}
     >
       {!hasError ? (
@@ -105,11 +105,11 @@ const BrandPill = ({ name }: { name: string }) => {
           loading="lazy"
         />
       ) : (
-        <div className="w-9 h-9 rounded-full bg-blue-50 dark:bg-slate-950 border border-blue-100 dark:border-slate-800 flex items-center justify-center">
+        <div className="w-9 h-9 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center">
           <span className="text-sm font-bold text-blue-400">{name.charAt(0)}</span>
         </div>
       )}
-      <span className="text-[10px] font-semibold text-slate-500 dark:text-slate-400 text-center leading-tight line-clamp-1 w-full group-hover:text-blue-600 transition-colors">{name}</span>
+      <span className="text-[10px] font-semibold text-slate-500 text-center leading-tight line-clamp-1 w-full group-hover:text-blue-600 transition-colors">{name}</span>
     </div>
   );
 };
@@ -179,8 +179,8 @@ export default function OurBrands() {
           <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-widest uppercase mb-5">
             What We Carry
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-100 mb-4">Our Brands</h2>
-          <p className="text-base text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Our Brands</h2>
+          <p className="text-base text-slate-500 max-w-xl mx-auto">
             We represent and supply world-class brands across five major product categories, bringing trusted global manufacturers to East Africa.
           </p>
         </motion.div>
@@ -197,16 +197,16 @@ export default function OurBrands() {
             <motion.div
               key={brand.title}
               variants={itemVariant}
-              className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700/70 shadow-sm hover:shadow-lg hover:shadow-blue-900/5 hover:border-blue-200 transition-all duration-300 overflow-hidden"
+              className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg hover:shadow-blue-900/5 hover:border-blue-200 transition-all duration-300 overflow-hidden"
             >
               <div className="p-6 md:p-8">
                 {/* Category Header */}
                 <div className="flex items-start gap-4 mb-5">
-                  <div className="p-2.5 rounded-xl bg-blue-50 dark:bg-slate-950 border border-blue-100 dark:border-slate-800 shrink-0">
+                  <div className="p-2.5 rounded-xl bg-blue-50 border border-blue-100 shrink-0">
                     {brand.icon}
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 leading-tight">{brand.title}</h3>
+                    <h3 className="text-lg font-bold text-slate-800 leading-tight">{brand.title}</h3>
                     <p className="text-xs text-blue-500 font-semibold tracking-wide uppercase mt-0.5">{brand.subtitle}</p>
                     <p className="text-xs text-slate-400 mt-1 leading-relaxed">{brand.description}</p>
                   </div>
