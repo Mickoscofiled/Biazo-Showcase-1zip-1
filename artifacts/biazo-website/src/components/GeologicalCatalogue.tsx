@@ -11,7 +11,6 @@ const categories = [
   {
     icon: <Tag className="w-5 h-5 text-blue-600" />,
     title: "Stationery & Labelling",
-    pages: "Pages 3 – 12",
     items: [
       "PVC Flagging Tapes",
       "Flagging Tape Dispenser",
@@ -35,7 +34,6 @@ const categories = [
   {
     icon: <Package className="w-5 h-5 text-blue-600" />,
     title: "Sample Storage",
-    pages: "Pages 14 – 16",
     items: [
       "Core Trays",
       "Sample Bags",
@@ -47,7 +45,6 @@ const categories = [
   {
     icon: <BookOpen className="w-5 h-5 text-blue-600" />,
     title: "Core & More",
-    pages: "Pages 17 – 27",
     items: [
       "Core Cutting & Splitting Equipment",
       "Core Orientation Tools",
@@ -64,7 +61,6 @@ const categories = [
   {
     icon: <Compass className="w-5 h-5 text-blue-600" />,
     title: "Exploration & Navigation",
-    pages: "Pages 28 – 32",
     items: [
       "Brunton & Geological Compasses",
       "Clinometers & Dip Meters",
@@ -78,7 +74,6 @@ const categories = [
   {
     icon: <Pickaxe className="w-5 h-5 text-blue-600" />,
     title: "Gold Mining Accessories",
-    pages: "Pages 33 – 45",
     items: [
       "Gold Pans",
       "Sluice Boxes & Accessories",
@@ -115,7 +110,6 @@ function CategoryCard({ cat, index }: { cat: typeof categories[number]; index: n
         </div>
         <div className="min-w-0">
           <h3 className="text-sm font-bold text-slate-800 leading-tight group-hover:text-blue-600 transition-colors">{cat.title}</h3>
-          <span className="text-[10px] text-blue-500 font-medium">{cat.pages}</span>
         </div>
       </div>
 
