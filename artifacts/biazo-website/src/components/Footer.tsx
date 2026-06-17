@@ -1,6 +1,6 @@
 import logoPath from "@/assets/biazo-logo-transparent.webp";
 import { motion } from "framer-motion";
-import { MapPin, Building, Mail } from "lucide-react";
+import { MapPin, Building, Mail, Globe } from "lucide-react";
 
 export default function Footer() {
   const containerVariant = {
@@ -38,20 +38,27 @@ export default function Footer() {
               We are strategically positioned to serve our clients seamlessly across the Middle East and East Africa, ensuring rapid supply and premium support.
             </p>
           </motion.div>
-          <motion.div variants={itemVariant} className="grid sm:grid-cols-2 gap-6">
+          <motion.div variants={itemVariant} className="grid sm:grid-cols-3 gap-6">
              <div className="bg-white/[0.02] border border-white/5 hover:border-white/10 hover:bg-white/[0.04] transition-all duration-300 rounded-3xl p-8 shadow-2xl">
                 <div className="w-12 h-12 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-6 text-blue-400">
                    <Building size={24} />
                 </div>
-                <h4 className="text-white font-bold text-lg mb-3">Global Headquarters</h4>
-                <p className="text-sm text-slate-400 leading-relaxed font-medium">RAKEZ Business Zone<br/>Ras Al Khaimah, UAE</p>
+                <h4 className="text-white font-bold text-lg mb-3">UAE Headquarters</h4>
+                <p className="text-sm text-slate-400 leading-relaxed font-medium">Ras Al Khaimah, UAE<br/>RAKEZ Business Zone-FZ<br/>B4209b10-Business Center 04</p>
+             </div>
+             <div className="bg-white/[0.02] border border-white/5 hover:border-white/10 hover:bg-white/[0.04] transition-all duration-300 rounded-3xl p-8 shadow-2xl">
+                <div className="w-12 h-12 rounded-2xl bg-[#7391D1]/20 flex items-center justify-center mb-6 text-[#7391D1]">
+                   <MapPin size={24} />
+                </div>
+                <h4 className="text-white font-bold text-lg mb-3">Dubai Office</h4>
+                <p className="text-sm text-slate-400 leading-relaxed font-medium">Abraj Shopping Center<br/>903 Sabka Rd, Deira<br/>Dubai, UAE</p>
              </div>
              <div className="bg-white/[0.02] border border-white/5 hover:border-white/10 hover:bg-white/[0.04] transition-all duration-300 rounded-3xl p-8 shadow-2xl">
                 <div className="w-12 h-12 rounded-2xl bg-[#25D366]/20 flex items-center justify-center mb-6 text-[#25D366]">
-                   <MapPin size={24} />
+                   <Globe size={24} />
                 </div>
-                <h4 className="text-white font-bold text-lg mb-3">Regional Operations</h4>
-                <p className="text-sm text-slate-400 leading-relaxed font-medium">Serving major industrial<br/>hubs across East Africa</p>
+                <h4 className="text-white font-bold text-lg mb-3">Branch Offices</h4>
+                <p className="text-sm text-slate-400 leading-relaxed font-medium">Ethiopia · Uganda<br/>Malawi · Zimbabwe</p>
              </div>
           </motion.div>
         </motion.div>
