@@ -57,7 +57,7 @@ export default function Hero() {
           <motion.div variants={textItem} className="relative mb-4 flex flex-col items-center w-full">
             <div className="relative flex justify-center mb-6">
               <div 
-                className="w-96 md:w-[600px] h-64 md:h-[400px] drop-shadow-2xl transition-all duration-300 hover:scale-105"
+                className="w-80 md:w-[480px] h-56 md:h-80 drop-shadow-2xl transition-all duration-300 hover:scale-105"
                 style={{
                   backgroundColor: '#87CEFA',
                   WebkitMaskImage: `url(${logoPath})`,
