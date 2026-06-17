@@ -76,7 +76,7 @@ export default function Footer() {
               src={logoPath}
               alt="Biazo Logo"
               data-testid="img-footer-logo"
-              className="h-28 w-auto object-contain mb-8 brightness-0 invert opacity-90 transition-all duration-300 hover:scale-105"
+              className="h-36 w-auto object-contain mb-8 brightness-0 invert opacity-90 transition-all duration-300 hover:scale-105"
               loading="lazy"
             />
             <p className="max-w-sm text-sm leading-relaxed text-slate-400 mb-8 font-medium">

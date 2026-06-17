@@ -45,7 +45,7 @@ export default function Navbar() {
               <div className="relative">
                 <div
                   data-testid="img-navbar-logo"
-                  className="h-24 w-52 drop-shadow-md transition-all duration-300 group-hover:scale-105"
+                  className="h-32 w-64 drop-shadow-md transition-all duration-300 group-hover:scale-105"
                   style={{
                     backgroundColor: isScrolled ? '#1E90FF' : '#87CEFA',
                     WebkitMaskImage: `url(${logoPath})`,
