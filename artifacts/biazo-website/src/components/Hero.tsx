@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ChevronDown, Globe2, Shield, Truck, PackageCheck } from "lucide-react";
-import logoPath from "@/assets/biazo-logo-transparent.webp";
-import fixedLogoPath from "@/assets/biazo-logo-fixed.jpeg";
+import logoPath from "@/assets/biazo-logo-new-transparent.png";
 import heroVideo from "@/assets/hero-video.mp4";
 
 export default function Hero() {
@@ -56,9 +55,9 @@ export default function Hero() {
         >
           {/* Optimized Logo */}
           <motion.div variants={textItem} className="relative mb-4 flex flex-col items-center w-full">
-            <div className="relative flex justify-center mb-4">
+            <div className="relative flex justify-center mb-6">
               <div 
-                className="w-64 md:w-96 h-24 md:h-32 drop-shadow-xl"
+                className="w-80 md:w-[480px] h-32 md:h-44 drop-shadow-2xl transition-all duration-300 hover:scale-105"
                 style={{
                   backgroundColor: '#87CEFA',
                   WebkitMaskImage: `url(${logoPath})`,

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import logoPath from "@/assets/biazo-logo-transparent.webp";
+import logoPath from "@/assets/biazo-logo-new-transparent.png";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -45,9 +45,9 @@ export default function Navbar() {
               <div className="relative">
                 <div
                   data-testid="img-navbar-logo"
-                  className="h-24 w-40 drop-shadow-sm transition-all duration-300 group-hover:scale-105"
+                  className="h-24 w-52 drop-shadow-md transition-all duration-300 group-hover:scale-105"
                   style={{
-                    backgroundColor: '#87CEFA',
+                    backgroundColor: isScrolled ? '#1E90FF' : '#87CEFA',
                     WebkitMaskImage: `url(${logoPath})`,
                     maskImage: `url(${logoPath})`,
                     WebkitMaskSize: 'contain',
