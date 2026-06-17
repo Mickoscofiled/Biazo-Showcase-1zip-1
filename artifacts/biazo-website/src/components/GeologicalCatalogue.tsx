@@ -101,11 +101,11 @@ function CategoryCard({ cat, index }: { cat: typeof categories[number]; index: n
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
       transition={{ duration: 0.4, delay: index * 0.08 }}
-      className="group p-4 rounded-xl bg-white border border-slate-200 hover:border-blue-200 transition-all duration-200 hover:shadow-md hover:shadow-blue-900/5"
+      className="group p-5 rounded-3xl bg-white border-none shadow-xl shadow-blue-900/5 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/10 hover:-translate-y-1"
     >
       {/* Header */}
-      <div className="flex items-center gap-2.5 mb-3">
-        <div className="p-2 rounded-lg bg-blue-50 border border-blue-100 shrink-0">
+      <div className="flex items-center gap-3 mb-4">
+        <div className="p-3 rounded-2xl bg-blue-50 text-blue-600 shrink-0">
           {cat.icon}
         </div>
         <div className="min-w-0">
@@ -193,7 +193,7 @@ export default function GeologicalCatalogue() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ delay: 0.2 }}
-          className="mt-8 py-4 px-6 rounded-xl bg-white border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4"
+          className="mt-8 py-5 px-8 rounded-3xl bg-white shadow-xl shadow-blue-900/5 border-none flex flex-col sm:flex-row items-center justify-between gap-6"
         >
           <div>
             <h3 className="text-sm font-bold text-slate-800">Need pricing or availability?</h3>

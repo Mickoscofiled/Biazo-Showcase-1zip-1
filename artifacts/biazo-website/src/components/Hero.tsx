@@ -83,10 +83,10 @@ export default function Hero() {
           {/* Status badge */}
           <motion.div
             variants={textItem}
-            className="inline-flex items-center gap-2.5 py-2 px-6 rounded-full bg-white backdrop-blur-md border border-white/30 text-white font-bold tracking-widest uppercase text-xs sm:text-sm shadow-[0_8px_16px_rgba(0,0,0,0.1)] shadow-inner"
+            className="inline-flex items-center gap-2.5 py-2 px-6 rounded-full bg-white backdrop-blur-md border border-white/50 shadow-xl"
           >
-            <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
-            Bridging UAE & East Africa
+            <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
+            <span className="text-[#0f172a] font-extrabold tracking-widest uppercase text-xs sm:text-sm">Bridging UAE & East Africa</span>
           </motion.div>
 
           {/* Main heading */}
@@ -121,9 +121,9 @@ export default function Hero() {
             <a
               href="#contact"
               data-testid="link-contact-sales"
-              className="flex items-center gap-2 bg-white text-white border border-white/40 hover:bg-white px-8 py-4 rounded-full active:scale-95 font-extrabold text-lg transition-all backdrop-blur-md hover:-translate-y-1 shadow-[0_10px_25px_rgba(0,0,0,0.1),inset_0_2px_10px_rgba(255,255,255,0.2)]"
+              className="flex items-center justify-center gap-2 bg-[#1E90FF] border-none hover:bg-[#187bcd] px-8 py-4 rounded-full active:scale-95 transition-all hover:-translate-y-1 shadow-[0_10px_25px_rgba(30,144,255,0.3)] hover:shadow-[0_15px_35px_rgba(30,144,255,0.5)]"
             >
-              Contact Sales
+              <span className="text-white font-extrabold text-lg">Contact Sales</span>
             </a>
           </motion.div>
 

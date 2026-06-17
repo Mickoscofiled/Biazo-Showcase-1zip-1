@@ -76,26 +76,24 @@ export default function Activities() {
           initial="hidden" whileInView="show"
           viewport={{ once: false, margin: "-50px" }}
           variants={containerVariant}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 max-w-7xl mx-auto mb-16"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-16"
         >
           {sectorImages.map((sector, i) => (
             <motion.div
               key={sector.name}
               variants={itemVariant}
-              whileHover={{ y: -8, scale: 1.04 }}
+              whileHover={{ y: -8, scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="group relative rounded-3xl overflow-hidden aspect-[3/4] shadow-xl shadow-slate-200/60 border border-white/60 cursor-default"
+              className="group bg-white p-3 rounded-[32px] shadow-lg shadow-blue-900/5 hover:shadow-2xl hover:shadow-blue-900/10 border-none cursor-pointer flex flex-col"
             >
-              <div className="absolute inset-0 bg-slate-900">
+              <div className="relative rounded-[24px] overflow-hidden aspect-[4/3] mb-4 bg-slate-100">
                 <img src={sector.image} alt={sector.name} loading="lazy"
-                  className="w-full h-full object-cover opacity-75 group-hover:opacity-95 group-hover:scale-110 transition-all duration-600 ease-out" />
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/30 to-transparent" />
-              {/* Bubbly accent blob */}
-              <div className="absolute top-3 right-3 w-10 h-10 bg-blue-400/30 rounded-full blur-md group-hover:scale-150 transition-transform duration-500" />
-              <div className="absolute bottom-0 left-0 p-4 w-full text-left">
-                <h3 className="text-sm font-bold text-white leading-tight drop-shadow-md">{sector.name}</h3>
-                <div className="h-0.5 w-6 bg-blue-400 rounded-full mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              <div className="px-2 pb-2 text-center flex-grow flex items-center justify-center">
+                <h3 className="text-[13px] md:text-sm font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-tight">
+                  {sector.name}
+                </h3>
               </div>
             </motion.div>
           ))}

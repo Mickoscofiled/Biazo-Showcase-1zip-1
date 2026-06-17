@@ -92,7 +92,7 @@ const BrandPill = ({ name }: { name: string }) => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center gap-1.5 bg-white border border-slate-200 rounded-xl px-4 py-3 cursor-pointer hover:border-blue-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:shadow-[0_8px_24px_rgba(59,130,246,0.12)] transition-all duration-200 ease-out group"
+      className="flex flex-col items-center justify-center gap-1.5 bg-white shadow-md rounded-2xl px-4 py-3 cursor-pointer hover:shadow-xl hover:shadow-blue-900/10 hover:-translate-y-1 transition-all duration-300 ease-out group"
       style={{ minWidth: "90px", width: "100px" }}
     >
       {!hasError ? (
@@ -197,12 +197,12 @@ export default function OurBrands() {
             <motion.div
               key={brand.title}
               variants={itemVariant}
-              className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg hover:shadow-blue-900/5 hover:border-blue-200 transition-all duration-300 overflow-hidden"
+              className="bg-white rounded-3xl border-none shadow-xl shadow-blue-900/5 hover:shadow-2xl hover:shadow-blue-900/10 hover:-translate-y-1 transition-all duration-300 overflow-hidden"
             >
               <div className="p-6 md:p-8">
                 {/* Category Header */}
-                <div className="flex items-start gap-4 mb-5">
-                  <div className="p-2.5 rounded-xl bg-blue-50 border border-blue-100 shrink-0">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="p-3.5 rounded-2xl bg-blue-50 text-blue-600 shrink-0">
                     {brand.icon}
                   </div>
                   <div>

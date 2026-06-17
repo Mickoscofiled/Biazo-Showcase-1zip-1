@@ -106,9 +106,9 @@ export default function Products() {
               key={category.title}
               variants={itemVariant}
               data-testid={`card-product-${idx}`}
-              className="group bg-blue-50 p-7 rounded-2xl border border-blue-100 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1.5 transition-all duration-300 ease-out"
+              className="group bg-white p-7 rounded-3xl border-none shadow-xl shadow-blue-900/5 hover:shadow-2xl hover:shadow-blue-900/10 hover:-translate-y-2 transition-all duration-300 ease-out"
             >
-              <div className="mb-5 bg-primary/5 w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+              <div className="mb-5 bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-blue-100 transition-all duration-300">
                 <div className="text-primary">{category.icon}</div>
               </div>
               <h3 className="text-lg font-bold text-slate-800 mb-4 group-hover:text-primary transition-colors">{category.title}</h3>

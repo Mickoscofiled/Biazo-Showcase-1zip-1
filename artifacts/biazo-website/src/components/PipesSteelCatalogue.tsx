@@ -78,12 +78,12 @@ export default function PipesSteelCatalogue() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="flex flex-col rounded-xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow pb-4"
+              className="flex flex-col rounded-3xl bg-white overflow-hidden shadow-xl shadow-blue-900/5 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 pb-4 border border-blue-50"
             >
               {/* Card Header */}
-              <div className="flex flex-col gap-3 px-5 py-4 border-b border-slate-100 bg-slate-50">
+              <div className="flex flex-col gap-3 px-5 py-4 border-b border-blue-50/50 bg-blue-50/30">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-blue-50 border border-blue-100 shrink-0">
+                  <div className="p-3 rounded-2xl bg-blue-100/50 text-blue-600 shrink-0">
                     {cat.icon}
                   </div>
                   <div>
@@ -100,7 +100,7 @@ export default function PipesSteelCatalogue() {
                   href={`${WA_BASE}${cat.waText}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-full justify-center items-center gap-1.5 bg-[#25D366] hover:bg-[#20c05c] text-white px-4 py-2 rounded-lg font-semibold text-xs transition-all hover:-translate-y-0.5 shadow-sm"
+                  className="inline-flex w-full justify-center items-center gap-1.5 bg-[#25D366] hover:bg-[#20c05c] text-white px-4 py-3 rounded-2xl font-semibold text-xs transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-[#25D366]/30 shadow-sm"
                 >
                   Get a Quote
                   <ChevronRight size={12} />
@@ -116,7 +116,7 @@ export default function PipesSteelCatalogue() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ delay: 0.2 }}
-          className="mt-8 py-4 px-6 rounded-xl bg-primary flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg shadow-primary/15"
+          className="mt-8 py-6 px-8 rounded-3xl bg-gradient-to-r from-primary to-blue-600 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl shadow-primary/20"
         >
           <div>
             <h3 className="text-sm font-bold text-white">Need a full material list or bill of quantities?</h3>

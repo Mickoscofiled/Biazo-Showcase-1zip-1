@@ -10,7 +10,6 @@ const Products = React.lazy(() => import("@/components/Products"));
 const OurBrands = React.lazy(() => import("@/components/OurBrands"));
 const GeologicalCatalogue = React.lazy(() => import("@/components/GeologicalCatalogue"));
 const PipesSteelCatalogue = React.lazy(() => import("@/components/PipesSteelCatalogue"));
-const InquiryForm = React.lazy(() => import("@/components/InquiryForm"));
 const Statistics = React.lazy(() => import("@/components/Statistics"));
 const Contact = React.lazy(() => import("@/components/Contact"));
 const Footer = React.lazy(() => import("@/components/Footer"));
@@ -29,7 +28,6 @@ export default function HomePage() {
           <OurBrands />
           <GeologicalCatalogue />
           <PipesSteelCatalogue />
-          <InquiryForm />
           <Statistics />
           <Contact />
         </Suspense>
