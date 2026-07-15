@@ -2,4 +2,4 @@ name = "biazogroup"
 compatibility_date = "2025-06-02"
 
 [assets]
-directory = "."
+directory = "public_html"
